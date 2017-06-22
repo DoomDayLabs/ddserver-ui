@@ -6,7 +6,7 @@ this.renderView = function(){
 return React.createElement('div',null,'SCRIPT_VIEW');
 }
 this.renderPrefpane = function(){
-
+return React.createElement('div',null,'SCRIPT PREF PANE');
 }
 `
 

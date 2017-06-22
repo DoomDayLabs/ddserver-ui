@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 192:
+/***/ 195:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************!*\
@@ -51,7 +51,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(/*! ./urls */ 193);
+var	fixUrls = __webpack_require__(/*! ./urls */ 196);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -365,7 +365,7 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 
-/***/ 193:
+/***/ 196:
 /* no static exports found */
 /* all exports used */
 /*!************************************!*\
@@ -491,6 +491,12 @@ exports.default = {
                 sensor: 'device1.sensor1'
             }]
         }
+    }, {
+        label: 'CUSTOM1',
+        class: 'custom'
+    }, {
+        label: 'CUSTOM2',
+        class: 'custom'
     }]
 };
 
@@ -514,11 +520,11 @@ exports.Dashboard = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(/*! react */ 20);
+var _react = __webpack_require__(/*! react */ 16);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _widget = __webpack_require__(/*! ./widget */ 89);
+var _widget = __webpack_require__(/*! ./widget */ 92);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -599,7 +605,7 @@ exports.default = {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../~/css-loader!./layout.css */ 91);
+var content = __webpack_require__(/*! !../../~/css-loader!./layout.css */ 94);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -607,7 +613,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(/*! ../../~/style-loader/lib/addStyles.js */ 192)(content, options);
+var update = __webpack_require__(/*! ../../~/style-loader/lib/addStyles.js */ 195)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -636,11 +642,9 @@ if(false) {
 "use strict";
 
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(/*! react */ 20);
+var _react = __webpack_require__(/*! react */ 16);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -672,12 +676,7 @@ var App = function (_React$Component) {
     function App() {
         _classCallCheck(this, App);
 
-        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
-
-        var src = { a: 1, b: 2, c: 3 };
-        var dst = { e: 'e', f: 'f', a: 'a' };
-        dst = _extends({}, src);
-        return _this;
+        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
     }
 
     _createClass(App, [{
@@ -710,6 +709,180 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ 89:
 /* no static exports found */
 /* all exports used */
+/*!************************************************!*\
+  !*** ./src/dashboard/default-widget/widget.js ***!
+  \************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.DefaultWidget = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ 16);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DefaultWidget = exports.DefaultWidget = function (_React$Component) {
+    _inherits(DefaultWidget, _React$Component);
+
+    function DefaultWidget() {
+        _classCallCheck(this, DefaultWidget);
+
+        return _possibleConstructorReturn(this, (DefaultWidget.__proto__ || Object.getPrototypeOf(DefaultWidget)).apply(this, arguments));
+    }
+
+    _createClass(DefaultWidget, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "content" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "sensors-main" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "sensor" },
+                        _react2.default.createElement(
+                            "h4",
+                            null,
+                            "Sensor 1"
+                        ),
+                        _react2.default.createElement(
+                            "div",
+                            { className: "progress" },
+                            _react2.default.createElement("div", { className: "bar", style: { width: '33%' } })
+                        )
+                    )
+                ),
+                _react2.default.createElement("div", { className: "sensors-extend" }),
+                _react2.default.createElement(
+                    "div",
+                    { className: "actions" },
+                    _react2.default.createElement(
+                        "button",
+                        null,
+                        "HEAT"
+                    ),
+                    _react2.default.createElement(
+                        "button",
+                        null,
+                        "BOIL"
+                    ),
+                    _react2.default.createElement(
+                        "button",
+                        null,
+                        "STANDBY"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return DefaultWidget;
+}(_react2.default.Component);
+
+/***/ }),
+
+/***/ 90:
+/* no static exports found */
+/* all exports used */
+/*!***********************************!*\
+  !*** ./src/dashboard/injector.js ***!
+  \***********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var globals = {};
+
+var Injector = function () {
+    function Injector(locals) {
+        _classCallCheck(this, Injector);
+
+        this.locals = locals || {};
+    }
+
+    _createClass(Injector, [{
+        key: "require",
+        value: function require(name) {
+            return this.locals[name] || globals[name] || undefined;
+        }
+    }]);
+
+    return Injector;
+}();
+
+function makeInjector(locals) {
+    return new Injector(locals);
+}
+
+function append(objects) {
+    globals = _extends({}, globals, objects);
+}
+
+exports.default = {
+    get: makeInjector,
+    append: append
+};
+
+/***/ }),
+
+/***/ 91:
+/* no static exports found */
+/* all exports used */
+/*!*****************************************!*\
+  !*** ./src/dashboard/widget-factory.js ***!
+  \*****************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var src = '\nvar React = require(\'react\');\n\nthis.renderView = function(){\nreturn React.createElement(\'div\',null,\'SCRIPT_VIEW\');\n}\nthis.renderPrefpane = function(){\n\n}\n';
+
+function getWidget(className) {
+    return new Function('require,config', src);
+}
+
+exports.default = {
+    getWidget: getWidget
+};
+
+/***/ }),
+
+/***/ 92:
+/* no static exports found */
+/* all exports used */
 /*!*********************************!*\
   !*** ./src/dashboard/widget.js ***!
   \*********************************/
@@ -725,9 +898,19 @@ exports.Widget = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(/*! react */ 20);
+var _react = __webpack_require__(/*! react */ 16);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _injector = __webpack_require__(/*! ./injector */ 90);
+
+var _injector2 = _interopRequireDefault(_injector);
+
+var _widgetFactory = __webpack_require__(/*! ./widget-factory */ 91);
+
+var _widgetFactory2 = _interopRequireDefault(_widgetFactory);
+
+var _widget = __webpack_require__(/*! ./default-widget/widget */ 89);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -737,6 +920,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+_injector2.default.append({ 'react': _react2.default });
+
 var Widget = exports.Widget = function (_React$Component) {
     _inherits(Widget, _React$Component);
 
@@ -745,74 +930,92 @@ var Widget = exports.Widget = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Widget.__proto__ || Object.getPrototypeOf(Widget)).call(this));
 
+        _this.state = {
+            mode: 'widget'
+        };
         _this.header = props.config.label;
         _this.subheader = props.config.description;
-        _this.class = props.config.class;
+        var className = props.config.class || 'default';
+        if (className === 'default') {
+            _this.widget = _widget.DefaultWidget;
+        } else {
+            var widgetFn = _widgetFactory2.default.getWidget(_this.class);
+            var injector = _injector2.default.get();
+
+            _this.widget = function (_React$Component2) {
+                _inherits(_class, _React$Component2);
+
+                function _class(props) {
+                    _classCallCheck(this, _class);
+
+                    var _this2 = _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).call(this));
+
+                    var _render = _this2.render;
+                    var _componentWillMount = _this2.componentnWillMount;
+                    var _componentDidMount = _this2.componentDidMount;
+                    widgetFn.apply(_this2, [function (name) {
+                        return injector.require(name);
+                    }, props.config]);
+                    _this2.componentDidMount = _componentDidMount;
+                    _this2.componentWillMount = _componentWillMount;
+                    _this2.render = _render;
+                    return _this2;
+                }
+
+                _createClass(_class, [{
+                    key: 'render',
+                    value: function render() {
+                        if (this.renderView) return this.renderView();
+                        return _react2.default.createElement(
+                            'div',
+                            null,
+                            'CUSTOM_VIEW'
+                        );
+                    }
+                }]);
+
+                return _class;
+            }(_react2.default.Component);
+        }
         return _this;
     }
 
     _createClass(Widget, [{
-        key: "render",
+        key: 'handlePrefClick',
+        value: function handlePrefClick() {
+            this.setState({ mode: 'pref' });
+        }
+    }, {
+        key: 'render',
         value: function render() {
+            var _this3 = this;
+
+            console.log('RENDER');
             return _react2.default.createElement(
-                "div",
-                { className: "widget" },
+                'div',
+                { className: 'widget' },
                 _react2.default.createElement(
-                    "div",
-                    { className: "header" },
+                    'div',
+                    { className: 'header' },
                     _react2.default.createElement(
-                        "h2",
+                        'i',
+                        { className: 'btnConfig', onClick: function onClick() {
+                                return _this3.handlePrefClick();
+                            } },
+                        '*'
+                    ),
+                    _react2.default.createElement(
+                        'h2',
                         null,
                         this.header
                     ),
                     _react2.default.createElement(
-                        "h3",
+                        'h3',
                         null,
                         this.subheader
                     )
                 ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "content" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "sensors-main" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "sensor" },
-                            _react2.default.createElement(
-                                "h4",
-                                null,
-                                "Sensor 1"
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "progress" },
-                                _react2.default.createElement("div", { className: "bar", style: { width: '33%' } })
-                            )
-                        )
-                    ),
-                    _react2.default.createElement("div", { className: "sensors-extend" }),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "actions" },
-                        _react2.default.createElement(
-                            "button",
-                            null,
-                            "HEAT"
-                        ),
-                        _react2.default.createElement(
-                            "button",
-                            null,
-                            "BOIL"
-                        ),
-                        _react2.default.createElement(
-                            "button",
-                            null,
-                            "STANDBY"
-                        )
-                    )
-                )
+                _react2.default.createElement(this.widget, { mode: this.state.mode })
             );
         }
     }]);
@@ -822,7 +1025,7 @@ var Widget = exports.Widget = function (_React$Component) {
 
 /***/ }),
 
-/***/ 91:
+/***/ 94:
 /* no static exports found */
 /* all exports used */
 /*!*******************************************!*\
@@ -830,19 +1033,19 @@ var Widget = exports.Widget = function (_React$Component) {
   \*******************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 92)(undefined);
+exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 95)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "html,body,root{\n    margin: 0px;\n    padding: 0px;\n}\n\n.appbar{\n    padding: 0px 1em;\n    background-color: cornflowerblue;\n}\n.appbar h1{\n    padding: 0px;\n    margin: 0px;\n}\n.dashboard{\n    display: flex;\n}\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}\n\n\n.progress{\n    display: block;\n    height: 10px;\n    position: relative;\n    border:1px solid gray;\n    margin: 0px 0px;\n}\n\n.progress>.bar{\n    display: block;\n    position: absolute;\n    top:0px;\n    left: 0px;\n    height: 100%;\n    background-color: orangered;\n}\n\n.widget .actions{\n    display: flex;\n    justify-content: space-around;\n    align-items: stretch;\n}", ""]);
+exports.push([module.i, "html,body,root{\n    margin: 0px;\n    padding: 0px;\n}\n\n.appbar{\n    padding: 0px 1em;\n    background-color: cornflowerblue;\n}\n.appbar h1{\n    padding: 0px;\n    margin: 0px;\n}\n.dashboard{\n    display: flex;\n}\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}\n\n.widget .header .btnConfig{\n    float:right;\n}\n\n\n.progress{\n    display: block;\n    height: 10px;\n    position: relative;\n    border:1px solid gray;\n    margin: 0px 0px;\n}\n\n.progress>.bar{\n    display: block;\n    position: absolute;\n    top:0px;\n    left: 0px;\n    height: 100%;\n    background-color: orangered;\n}\n\n.widget .actions{\n    display: flex;\n    justify-content: space-around;\n    align-items: stretch;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 92:
+/***/ 95:
 /* no static exports found */
 /* all exports used */
 /*!**************************************!*\

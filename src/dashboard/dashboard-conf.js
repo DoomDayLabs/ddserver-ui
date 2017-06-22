@@ -7,6 +7,7 @@ export default {
             config:{
                 sensors:[
                     {
+                        view:'main',
                         title:'Temperature',
                         sensor:'device1.sensor1'                        
                     }

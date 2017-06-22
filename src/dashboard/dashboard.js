@@ -3,8 +3,7 @@ import {Widget} from './widget';
 
 export class Dashboard extends React.Component{
     constructor(props){
-        super();
-        console.log(props);        
+        super();              
     }
     render(){
         

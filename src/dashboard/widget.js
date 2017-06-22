@@ -32,8 +32,15 @@ export class Widget extends React.Component{
                     this.render = _render;
                 }
                 render(){
-                    if (this.renderView) return this.renderView();
-                    return <div>CUSTOM_VIEW</div>
+                    if (this.props.mode==='widget'){
+                        if (this.renderView) return this.renderView()
+                        else return <div>VIEW_NOT_FOUND</div>
+                    } else {
+                        if (this.renderPrefpane) return this.renderPrefpane()
+                        else return <div>PREFPANE_NOT_FOUND</div>
+                    }
+                    
+                    
                 }
             }
             
@@ -41,7 +48,8 @@ export class Widget extends React.Component{
         }        
     }
     handlePrefClick(){
-        this.setState({mode:'pref'});
+        
+        this.setState(this.state.mode==='pref'?{mode:'widget'}:{mode:'pref'});
     }
     render(){
         console.log('RENDER');
@@ -54,7 +62,7 @@ export class Widget extends React.Component{
                             
                         </div>
       
-                        <this.widget mode={this.state.mode}/>
+                        <this.widget mode={this.state.mode} config={this.props.config.config}/>
            
                     </div>
                 )
