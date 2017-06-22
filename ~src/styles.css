@@ -1,0 +1,19 @@
+.progress{
+    display: block;
+    width: 100px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress>.bar{
+    display: block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    background-color: aquamarine;
+}

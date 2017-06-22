@@ -1,0 +1,52 @@
+html,body,root{
+    margin: 0px;
+    padding: 0px;
+}
+
+.appbar{
+    padding: 0px 1em;
+    background-color: cornflowerblue;
+}
+.appbar h1{
+    padding: 0px;
+    margin: 0px;
+}
+.dashboard{
+    display: flex;
+}
+
+.dashboard .widget{
+    display: inline-block;
+    width: 300px;
+    min-height: 10px;
+    border: 1px dashed black;
+    margin:5px;
+}
+
+.widget .header .btnConfig{
+    float:right;
+}
+
+
+.progress{
+    display: block;
+    height: 10px;
+    position: relative;
+    border:1px solid gray;
+    margin: 0px 0px;
+}
+
+.progress>.bar{
+    display: block;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    background-color: orangered;
+}
+
+.widget .actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}

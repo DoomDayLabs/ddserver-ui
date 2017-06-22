@@ -1,0 +1,33 @@
+export default [
+    {
+        name:'device1',
+        sensors:[
+            {
+                name:'sensor1',
+                type:'int',
+                min:0,
+                max:100
+            },
+            {
+                name:'sensor2',
+                type:'float',
+                min:0.0,
+                max:3.14                
+            },
+            {
+                name:'sensor3',
+                type:'str'
+            },
+            {
+                name:'sensor4',
+                type:'val',
+                options:['OPTION1','OPTION2','OPTION3']
+            },
+            {
+                name:'sensor5',
+                type:'flag',
+                flags:['FLAG1','FLAG2','FLAG3','FLAG4']
+            }
+        ]
+    }
+];
