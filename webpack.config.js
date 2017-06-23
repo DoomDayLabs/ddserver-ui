@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 var HtmlPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry:{
         app:'./src/app.js',
@@ -21,16 +22,19 @@ module.exports = {
                 use:'html-loader'
             },
             {
-                test:/\.(css)$/,
-                use:['style-loader','css-loader']
+                test:/\.(css|scss)$/,
+                //use:['style-loader',{loader:'css-loader',options:{modules:true,sourceMap:true,importLoaders:1,localIdentName: "[name]--[local]--[hash:base64:8]"}},'sass-loader',"postcss-loader"]
+                //use:['style-loader',{loader:'css-loader',options:{modules:true,sourceMap:true,importLoaders:1,localIdentName: "[name]"}},'sass-loader',"postcss-loader"]
+                use:['style-loader','css-loader','postcss-loader']
             }
         ]
     },
     resolve:{
-        extensions:['.js','.htmls','.css']
+        extensions:['.js','.htmls','.css','.scss']
     },
     plugins:[
       //new webpack.optimize.CommonsChunkPlugin({names: ["apps","vendor"]}),
+      new webpack.NamedModulesPlugin(),
       new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
       new HtmlPlugin({
         title: 'Test APP',
@@ -46,7 +50,7 @@ module.exports = {
     },
     devServer:{
         host:'0.0.0.0',
-        contentBase:'./dist/',
+        contentBase:[path.join(__dirname,'./dist/'),path.join(__dirname,'./conf/'),path.join(__dirname,'./ext/')],
         disableHostCheck: true
     }
 }
