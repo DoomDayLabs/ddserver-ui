@@ -1,72 +1,8 @@
 import React from 'react';
 import DeviceManager from '../../device/device-manager';
-
-class IntSensor extends React.Component{
-    constructor(props){
-        super();
-        this.min = props.def.min;
-        this.max = props.def.max-props.def.min;        
-        
-    }
-    render(){         
-        let v = (this.props.value-this.min)/this.max*100;                        
-        return (
-            <div className="sensor sensor-number">
-                <h4>{this.props.config.title}</h4>
-                <div className="progress">                                        
-                    <div className="bar" style={{width:v+'%'}}></div>
-                </div>        
-            </div>
-            )
-    }
-}
-class StrSensor extends React.Component{
-    
-    render(){        
-        return (
-            <div className="sensor sensor-str">
-                <h4>{this.props.config.title}</h4>
-                <div>this.props.value</div>
-            </div>
-        )
-    }    
-}
-
-class ValSensor extends React.Component{
-    constructor(props){
-        super();
-        this.options = props.def.options;
-    }
-    render(){
-        return (
-            <div className="sensor sensor-val">
-                <h4>{this.props.config.title}</h4>
-                <div className="options">
-                {this.options.map((o,i)=><span key={i} className={(()=>i==this.props.value?'option active':'option')()}>{o}</span>)}
-                </div>                
-            </div>
-        )
-    }
-}
-
-class FlagSensor extends React.Component{
-    constructor(props){
-        super();
-        this.flags = props.def.flags;
-    }
-    
-    render(){
-        return(
-            <div className="sensor sensor-flag">
-                <h4>{this.props.config.title}</h4>
-                <div className="flags">
-                {this.flags.map((f,i)=><span key={i} className={(()=>((1<<i)&this.props.value)>0?'flag active':'flag')()}>{f}</span>)}
-                </div>
-            </div>
-        )
-    }
-}
-
+import classNames from 'classnames';
+import {IntSensor,StrSensor,ValSensor,FlagSensor} from './sensors';
+import {TriggerArgPane} from './triggerargpane';
 
 
 export class DefaultWidget extends React.Component{ 
@@ -76,13 +12,16 @@ export class DefaultWidget extends React.Component{
         this.setState(state);
         
     }
+    
     constructor(props){
         super();
         //console.log(props);
         this.sensorsMain = [];
         this.sensorsExtend = [];
         this.sensors = new Map();
-        let state = {};
+        this.triggers = [...props.config.triggers];
+        
+        let state = {activeTrigger:null};
         (props.config.sensors||[]).forEach((s)=>{
             let sensor = DeviceManager.getSensor(s.sensor);
             state[sensor.def().UID] = 0;
@@ -98,7 +37,32 @@ export class DefaultWidget extends React.Component{
         this.state = state;
     }
     
+    handleActionClick(t){
+       
+        let trigger = DeviceManager.getTrigger(t.trigger);
+       
+        let def = trigger.def();
+        if ((def.params||[]).length==0){
+            trigger.call();
+        } else {
+            var state = {
+                activeTrigger:{
+                    def:def,
+                    trig:trigger,
+                    trigger:t
+                }
+            };
+            this.setState(state);
+        }
+        
+    }
+    
+    handleTriggerCall(trigger,values){        
+        trigger.trig.call(values);
+        this.setState({activeTrigger:null});
+    }
     render(){
+                
         if (this.props.mode==='widget')
         return (
             <div className="content">
@@ -116,11 +80,14 @@ export class DefaultWidget extends React.Component{
                 </div>
                 <div className="sensors-extend">
                 </div>
-                <div className="actions">
-                    <button>HEAT</button>
-                    <button>BOIL</button>
-                    <button>STANDBY</button>
+                <div className="actions">   
+                {this.triggers.map((t,k)=>{
+                    return <button key={k} onClick={()=>{this.handleActionClick(t)}}>{t.title}</button>
+                })}                    
                 </div>
+                <div className={classNames({'trigger-param-pane':true,'active':this.state.activeTrigger!=null})}>                
+                    <TriggerArgPane onCancel={()=>this.setState({activeTrigger:null})} onCall={(valuesArray)=>this.handleTriggerCall(this.state.activeTrigger,valuesArray)} trigger={this.state.activeTrigger}/>             
+                </div>                
             </div>        
         )
         else

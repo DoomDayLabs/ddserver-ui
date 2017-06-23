@@ -1,16 +1,36 @@
 import DeviceConf from './device-conf';
 class Trigger {
+    
     constructor(def,UID){
-        this.def = {UID,...def}    
-    }
-    
-    def(){
-        return {...def}
-    }
-    
-    call(...args){
+        let stateSubs = [];
+        let adef = {UID,...def}    
+        let state = {
+            enabled:true
+        };
+        let notify = ()=>{
+            stateSubs.forEach((s)=>s(state));   
+        }
         
+        this.def = ()=>{return {...adef}};
+        this.call = (args)=>{
+            console.log('Call '+adef.name+' with',args);
+        }
+        this.onState = (callback)=>{
+            stateSubs.push(callback);
+        }
+        this.enable = ()=>{
+            state.enabled = true;
+            notify();
+        }
+        this.disable = ()=>{
+            state.enabled = false;
+            notify();
+        }
     }
+    
+    
+        
+    
 }
 
 class Sensor {
@@ -58,7 +78,7 @@ function addDevice(device){
         let UID = device.name+'.'+s.name;
         sensors.set(UID, new Sensor(s,0,UID));
     });
-    (device.triggets||[]).forEach((t)=>{
+    (device.triggers||[]).forEach((t)=>{
         let UID = device.name+'.'+t.name;
         triggers.set(UID,new Trigger(t,UID));
     })

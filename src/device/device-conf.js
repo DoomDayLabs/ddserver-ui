@@ -29,6 +29,9 @@ export default {
             ],
             triggers:[
                 {
+                    name:'boil'                                    
+                },
+                {
                     name:'heat',
                     params:[
                         {

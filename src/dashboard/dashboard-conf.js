@@ -26,7 +26,17 @@ export default {
                         title:'Flags',
                         sensor:'device1.flagsensor'
                     }
-                ]                                           
+                ],
+                triggers:[
+                    {
+                        title:'Heat',
+                        trigger:'device1.heat'
+                    },
+                    {
+                        title:'Boil',
+                        trigger:'device1.boil'
+                    }
+                ]
             }            
         },
         {

@@ -1,3 +1,6 @@
+.widget .content{
+    position: relative;
+}
 .sensor.sensor-val .options{
     display:flex;
     flex-direction: row;
@@ -49,4 +52,47 @@
 
 .sensor.sensor-flag .flags .flag.active:before{
     content:'☑︎';
+}
+
+.widget .content .trigger-param-pane{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: cornflowerblue;
+    height: 0%;
+    transition:height 100ms 100ms linear;
+    overflow: hidden;
+}
+
+.widget .content .trigger-param-pane.active{
+    height: 100%;
+}
+.trigger-parampane-view{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.trigger-parampane-view>.content{
+    flex-grow: 1;
+}
+.trigger-parampane-view>.actions{
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+
+.slider {
+    position:absolute;    
+    height:10px;
+    width:300px;
+    background-color:green;
+}
+
+.slider .handle {
+    position:absolute;
+    height:10px;
+    width:20px;
+    background-color:red;
 }
