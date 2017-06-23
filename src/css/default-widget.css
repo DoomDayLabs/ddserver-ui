@@ -1,0 +1,52 @@
+.sensor.sensor-val .options{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+}
+.sensor.sensor-val .options .option{
+    border-radius: 100px;
+    
+    padding: 0.1em 0.5em;
+    border:1px dotted black;    
+}
+
+.sensor.sensor-val .options .option:before{
+    content: '◻︎'
+}
+
+.sensor.sensor-val .options .option.active{
+    border-color:green;
+    background-color: aquamarine;
+}
+
+.sensor.sensor-val .options .option.active:before{
+    content: '☑︎'
+}
+
+.sensor.sensor-flag .flags{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+}
+
+.sensor.sensor-flag .flags .flag{
+    border-radius: 100px;
+    
+    padding: 0.1em 0.5em;
+    border:1px dotted black;
+}
+
+.sensor.sensor-flag .flags .flag:before{
+    content:'◻︎';
+}
+
+.sensor.sensor-flag .flags .flag.active{
+    border-color:green;
+    background-color: aquamarine;
+}
+
+.sensor.sensor-flag .flags .flag.active:before{
+    content:'☑︎';
+}

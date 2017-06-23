@@ -10,6 +10,21 @@ export default {
                         view:'main',
                         title:'Temperature',
                         sensor:'device1.sensor1'                        
+                    },
+                    {
+                        view:'main',
+                        title:'Level',
+                        sensor:'device1.sensor2'
+                    },
+                    {
+                        view:'main',
+                        title:'State',
+                        sensor:'device1.state'
+                    },
+                    {
+                        view:'main',
+                        title:'Flags',
+                        sensor:'device1.flagsensor'
                     }
                 ]                                           
             }            

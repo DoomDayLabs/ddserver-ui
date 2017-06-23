@@ -9,6 +9,36 @@ export default {
                     type:'int',
                     min:0,
                     max:100
+                },
+                {
+                    name:'sensor2',
+                    type:'float',
+                    min:0,
+                    max:10
+                },
+                {
+                    name:'state',
+                    type:'val',
+                    options:['STANDBY','HEAT','BOIL']                            
+                },
+                {
+                    name:'flagsensor',
+                    type:'flag',
+                    flags:['FLAG_1','FLAG_2','FLAG_3']
+                }
+            ],
+            triggers:[
+                {
+                    name:'heat',
+                    params:[
+                        {
+                            name:'TARGET',
+                            type:'int',
+                            min:20,
+                            max:95
+                        }
+                    ]
+
                 }
             ]
         }

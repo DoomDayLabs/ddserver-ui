@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Dashboard} from './dashboard/dashboard'
 import './css/layout';
+import './css/default-widget';
 import './device/device-conf';
+
 import dashboardConf from './dashboard/dashboard-conf';
 
 class App extends React.Component{

@@ -52,7 +52,7 @@ export class Widget extends React.Component{
         this.setState(this.state.mode==='pref'?{mode:'widget'}:{mode:'pref'});
     }
     render(){
-        console.log('RENDER');
+        
         return (
                     <div className="widget">                    
                         <div className="header">

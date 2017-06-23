@@ -1,4 +1,18 @@
 import DeviceConf from './device-conf';
+class Trigger {
+    constructor(def,UID){
+        this.def = {UID,...def}    
+    }
+    
+    def(){
+        return {...def}
+    }
+    
+    call(...args){
+        
+    }
+}
+
 class Sensor {
     
     constructor(sensorDef,value,UID){
@@ -22,6 +36,8 @@ class Sensor {
     
 }
 var sensors = new Map();
+var triggers = new Map();
+
 DeviceConf.devices.forEach((d)=>addDevice(d));
 
 
@@ -42,13 +58,22 @@ function addDevice(device){
         let UID = device.name+'.'+s.name;
         sensors.set(UID, new Sensor(s,0,UID));
     });
+    (device.triggets||[]).forEach((t)=>{
+        let UID = device.name+'.'+t.name;
+        triggers.set(UID,new Trigger(t,UID));
+    })
 }
 
 function getSensor(name){
     return sensors.get(name)||null;
 }
 
+function getTrigger(name){
+    return triggers.get(name)||null;
+}
+
 export default{
     addDevice:addDevice,
-    getSensor:getSensor
+    getSensor:getSensor,
+    getTrigger:getTrigger
 }
