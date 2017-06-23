@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/.bin/webpack --progress",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --public"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
     "jquery": "^3.2.1",
+    "material-design-icons": "^3.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",

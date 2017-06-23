@@ -2,7 +2,8 @@ import React from 'react';
 import Injector from './injector';
 import WidgetFactory from './widget-factory';
 import {DefaultWidget} from './default-widget/widget';
-Injector.append({'react':React});
+import ReactSlider from 'react-slider';
+Injector.append({'react':React,'react-slider':ReactSlider});
 
 export class Widget extends React.Component{
   
