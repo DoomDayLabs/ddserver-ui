@@ -2,7 +2,10 @@ html,body,root{
     margin: 0px;
     padding: 0px;
 }
-
+:global{
+    @import 'material-design-icons/iconfont/material-icons';
+}
+/*
 .appbar{
     padding: 0px 1em;
     background-color: cornflowerblue;
@@ -11,10 +14,7 @@ html,body,root{
     padding: 0px;
     margin: 0px;
 }
-.dashboard{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 .dashboard .widget{
     display: inline-block;
@@ -29,26 +29,12 @@ html,body,root{
 }
 
 
-.progress{
-    display: block;
-    height: 10px;
-    position: relative;
-    border:1px solid gray;
-    margin: 0px 0px;
-}
 
-.progress>.bar{
-    display: block;
-    position: absolute;
-    top:0px;
-    left: 0px;
-    height: 100%;
-    background-color: orangered;
-    transition:width 90ms 0ms ease;
-}
+
 
 .widget .actions{
     display: flex;
     justify-content: space-around;
     align-items: stretch;
 }
+*/

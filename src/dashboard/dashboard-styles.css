@@ -1,0 +1,12 @@
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.dashboard .widget{
+    display: inline-block;
+    width: 300px;
+    min-height: 10px;
+    border: 1px dashed black;
+    margin:5px;
+}

@@ -1,16 +1,32 @@
 import React from 'react';
 import ReactSlider from 'react-slider';
+import css from './trigger-styles';
+import {Button} from 'react-toolbox/lib/button';
+import Slider from 'react-toolbox/lib/slider';
 
+export var style=css;
 class ParamSetter extends React.Component{
+    
+
+    handleChange(value){
+        console.log(value);
+        this.setState({value:value});
+        this.props.onValue?this.props.onValue(value):null;
+    }
     constructor(props){
         super();
+        this.state = {value:0}
         console.log(props);
         this.def = props.param;
         this.component = <div>PARAMSETTER</div>   
-        this.component = <ReactSlider onChange={(v)=>this.props.onValue?this.props.onValue(v):null}/>
+        //this.component = <ReactSlider onChange={(v)=>this.props.onValue?this.props.onValue(v):null}/>
+        //this.component = <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>        
     }
     render(){
-        return this.component
+        if (this.def.type==='int'){
+            return <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>;
+        }
+        return this.component;
     }
 }
 
@@ -46,8 +62,8 @@ export class TriggerArgPane extends React.Component{
         let params = this.props.trigger.def.params||[];
         
         return (            
-            <div className='trigger-parampane-view' >
-                <div className='content'>
+            <div className={css.view} >
+                <div className={css.content}>
                 {params.map((p,i)=>{                    
                     return (
                         <div key={i} className="param-contailer">
@@ -57,9 +73,10 @@ export class TriggerArgPane extends React.Component{
                     )
                 })}
                 </div>
-                <div className='actions'>
-                    <button onClick={()=>this.handleCancel()}>Cancel</button>
-                    <button onClick={()=>this.handleCall()}>{this.props.trigger.trigger.title}</button>
+                <div className={css.actions}>
+                    
+                    <Button onClick={()=>this.handleCancel()} label="Cancel" raised/>
+                    <Button onClick={()=>this.handleCall()} label={this.props.trigger.trigger.title} raised />
                 </div>
             </div>
             )

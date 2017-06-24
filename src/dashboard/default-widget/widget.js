@@ -3,7 +3,8 @@ import DeviceManager from '../../device/device-manager';
 import classNames from 'classnames';
 import {IntSensor,StrSensor,ValSensor,FlagSensor} from './sensors';
 import {TriggerArgPane} from './triggerargpane';
-
+import {Button} from 'react-toolbox/lib/button';
+import css from './widget-styles';
 
 export class DefaultWidget extends React.Component{ 
     refreshSensor(val,name){
@@ -65,7 +66,7 @@ export class DefaultWidget extends React.Component{
                 
         if (this.props.mode==='widget')
         return (
-            <div className="content">
+            <div className={css.content}>
                 <div className="sensors-main">
                 {this.sensorsMain.map((s,k)=>{                    
                     let def = this.sensors.get(s).def();                    
@@ -80,12 +81,12 @@ export class DefaultWidget extends React.Component{
                 </div>
                 <div className="sensors-extend">
                 </div>
-                <div className="actions">   
+                <div className={css.actions}>   
                 {this.triggers.map((t,k)=>{
-                    return <button key={k} onClick={()=>{this.handleActionClick(t)}}>{t.title}</button>
+                    return <Button key={k} onClick={()=>{this.handleActionClick(t)}} label={t.title} raised />
                 })}                    
                 </div>
-                <div className={classNames({'trigger-param-pane':true,'active':this.state.activeTrigger!=null})}>                
+                <div className={(()=>this.state.activeTrigger==null?css.triggerParamPane:css.triggerParamPane_active)()} >
                     <TriggerArgPane onCancel={()=>this.setState({activeTrigger:null})} onCall={(valuesArray)=>this.handleTriggerCall(this.state.activeTrigger,valuesArray)} trigger={this.state.activeTrigger}/>             
                 </div>                
             </div>        

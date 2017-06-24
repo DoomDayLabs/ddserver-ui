@@ -1,0 +1,94 @@
+
+.sensor_number{
+
+}
+
+
+.progress{
+    display: block;
+    height: 10px;
+    position: relative;
+    border:1px solid gray;
+    margin: 0px 0px;    
+}
+
+.progress>.bar{
+        display: block;
+        position: absolute;
+        top:0px;
+        left: 0px;
+        height: 100%;
+        background-color: orangered;
+        transition:width 90ms 0ms ease;
+}
+
+
+.sensor_val{
+
+}
+.sensor_val .options{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+}
+.sensor_val .options .option{
+    border-radius: 100px;   
+    padding: 0.1em 0.5em;
+    border:1px dotted black;    
+}
+
+.sensor_val .options .option:before{
+    content: '◻︎'
+}
+
+.option_active{
+    @extend .sensor_val .options .option;
+    border-color:green;
+    background-color: aquamarine;
+}
+
+.option_active:before{
+    content: '☑︎'
+}
+
+
+.sensor_flag{
+
+}
+.sensor_flag .flags{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+}
+
+.sensor_flag .flags .flag{
+    border-radius: 100px;    
+    padding: 0.1em 0.5em;
+    border:1px dotted black;
+}
+
+.sensor_flag .flags .flag:before{
+    content:'◻︎';
+}
+
+
+
+
+
+
+
+:global .slider {
+    position:absolute;    
+    height:10px;
+    width:300px;
+    background-color:green;
+}
+
+:global .slider .handle {
+    position:absolute;
+    height:10px;
+    width:20px;
+    background-color:red;
+}

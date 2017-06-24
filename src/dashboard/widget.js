@@ -3,8 +3,10 @@ import Injector from './injector';
 import WidgetFactory from './widget-factory';
 import {DefaultWidget} from './default-widget/widget';
 import ReactSlider from 'react-slider';
-Injector.append({'react':React,'react-slider':ReactSlider});
+import styles from './widget-styles';
+import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 
+Injector.append({'react':React,'react-slider':ReactSlider});
 export class Widget extends React.Component{
   
     constructor(props){
@@ -12,6 +14,7 @@ export class Widget extends React.Component{
         this.state = {
            mode:'widget' 
         };
+        
         this.header = props.config.label;
         this.subheader = props.config.description;
         let className = props.config.class||'default'; 
@@ -55,9 +58,10 @@ export class Widget extends React.Component{
     render(){
         
         return (
-                    <div className="widget">                    
-                        <div className="header">
-                            <i className="btnConfig" onClick={()=>this.handlePrefClick()}>*</i>
+                    <div className={styles.widget}>                    
+                        <div className={styles.header}>
+                            <i className="material-icons" onClick={()=>this.handlePrefClick()}></i>
+                            
                             <h2>{this.header}</h2>
                             <h3>{this.subheader}</h3>
                             

@@ -1,0 +1,23 @@
+.content{
+    position: relative;
+}
+.triggerParamPane{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    height: 0%;
+    transition:height 100ms 100ms linear;
+    overflow: hidden;
+}
+
+.triggerParamPane_active{
+    @extend .triggerParamPane;
+    height: 100%;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-around;
+}

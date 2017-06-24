@@ -25,7 +25,11 @@ module.exports = {
                 test:/\.(css|scss)$/,
                 //use:['style-loader',{loader:'css-loader',options:{modules:true,sourceMap:true,importLoaders:1,localIdentName: "[name]--[local]--[hash:base64:8]"}},'sass-loader',"postcss-loader"]
                 //use:['style-loader',{loader:'css-loader',options:{modules:true,sourceMap:true,importLoaders:1,localIdentName: "[name]"}},'sass-loader',"postcss-loader"]
-                use:['style-loader','css-loader','postcss-loader']
+                use:['style-loader',{loader:'css-loader',options:{modules:true,sourceMap:true,localIdentName:'[name]__[local]--[hash:base64:8]'}},'postcss-loader']
+            },
+            {
+                test:/\.(svg|woff|woff2|ttf|eot)$/,
+                use:'file-loader'
             }
         ]
     },
