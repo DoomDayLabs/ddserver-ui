@@ -10,7 +10,7 @@
     width: 100%;
     background-color: white;
     height: 0%;
-    transition:height 100ms 100ms linear;
+    transition:height 200ms 0ms ease-out;
     overflow: hidden;
 }
 

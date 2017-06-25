@@ -22,10 +22,13 @@ export class Widget extends React.Component{
         if (className==='default'){            
             this.widget = DefaultWidget;
         } else {
-            let widgetFn = WidgetFactory.getWidget(this.class);
+            //let widgetClass = WidgetFactory.getWidget(props.config.class);
+            
+            //let widgetFn = widgetClass.fn;
             let injector = Injector.get();            
-                        
-            this.widget = class extends React.Component{
+
+            this.widget = WidgetFactory.makeWidget(props.config.class,injector);      
+            this._widget = class extends React.Component{
                 constructor(props){
                     super();
                     let  _render = this.render;
@@ -64,8 +67,7 @@ export class Widget extends React.Component{
                             <IconMenu icon='more_vert' position='topRight' menuRipple>                        
                                 <MenuItem caption="Config" icon="settings" onClick={()=>this.handlePrefClick()}/>
                                 <MenuItem caption="Move" icon="swap_horiz"/>
-                                <MenuItem caption="Remove" icon="delete_forever"/>
-                                
+                                <MenuItem caption="Remove" icon="delete_forever"/>                                
                             </IconMenu>
                         </div>
                         <CardTitle

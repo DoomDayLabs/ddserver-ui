@@ -47,5 +47,8 @@
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
     "webpack-runtime-require": "^0.1.0"
+  },
+  "dependencies": {
+    "popsicle": "^9.1.0"
   }
 }

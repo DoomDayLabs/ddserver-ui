@@ -16,16 +16,17 @@ class ParamSetter extends React.Component{
     }
     constructor(props){
         super();
-        this.state = {value:0}
+        this.state = {value:null}
         console.log(props);
         this.def = props.param;
-        this.component = <div>PARAMSETTER</div>   
+        this.component = <div></div>   
         //this.component = <ReactSlider onChange={(v)=>this.props.onValue?this.props.onValue(v):null}/>
         //this.component = <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>        
     }
     render(){
+        console.log('Param props=',this.props);
         if (this.def.type==='int'){
-            return <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>;
+            return <Slider min={this.props.param.min} max={this.props.param.max} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>;
         }
         return this.component;
     }
@@ -57,7 +58,8 @@ export class TriggerArgPane extends React.Component{
     shouldComponentUpdate(){                
         return  this.props.trigger!=null;
     }
-    render(){             
+    render(){  
+        console.log('render');           
         if (this.props.trigger==null) return <span></span>
                     
         let params = this.props.trigger.def.params||[];

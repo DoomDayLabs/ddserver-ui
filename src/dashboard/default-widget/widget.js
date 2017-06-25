@@ -5,6 +5,7 @@ import {IntSensor,StrSensor,ValSensor,FlagSensor} from './sensors';
 import {TriggerArgPane} from './triggerargpane';
 import {Button} from 'react-toolbox/lib/button';
 import { CardMedia, CardText, CardActions } from 'react-toolbox/lib/card';
+import {Tab, Tabs} from 'react-toolbox';
 
 import css from './widget-styles';
 
@@ -89,14 +90,33 @@ export class DefaultWidget extends React.Component{
                 })}                    
                 </CardActions>
                 <div className={(()=>this.state.activeTrigger==null?css.triggerParamPane:css.triggerParamPane_active)()} >
-                    <TriggerArgPane onCancel={()=>this.setState({activeTrigger:null})} onCall={(valuesArray)=>this.handleTriggerCall(this.state.activeTrigger,valuesArray)} trigger={this.state.activeTrigger}/>             
+                    {(()=>{
+                        if (this.state.activeTrigger!=null)
+                            return <TriggerArgPane 
+                                onCancel={()=>this.setState({activeTrigger:null})} 
+                                onCall={(valuesArray)=>this.handleTriggerCall(this.state.activeTrigger,valuesArray)} 
+                                trigger={this.state.activeTrigger}/>             
+                    })()}
                 </div>                
             </div>        
         )
-        else
-        return <div className="configPane">
-                CONFIG_PANE                    
-               </div>
+        else{
+            
+            let handleTabChange = (index)=>{                
+                this.setState({activePrefTab:index})
+            }
+            return (
+                <Tabs index={this.state.activePrefTab} onChange={handleTabChange}>
+                    <Tab label="Prefs">
+                    </Tab>
+                    <Tab label="Sensors">
+                    </Tab>
+                    <Tab label="Actions">
+                    </Tab>
+                </Tabs>
+            )
+        }
+                
             
     }
 }

@@ -1,0 +1,1 @@
+console.log('WIDGET_2_SOURCE');
