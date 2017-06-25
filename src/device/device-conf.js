@@ -6,6 +6,7 @@ export default {
             sensors:[
                 {
                     name:'sensor1',
+                    char:'℃',
                     type:'int',
                     min:0,
                     max:100

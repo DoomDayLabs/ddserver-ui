@@ -5,6 +5,7 @@ import {DefaultWidget} from './default-widget/widget';
 import ReactSlider from 'react-slider';
 import styles from './widget-styles';
 import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
+import {IconMenu, MenuItem, MenuDivider } from 'react-toolbox/lib/menu';
 
 Injector.append({'react':React,'react-slider':ReactSlider});
 export class Widget extends React.Component{
@@ -51,24 +52,28 @@ export class Widget extends React.Component{
             
         }        
     }
-    handlePrefClick(){
-        
+    handlePrefClick(){        
         this.setState(this.state.mode==='pref'?{mode:'widget'}:{mode:'pref'});
     }
     render(){
         
         return (
-                    <div className={styles.widget}>                    
-                        <div className={styles.header}>
-                            <i className="material-icons" onClick={()=>this.handlePrefClick()}></i>
-                            
-                            <h2>{this.header}</h2>
-                            <h3>{this.subheader}</h3>
-                            
+                    <div className={styles.widget}>
+                    <Card >
+                        <div style={{position:'absolute',right:'1rem',top:'1rem',display:(()=>this.state.mode=='widget'?'block':'none')()}}>
+                            <IconMenu icon='more_vert' position='topRight' menuRipple>                        
+                                <MenuItem caption="Config" icon="settings" onClick={()=>this.handlePrefClick()}/>
+                                <MenuItem caption="Move" icon="swap_horiz"/>
+                                <MenuItem caption="Remove" icon="delete_forever"/>
+                                
+                            </IconMenu>
                         </div>
-      
-                        <this.widget mode={this.state.mode} config={this.props.config.config}/>
-           
+                        <CardTitle
+                            title={this.header}
+                            subtitle={this.subheader}
+                        />                              
+                        <this.widget mode={this.state.mode} config={this.props.config.config}/>           
+                    </Card>
                     </div>
                 )
     }

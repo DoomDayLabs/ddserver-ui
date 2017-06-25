@@ -9,11 +9,13 @@ export default {
                     {
                         view:'main',
                         title:'Temperature',
+                        displayValue:true,
+                        type:'radial',
                         sensor:'device1.sensor1'                        
                     },
                     {
                         view:'main',
-                        title:'Level',
+                        title:'Level',                        
                         sensor:'device1.sensor2'
                     },
                     {
@@ -29,11 +31,15 @@ export default {
                 ],
                 triggers:[
                     {
-                        title:'Heat',
+                        title:'Подогрев',
                         trigger:'device1.heat'
                     },
                     {
-                        title:'Boil',
+                        title:'Кипячение',
+                        trigger:'device1.boil'
+                    },
+                    {
+                        title:'Выкл',
                         trigger:'device1.boil'
                     }
                 ]

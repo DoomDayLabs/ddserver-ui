@@ -71,7 +71,7 @@ setInterval(()=>{
     if (val==0){
         inc = 1;
     }
-},100);
+},500);
 
 function addDevice(device){
     (device.sensors||[]).forEach((s)=>{        

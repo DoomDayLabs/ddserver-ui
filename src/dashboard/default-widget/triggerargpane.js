@@ -3,6 +3,7 @@ import ReactSlider from 'react-slider';
 import css from './trigger-styles';
 import {Button} from 'react-toolbox/lib/button';
 import Slider from 'react-toolbox/lib/slider';
+import {CardActions} from 'react-toolbox/lib/card';
 
 export var style=css;
 class ParamSetter extends React.Component{
@@ -73,11 +74,11 @@ export class TriggerArgPane extends React.Component{
                     )
                 })}
                 </div>
-                <div className={css.actions}>
+                <CardActions className={css.actions}>
                     
                     <Button onClick={()=>this.handleCancel()} label="Cancel" raised/>
                     <Button onClick={()=>this.handleCall()} label={this.props.trigger.trigger.title} raised />
-                </div>
+                </CardActions>
             </div>
             )
     }

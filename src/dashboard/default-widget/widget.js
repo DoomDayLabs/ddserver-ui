@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import {IntSensor,StrSensor,ValSensor,FlagSensor} from './sensors';
 import {TriggerArgPane} from './triggerargpane';
 import {Button} from 'react-toolbox/lib/button';
+import { CardMedia, CardText, CardActions } from 'react-toolbox/lib/card';
+
 import css from './widget-styles';
 
 export class DefaultWidget extends React.Component{ 
@@ -81,11 +83,11 @@ export class DefaultWidget extends React.Component{
                 </div>
                 <div className="sensors-extend">
                 </div>
-                <div className={css.actions}>   
+                <CardActions className={css.actions}>   
                 {this.triggers.map((t,k)=>{
-                    return <Button key={k} onClick={()=>{this.handleActionClick(t)}} label={t.title} raised />
+                    return <Button icon={t.icon} key={k} onClick={()=>{this.handleActionClick(t)}} label={t.title} raised />
                 })}                    
-                </div>
+                </CardActions>
                 <div className={(()=>this.state.activeTrigger==null?css.triggerParamPane:css.triggerParamPane_active)()} >
                     <TriggerArgPane onCancel={()=>this.setState({activeTrigger:null})} onCall={(valuesArray)=>this.handleTriggerCall(this.state.activeTrigger,valuesArray)} trigger={this.state.activeTrigger}/>             
                 </div>                

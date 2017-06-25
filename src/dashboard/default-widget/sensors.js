@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './sensor-styles';
 import ProgressBar from 'react-toolbox/lib/progress_bar';
+import Avatar from 'react-toolbox/lib/avatar';
+import Chip from 'react-toolbox/lib/chip';
 
 export class IntSensor extends React.Component{
     constructor(props){
@@ -11,10 +13,10 @@ export class IntSensor extends React.Component{
     }
     render(){         
         let v = (this.props.value-this.min)/this.max*100;                        
-
+        let displayValue = this.props.config.displayValue?<span style={{float:'right'}}>{this.props.value} {this.props.def.char}</span>:null;
         return (
-            <div className={style.sensor_number}>
-                <h4>{this.props.config.title}</h4>
+            <div className={style.sensor_number}>                
+                <h4>{this.props.config.title}{displayValue}</h4>
                 <ProgressBar min={this.props.def.min} max={this.props.def.max} type='linear' value={this.props.value} mode='determinate'/>                
             </div>
             )
@@ -42,7 +44,10 @@ export class ValSensor extends React.Component{
             <div className={style.sensor_val}>
                 <h4>{this.props.config.title}</h4>
                 <div className={style.options}>
-                {this.options.map((o,i)=><span key={i} className={(()=>i==this.props.value?style.option_active:style.option)()}>{o}</span>)}
+                {this.options.map((o,i)=>{
+                    let avatarIcon = i==this.props.value?"radio_button_checked":"radio_button_unchecked";
+                    return <Chip key={i}><Avatar style={{color:'black'}} icon={avatarIcon} /><span >{o}</span></Chip>
+                })}
                 </div>                
             </div>
         )
@@ -60,7 +65,10 @@ export class FlagSensor extends React.Component{
             <div className={style.sensor_flag}>
                 <h4>{this.props.config.title}</h4>
                 <div className={style.flags}>
-                {this.flags.map((f,i)=><span key={i} className={(()=>((1<<i)&this.props.value)>0?style.flag_active:style.flag)()}>{f}</span>)}
+                {this.flags.map((f,i)=>{
+                    let avatarIcon = ((1<<i)&this.props.value)>0?'check_box':'check_box_outline_blank';
+                    return <Chip key={i}><Avatar style={{color:'black'}}icon={avatarIcon} />{f}</Chip>                
+                })}
                 </div>
             </div>
         )
