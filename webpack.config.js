@@ -56,5 +56,8 @@ module.exports = {
         host:'0.0.0.0',
         contentBase:[path.join(__dirname,'./dist/'),path.join(__dirname,'./conf/'),path.join(__dirname,'./ext/')],
         disableHostCheck: true
+    },
+    externals: {
+        'conf/config':'require("cfg")'
     }
 }

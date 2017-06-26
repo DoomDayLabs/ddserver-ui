@@ -86,7 +86,7 @@ export class DefaultWidget extends React.Component{
                 </div>
                 <CardActions className={css.actions}>   
                 {this.triggers.map((t,k)=>{
-                    return <Button icon={t.icon} key={k} onClick={()=>{this.handleActionClick(t)}} label={t.title} raised />
+                    return <Button icon={t.icon} key={k} onClick={()=>{this.handleActionClick(t)}} label={t.title}  />
                 })}                    
                 </CardActions>
                 <div className={(()=>this.state.activeTrigger==null?css.triggerParamPane:css.triggerParamPane_active)()} >

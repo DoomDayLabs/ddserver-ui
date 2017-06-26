@@ -6,8 +6,12 @@ import ReactSlider from 'react-slider';
 import styles from './widget-styles';
 import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import {IconMenu, MenuItem, MenuDivider } from 'react-toolbox/lib/menu';
-
-Injector.append({'react':React,'react-slider':ReactSlider});
+import Input from 'react-toolbox/lib/input';
+Injector.append({
+    'react':React,
+    'react-slider':ReactSlider,
+    'react-toolbox/lib/input':require('react-toolbox/lib/input')
+});
 export class Widget extends React.Component{
   
     constructor(props){
@@ -27,30 +31,8 @@ export class Widget extends React.Component{
             //let widgetFn = widgetClass.fn;
             let injector = Injector.get();            
 
-            this.widget = WidgetFactory.makeWidget(props.config.class,injector);      
-            this._widget = class extends React.Component{
-                constructor(props){
-                    super();
-                    let  _render = this.render;
-                    let  _componentWillMount = this.componentnWillMount;
-                    let  _componentDidMount = this.componentDidMount;                    
-                    widgetFn.apply(this,[(name)=>injector.require(name),props.config]);
-                    this.componentDidMount = _componentDidMount;
-                    this.componentWillMount = _componentWillMount;
-                    this.render = _render;
-                }
-                render(){
-                    if (this.props.mode==='widget'){
-                        if (this.renderView) return this.renderView()
-                        else return <div>VIEW_NOT_FOUND</div>
-                    } else {
-                        if (this.renderPrefpane) return this.renderPrefpane()
-                        else return <div>PREFPANE_NOT_FOUND</div>
-                    }
-                    
-                    
-                }
-            }
+            this.widget = WidgetFactory.makeWidget(this,props.config.class,injector);      
+            
             
             
         }        
@@ -74,7 +56,7 @@ export class Widget extends React.Component{
                             title={this.header}
                             subtitle={this.subheader}
                         />                              
-                        <this.widget mode={this.state.mode} config={this.props.config.config}/>           
+                        <this.widget mode={this.state.mode} config={this.props.config.config}/>                                   
                     </Card>
                     </div>
                 )

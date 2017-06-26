@@ -8,32 +8,35 @@
                 "sensors":[
                     {
                         "view":"main",
-                        "title":"Temperature",
-                        "sensor":"device1.sensor1"                        
+                        "title":"Температура",
+                        "displayValue":true,
+                        "sensor":"device1.sensor1",
+                        "history":{
+                            "type":"graph"
+                        }                        
                     },
                     {
                         "view":"main",
-                        "title":"Level",
+                        "title":"Уровень воды",
                         "sensor":"device1.sensor2"
                     },
                     {
                         "view":"main",
-                        "title":"State",
+                        "title":"Режим",
                         "sensor":"device1.state"
-                    },
-                    {
-                        "view":"main",
-                        "title":"Flags",
-                        "sensor":"device1.flagsensor"
                     }
                 ],
                 "triggers":[
                     {
-                        "title":"Heat",
+                        "title":"Подогрев",
                         "trigger":"device1.heat"
                     },
                     {
-                        "title":"Boil",
+                        "title":"Кипятить",
+                        "trigger":"device1.boil"
+                    },
+                    {
+                        "title":"Выключить",
                         "trigger":"device1.boil"
                     }
                 ]
@@ -44,6 +47,14 @@
             "description":"Ом Мелафефом Бва Кха Ша",
             "class":"custom1"
         },        
+        {
+            "label":"Портал в ад",
+            "class":"custom2"
+        },        
+        {
+            "label":"Портал в ад",
+            "class":"custom2"
+        },                
         {
             "label":"Портал в ад",
             "class":"custom2"

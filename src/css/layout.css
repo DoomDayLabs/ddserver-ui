@@ -2,9 +2,6 @@ html,body,root{
     margin: 0px;
     padding: 0px;
 }
-:global{
-    @import 'material-design-icons/iconfont/material-icons';
-}
 /*
 .appbar{
     padding: 0px 1em;

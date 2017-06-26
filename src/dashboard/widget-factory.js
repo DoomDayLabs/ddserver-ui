@@ -16,7 +16,7 @@ class WidgetClass{
         let $name = name;
         let $js = jsSource;
         let $css = cssSource;
-        let $fn = new Function('require,config,React',$js);
+        let $fn = new Function('widget,require,config,React',$js);
 
         
         this.jsSource = ()=>$js;
@@ -41,7 +41,7 @@ function getWidget(className){
         
 }
 
-function makeWidget(className,injector){
+function makeWidget($this,className,injector){
     let widgetSource = classes.get(className);
     if (!widgetSource)
         return class extends React.Component{
@@ -58,7 +58,8 @@ function makeWidget(className,injector){
                     let  _render = this.render;
                     let  _componentWillMount = this.componentnWillMount;
                     let  _componentDidMount = this.componentDidMount;                    
-                    widgetFn.apply(this,[(name)=>injector.require(name),props.config,React]);
+                    this.state = {};
+                    widgetFn.apply(this,[this,(name)=>injector.require(name),props.config,React]);
                     this.componentDidMount = _componentDidMount;
                     this.componentWillMount = _componentWillMount;
                     this.render = _render;

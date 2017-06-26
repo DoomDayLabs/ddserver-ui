@@ -21,12 +21,15 @@ class ParamSetter extends React.Component{
         this.def = props.param;
         this.component = <div></div>   
         //this.component = <ReactSlider onChange={(v)=>this.props.onValue?this.props.onValue(v):null}/>
-        //this.component = <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>        
+        //this.component = <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>     
+        switch (this.def.type){
+            case 'int':{this.state.value=this.def.min};break;
+        }   
     }
     render(){
         console.log('Param props=',this.props);
         if (this.def.type==='int'){
-            return <Slider min={this.props.param.min} max={this.props.param.max} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>;
+            return <Slider min={this.def.min} max={this.def.max} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>;
         }
         return this.component;
     }
@@ -76,10 +79,9 @@ export class TriggerArgPane extends React.Component{
                     )
                 })}
                 </div>
-                <CardActions className={css.actions}>
-                    
-                    <Button onClick={()=>this.handleCancel()} label="Cancel" raised/>
-                    <Button onClick={()=>this.handleCall()} label={this.props.trigger.trigger.title} raised />
+                <CardActions className={css.actions}>                    
+                    <Button onClick={()=>this.handleCancel()} label="Cancel" />
+                    <Button onClick={()=>this.handleCall()} label={this.props.trigger.trigger.title} />
                 </CardActions>
             </div>
             )

@@ -67,7 +67,7 @@ let inc = 1;
 setInterval(()=>{
     let s = sensors.get('device1.sensor1');
     if (s){
-        //s.put(val+=inc);
+        s.put(val+=inc);
     if (val==100){
         inc = -1
     }

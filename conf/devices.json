@@ -8,6 +8,7 @@
                     "name":"sensor1",
                     "char":"℃",
                     "type":"int",
+                    "char":"℃",
                     "min":0,
                     "max":100
                 },
@@ -20,7 +21,7 @@
                 {
                     "name":"state",
                     "type":"val",
-                    "options":["STANDBY","HEAT","BOIL"]                            
+                    "options":["ВЫКЛ","Подогрев","Кипячение"]                            
                 },
                 {
                     "name":"flagsensor",
@@ -36,7 +37,7 @@
                     "name":"heat",
                     "params":[
                         {
-                            "name":"TARGET",
+                            "name":"Подогреть до",
                             "type":"int",
                             "min":20,
                             "max":95

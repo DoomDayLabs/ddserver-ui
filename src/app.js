@@ -58,7 +58,7 @@ class App extends React.Component{
         }        
         return (
             <div>     
-                <AppBar leftIcon='menu' title="Doomsday Laboratories" />                                    
+                <AppBar leftIcon='menu' title="Doomsday Laboratories" />                                                    
                 {content}
             </div>
         );
