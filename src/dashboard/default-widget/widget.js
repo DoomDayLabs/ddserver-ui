@@ -1,7 +1,7 @@
 import React from 'react';
 import DeviceManager from '../../device/device-manager';
 import classNames from 'classnames';
-import {IntSensor,StrSensor,ValSensor,FlagSensor} from './sensors';
+import {IntSensor,StrSensor,ValSensor,FlagSensor,BoolSensor} from './sensors';
 import {TriggerArgPane} from './triggerargpane';
 import {Button} from 'react-toolbox/lib/button';
 import { CardMedia, CardText, CardActions } from 'react-toolbox/lib/card';
@@ -13,25 +13,40 @@ export class DefaultWidget extends React.Component{
     refreshSensor(val,name){
         let state = {};
         state[name] = val;
-        this.setState(state);
+        if (this.$mounted){
+            this.setState(state);        
+        } else {
+            for (let i in state){
+                this.state[i] = state[i];
+            }
+        }
         
     }
     
+    componentDidMount(){
+        console.log('Mounted');
+        this.$mounted = true;
+    }
+    componentWillUnmount(){
+        console.log('Unmount');
+        this.$mounted = false;
+    }
     constructor(props){
+        console.log('create');
         super();
+        this.$mounted = false;
         //console.log(props);
         this.sensorsMain = [];
         this.sensorsExtend = [];
         this.sensors = new Map();
         this.triggers = [...props.config.triggers];
         
-        let state = {activeTrigger:null};
+        let state = {activeTrigger:null,mounted:false};
         (props.config.sensors||[]).forEach((s)=>{
             let sensor = DeviceManager.getSensor(s.sensor);
             state[sensor.def().UID] = sensor.val();
             sensor.sub((val,UID)=>this.refreshSensor(val,UID));
-            this.sensors.set(s,sensor);
-            
+            this.sensors.set(s,sensor);            
             if (s.view==='main'){
                 this.sensorsMain.push(s);
             } else {
@@ -79,7 +94,8 @@ export class DefaultWidget extends React.Component{
                         case 'str':return <StrSensor key={k} config={s} def={def} value={this.state[def.UID]} />;
                         case 'val':return <ValSensor key={k} config={s} def={def} value={this.state[def.UID]} />;
                         case 'flag':return <FlagSensor key={k} config={s} def={def} value={this.state[def.UID]} />;
-                    }                    
+                        case 'bool':return <BoolSensor key={k} config={s} def={def} value={this.state[def.UID]} />
+                    }                                        
                 })}
                 </div>
                 <div className="sensors-extend">

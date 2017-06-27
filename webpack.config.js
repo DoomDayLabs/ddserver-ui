@@ -54,6 +54,7 @@ module.exports = {
     },
     devServer:{
         host:'0.0.0.0',
+        port:8081,
         contentBase:[path.join(__dirname,'./dist/'),path.join(__dirname,'./conf/'),path.join(__dirname,'./ext/')],
         disableHostCheck: true
     },

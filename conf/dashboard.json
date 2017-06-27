@@ -2,7 +2,9 @@
         "rooms":[
             {
                 "title":"Room1",
+                "icon":"lightbulb_outline",
                  "widgets":[  
+                   
                    {
                         "label":"Чайник",
                         "description":"Чайник на кухне",
@@ -11,9 +13,14 @@
                             "sensors":[
                                 {
                                     "view":"main",
+                                    "title":"Online",
+                                    "sensor":"device1.online"
+                                },
+                                {
+                                    "view":"main",
                                     "title":"Температура",
                                     "displayValue":true,
-                                    "sensor":"device1.sensor1",
+                                    "sensor":"device1.sensor1",                                    
                                     "history":{
                                         "type":"graph"
                                     }                        
@@ -26,6 +33,11 @@
                                 {
                                     "view":"main",
                                     "title":"Режим",
+                                    "active":{
+                                        "source":"device1.sensor1",
+                                        "contsraint":"eq",
+                                        "target":"40"
+                                    },
                                     "sensor":"device1.state"
                                 }
                             ],
@@ -48,7 +60,8 @@
                 ]
             },
             {
-                "title":"Room2"
+                "title":"Room2",
+                "icon":"home"
             }
         ]
 

@@ -26,6 +26,7 @@ class Trigger {
             state.enabled = false;
             notify();
         }
+        this.UID = ()=>UID;
     }
     
     
@@ -36,24 +37,22 @@ class Trigger {
 class Sensor {
     
     constructor(sensorDef,value,UID){
-        this.sensorDef = {UID,...sensorDef};
-        this.value = value;
-        this.subs = [];
-        this.val = ()=>value;
+        let $def = {UID,...sensorDef};
+        let $value = value;
+        let $subs = [];
+
+        this.def = ()=>({...$def});
+        this.sub = (fn)=>$subs.push(fn);
+        this.val = ()=>$value;        
+        this.put = (v)=>{
+            $value = v;
+            $subs.forEach((s)=>s(v,$def.UID));
+        }        
     }
     
-    sub(fn){
-        this.subs.push(fn);
-    }
     
-    def(){
-        return {...this.sensorDef}
-    }
     
-    put(value){
-        this.value = value;
-        this.subs.forEach((s)=>s(value,this.sensorDef.UID));
-    }
+    
     
 }
 var sensors = new Map();
@@ -68,23 +67,27 @@ let inc = 1;
 setInterval(()=>{
     let s = sensors.get('device1.sensor1');
     if (s){
-       // s.put(val+=inc); 
+        s.put(val+=inc); 
     if (val==100){
         inc = -1
     }
     if (val==0){
         inc = 1;
     }
-    }
-    
+    }    
 },1000);
 
 
 function addDevice(device){
     (device.sensors||[]).forEach((s)=>{        
         let UID = device.name+'.'+s.name;
-        sensors.set(UID, new Sensor(s,s.value,UID));
+        let sensor = new Sensor(s,s.value,UID)
+        sensors.set(sensor.def().UID, sensor);
     });
+    
+    let onlineSensor = new Sensor({name:'online',type:'bool',value:false},false,device.name+'.online');
+    sensors.set(onlineSensor.def().UID,onlineSensor);
+
     (device.triggers||[]).forEach((t)=>{
         let UID = device.name+'.'+t.name;
         triggers.set(UID,new Trigger(t,UID));

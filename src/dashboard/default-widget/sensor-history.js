@@ -1,9 +1,15 @@
-import Dialog from 'react-toolbox/lib/dialog';
 import React from 'react';
+import Dialog from 'react-toolbox/lib/dialog';
+import Dropdown from 'react-toolbox/lib/dropdown';
+
 
 export class SensorHistory extends React.Component{
     constructor(props){
         super();
+        this.viewMode = [
+                            {value:'day',label:'Per day'},
+                            {value:'interval',label:'Per interval'}
+                        ]
     }
 
     render(){
@@ -15,6 +21,7 @@ export class SensorHistory extends React.Component{
                         onOverlayClick={this.props.onClose}
                         onEscKeyDown={this.props.onClose}
         >
+        <Dropdown source={this.viewMode} />
         </Dialog>
     }
 }

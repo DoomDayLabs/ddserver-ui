@@ -18,8 +18,7 @@
                     "type":"float",
                     "min":0,
                     "max":3,
-                    "value":2
-                
+                    "value":2                
                 },
                 {
                     "name":"state",

@@ -66,6 +66,17 @@ export class StrSensor extends Sensor{
     }    
 }
 
+export class BoolSensor extends Sensor{
+    render(){
+        let color = this.props.value===true?'yellowgreen':'firebrick';        
+        return (
+            <div className={style.sensor_bool}>
+                    <h4>{this.props.config.title} <Chip style={{float:'right'}}><Avatar style={{backgroundColor:color}} />{this.props.value.toString()}</Chip></h4>                                        
+            </div>
+        )
+    }
+}
+
 export class ValSensor extends Sensor{
     constructor(props){
         super();

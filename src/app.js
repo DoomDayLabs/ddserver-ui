@@ -9,10 +9,9 @@ import ReactSlider from 'react-slider';
 import WidgetFactory from './dashboard/widget-factory';
 import Drawer from 'react-toolbox/lib/drawer';
 import {DashboardList} from './dashboard-list';
-
-
-
-
+import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
+import FontIcon from 'react-toolbox/lib/font_icon';
+//import './client/client';
 import {get} from 'popsicle';
 
 
@@ -46,8 +45,7 @@ class App extends React.Component{
                         }
                     });                
                 })
-                
-                console.log(sources);
+                                
                 Promise.all(sources.map((s)=>{                    
                     return Promise.all([
                         get(`/ext/${s}/widget.js`),
@@ -81,11 +79,17 @@ class App extends React.Component{
        
         return (
             <div>     
-                <AppBar leftIcon='menu' onLeftIconClick={()=>this.handleDrawerToggle()} title={`Doomsday Laboratories: ${this.state.dashboard.title}`} />                                                    
+                <AppBar leftIcon='menu' onLeftIconClick={()=>this.handleDrawerToggle()} title={`Doomsday Laboratories: ${this.state.dashboard.title}`} >
+                    <FontIcon value={this.state.dashboard.icon} /><span>{this.state.dashboard.title}</span>
+                </AppBar>                                                    
                 {content}
                 <Drawer active={this.state.drawer} onOverlayClick={()=>this.handleDrawerToggle()} style={{width:'25%'}}>
                     <h4>This is your Drawer.</h4>                    
                     <DashboardList rooms={this.state.rooms} onSelect={(r)=>this.handleRoomSelect(r)}/>
+                    <List selectable ripple>
+                        <ListItem caption="Configuration" leftIcon="settings_applications" />
+                    </List>
+
                 </Drawer>
             </div>
         );
