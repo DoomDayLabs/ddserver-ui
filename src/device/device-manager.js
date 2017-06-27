@@ -39,6 +39,7 @@ class Sensor {
         this.sensorDef = {UID,...sensorDef};
         this.value = value;
         this.subs = [];
+        this.val = ()=>value;
     }
     
     sub(fn){
@@ -67,7 +68,7 @@ let inc = 1;
 setInterval(()=>{
     let s = sensors.get('device1.sensor1');
     if (s){
-        s.put(val+=inc);
+       // s.put(val+=inc); 
     if (val==100){
         inc = -1
     }
@@ -82,7 +83,7 @@ setInterval(()=>{
 function addDevice(device){
     (device.sensors||[]).forEach((s)=>{        
         let UID = device.name+'.'+s.name;
-        sensors.set(UID, new Sensor(s,0,UID));
+        sensors.set(UID, new Sensor(s,s.value,UID));
     });
     (device.triggers||[]).forEach((t)=>{
         let UID = device.name+'.'+t.name;

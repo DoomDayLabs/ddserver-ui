@@ -7,6 +7,8 @@ import './css/layout';
 import AppBar from 'react-toolbox/lib/app_bar';
 import ReactSlider from 'react-slider';
 import WidgetFactory from './dashboard/widget-factory';
+import Drawer from 'react-toolbox/lib/drawer';
+import {DashboardList} from './dashboard-list';
 
 
 
@@ -21,7 +23,7 @@ class App extends React.Component{
     constructor(){        
         
         super();
-        this.state = {dashboard:null};
+        this.state = {dashboard:null,drawer:false};
         this.dashboard = null; 
         this.promises = []
 
@@ -49,6 +51,10 @@ class App extends React.Component{
             });
         });           
     }
+    handleDrawerToggle(){
+        
+        this.setState({drawer:!this.state.drawer});
+    }
     render(){
         let content = null;
         if (this.state.dashboard){
@@ -58,8 +64,12 @@ class App extends React.Component{
         }        
         return (
             <div>     
-                <AppBar leftIcon='menu' title="Doomsday Laboratories" />                                                    
+                <AppBar leftIcon='menu' onLeftIconClick={()=>this.handleDrawerToggle()} title="Doomsday Laboratories" />                                                    
                 {content}
+                <Drawer active={this.state.drawer} onOverlayClick={()=>this.handleDrawerToggle()} style={{width:'25%'}}>
+                    <h4>This is your Drawer.</h4>                    
+                    <DashboardList />
+                </Drawer>
             </div>
         );
     }

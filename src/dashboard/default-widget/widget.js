@@ -28,7 +28,7 @@ export class DefaultWidget extends React.Component{
         let state = {activeTrigger:null};
         (props.config.sensors||[]).forEach((s)=>{
             let sensor = DeviceManager.getSensor(s.sensor);
-            state[sensor.def().UID] = 0;
+            state[sensor.def().UID] = sensor.val();
             sensor.sub((val,UID)=>this.refreshSensor(val,UID));
             this.sensors.set(s,sensor);
             

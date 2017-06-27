@@ -10,18 +10,22 @@
                     "type":"int",
                     "char":"℃",
                     "min":0,
-                    "max":100
+                    "max":100,
+                    "value":30
                 },
                 {
                     "name":"sensor2",
                     "type":"float",
                     "min":0,
-                    "max":10
+                    "max":3,
+                    "value":2
+                
                 },
                 {
                     "name":"state",
                     "type":"val",
-                    "options":["ВЫКЛ","Подогрев","Кипячение"]                            
+                    "options":["ВЫКЛ","Подогрев","Кипячение"],
+                    "value":0                            
                 },
                 {
                     "name":"flagsensor",
@@ -41,6 +45,10 @@
                             "type":"int",
                             "min":20,
                             "max":95
+                        },
+                        {
+                            "name":"Val",
+                            "type":"str"
                         }
                     ]
 
