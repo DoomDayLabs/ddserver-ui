@@ -56,7 +56,7 @@ export class Widget extends React.Component{
                             title={this.header}
                             subtitle={this.subheader}
                         />                              
-                        <this.widget mode={this.state.mode} config={this.props.config.config}/>                                   
+                        <this.widget mode={this.state.mode} config={this.props.config.config} />                                   
                     </Card>
                     </div>
                 )

@@ -9,7 +9,10 @@ export class SensorHistory extends React.Component{
         this.viewMode = [
                             {value:'day',label:'Per day'},
                             {value:'interval',label:'Per interval'}
-                        ]
+                        ];
+        this.state = {
+            viewMode:'day'
+        }
     }
 
     render(){
@@ -21,7 +24,7 @@ export class SensorHistory extends React.Component{
                         onOverlayClick={this.props.onClose}
                         onEscKeyDown={this.props.onClose}
         >
-        <Dropdown source={this.viewMode} />
+        <Dropdown source={this.viewMode} value={this.state.viewMode} onChange={(viewMode)=>this.setState({viewMode})}/>            
         </Dialog>
     }
 }

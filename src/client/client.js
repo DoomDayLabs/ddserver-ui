@@ -2,8 +2,18 @@ import DeviceManager from '../device/device-manager';
 
 const URL = 'ws://dds:8080/client';
 
+function onSensorSet(m){
+
+}
+
 let onmessage = function(m,e){
     console.log('Message',m,this);
+    let msg = JSON.parse(m);
+    switch(msg.type){
+        case 'sensor.set':onSensorSet(msg.data);break;
+        case 'device.add':onDeviceAdd(msg.data);break;
+        case 'widget.add':onWidgetAdd(msg.data);break;
+    }
 }
 
 let openSocket = function(){

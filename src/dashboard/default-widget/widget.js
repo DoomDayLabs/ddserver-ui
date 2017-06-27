@@ -10,17 +10,12 @@ import {Tab, Tabs} from 'react-toolbox';
 import css from './widget-styles';
 
 export class DefaultWidget extends React.Component{ 
-    refreshSensor(val,name){
-        let state = {};
-        state[name] = val;
+    refreshSensor(val,name){        
         if (this.$mounted){
+            let state = {};
+            state[name] = val;
             this.setState(state);        
-        } else {
-            for (let i in state){
-                this.state[i] = state[i];
-            }
-        }
-        
+        }         
     }
     
     componentDidMount(){
