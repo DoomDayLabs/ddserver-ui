@@ -8,9 +8,14 @@ export class DashboardList extends React.Component{
     render(){
         return (
             <List selectable ripple>
-                <ListItem leftIcon="home" caption="Дом" />
-                <ListItem leftIcon="home" caption="Дача" />
-                <ListItem leftIcon="home" caption="Ад" />
+                {this.props.rooms.map((r,i)=><ListItem 
+                                                key={i}
+                                                leftIcon={r.icon}
+                                                caption={r.title}
+                                                legend={r.legend}
+                                                onClick={()=>this.props.onSelect?this.props.onSelect(r):{}}
+                                                />)
+                }                
             </List>
         )
     }

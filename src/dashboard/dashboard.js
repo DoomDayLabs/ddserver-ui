@@ -9,7 +9,7 @@ export class Dashboard extends React.Component{
         
         return (
         <div className={style.dashboard}>
-            {this.props.config.widgets.map((widgetConf,k)=><Widget key={k} config={widgetConf} />)}
+            {(this.props.config.widgets||[]).map((widgetConf,k)=><Widget key={k} config={widgetConf} />)}
                                                 
             </div>        
         )

@@ -23,10 +23,10 @@ class App extends React.Component{
     constructor(){        
         
         super();
-        this.state = {dashboard:null,drawer:false};
+        this.state = {dashboard:{title:''},drawer:false,rooms:[]};        
         this.dashboard = null; 
         this.promises = []
-
+ 
         get('/devices.json')
         .then(($r)=>{
             let devicesConf = JSON.parse($r.body);
@@ -35,18 +35,29 @@ class App extends React.Component{
         .then(()=>{
             get('/dashboard.json')
             .then(($r)=>{
-                let dashboard = JSON.parse($r.body);                
-                Promise.all(dashboard.widgets.map((w)=>{
-                    if (w.class!=='default')
+                let dashboardConfig = JSON.parse($r.body);                                
+                let sources = [];
+                dashboardConfig.rooms.forEach((r)=>{
+                    (r.widgets||[]).forEach((w)=>{
+                        if ((w.class||'default')!='default'){
+                            if (sources.indexOf(w.class)==-1){
+                                sources.push(w.class);
+                            }
+                        }
+                    });                
+                })
+                
+                console.log(sources);
+                Promise.all(sources.map((s)=>{                    
                     return Promise.all([
-                        get(`/ext/${w.class}/widget.js`),
-                        get(`/ext/${w.class}/widget.css`),
+                        get(`/ext/${s}/widget.js`),
+                        get(`/ext/${s}/widget.css`),
                     ]).then((sources)=>{
-                        return WidgetFactory.addWidget(w.class,sources[0].body,sources[1].body);
+                        return WidgetFactory.addWidget(s,sources[0].body,sources[1].body);
                     });                                      
                 }))
                 .then((widgetSources)=>{                                        
-                    this.setState({dashboard});
+                    this.setState({dashboard:dashboardConfig.rooms[0],rooms:dashboardConfig.rooms});
                 });              
             });
         });           
@@ -55,20 +66,26 @@ class App extends React.Component{
         
         this.setState({drawer:!this.state.drawer});
     }
+
+    handleRoomSelect(room){
+        this.setState({dashboard:room,drawer:false});        
+    }
     render(){
         let content = null;
         if (this.state.dashboard){
             content = <Dashboard config={this.state.dashboard} />
         } else {            
             content = <ProgressBar type="linear" mode="indeterminate" />;
-        }        
+        }       
+
+       
         return (
             <div>     
-                <AppBar leftIcon='menu' onLeftIconClick={()=>this.handleDrawerToggle()} title="Doomsday Laboratories" />                                                    
+                <AppBar leftIcon='menu' onLeftIconClick={()=>this.handleDrawerToggle()} title={`Doomsday Laboratories: ${this.state.dashboard.title}`} />                                                    
                 {content}
                 <Drawer active={this.state.drawer} onOverlayClick={()=>this.handleDrawerToggle()} style={{width:'25%'}}>
                     <h4>This is your Drawer.</h4>                    
-                    <DashboardList />
+                    <DashboardList rooms={this.state.rooms} onSelect={(r)=>this.handleRoomSelect(r)}/>
                 </Drawer>
             </div>
         );

@@ -1,64 +1,55 @@
 {
-        "widgets":[
+        "rooms":[
             {
-                "label":"Чайник",
-                "description":"Чайник на кухне",
-                "class":"default",
-                "config":{
-                    "sensors":[
-                        {
-                            "view":"main",
-                            "title":"Температура",
-                            "displayValue":true,
-                            "sensor":"device1.sensor1",
-                            "history":{
-                                "type":"graph"
-                            }                        
-                        },
-                        {
-                            "view":"main",
-                            "title":"Уровень воды",
-                            "sensor":"device1.sensor2"
-                        },
-                        {
-                            "view":"main",
-                            "title":"Режим",
-                            "sensor":"device1.state"
-                        }
-                    ],
-                    "triggers":[
-                        {
-                            "title":"Подогрев",
-                            "trigger":"device1.heat"
-                        },
-                        {
-                            "title":"Кипятить",
-                            "trigger":"device1.boil"
-                        },
-                        {
-                            "title":"Выключить",
-                            "trigger":"device1.boil"
-                        }
-                    ]
-                }            
+                "title":"Room1",
+                 "widgets":[  
+                   {
+                        "label":"Чайник",
+                        "description":"Чайник на кухне",
+                        "class":"default",
+                        "config":{
+                            "sensors":[
+                                {
+                                    "view":"main",
+                                    "title":"Температура",
+                                    "displayValue":true,
+                                    "sensor":"device1.sensor1",
+                                    "history":{
+                                        "type":"graph"
+                                    }                        
+                                },
+                                {
+                                    "view":"main",
+                                    "title":"Уровень воды",
+                                    "sensor":"device1.sensor2"
+                                },
+                                {
+                                    "view":"main",
+                                    "title":"Режим",
+                                    "sensor":"device1.state"
+                                }
+                            ],
+                            "triggers":[
+                                {
+                                    "title":"Подогрев",
+                                    "trigger":"device1.heat"
+                                },
+                                {
+                                    "title":"Кипятить",
+                                    "trigger":"device1.boil"
+                                },
+                                {
+                                    "title":"Выключить",
+                                    "trigger":"device1.boil"
+                                }
+                            ]
+                        }            
+                    }         
+                ]
             },
             {
-                "label":"Террариум",
-                "description":"Ом Мелафефом Бва Кха Ша",
-                "class":"custom1"
-            },        
-            {
-                "label":"Портал в ад",
-                "class":"custom2"
-            },        
-            {
-                "label":"Портал в ад",
-                "class":"custom2"
-            },                
-            {
-                "label":"Портал в ад",
-                "class":"custom2"
+                "title":"Room2"
             }
         ]
-   
+
 }
