@@ -44,10 +44,6 @@
                             "type":"int",
                             "min":20,
                             "max":95
-                        },
-                        {
-                            "name":"Val",
-                            "type":"str"
                         }
                     ]
 

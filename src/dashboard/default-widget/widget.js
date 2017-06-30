@@ -39,15 +39,18 @@ export class DefaultWidget extends React.Component{
         let state = {activeTrigger:null,mounted:false};
         (props.config.sensors||[]).forEach((s)=>{
             let sensor = DeviceManager.getSensor(s.sensor);
-            state[sensor.def().UID] = sensor.val();
-            sensor.sub((val,UID)=>this.refreshSensor(val,UID));
-            this.sensors.set(s,sensor);            
-            if (s.view==='main'){
-                this.sensorsMain.push(s);
-            } else {
-                this.sensorsExtend.push(s);
+            if (sensor){
+                state[sensor.def().UID] = sensor.val();
+                sensor.sub((val,UID)=>this.refreshSensor(val,UID));
+                this.sensors.set(s,sensor);            
+                if (s.view==='main'){
+                    this.sensorsMain.push(s);
+                } else {
+                    this.sensorsExtend.push(s);
+                }
             }
         });
+        
         this.state = state;
     }
     

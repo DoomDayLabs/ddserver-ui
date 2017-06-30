@@ -1,9 +1,9 @@
 import DeviceManager from '../device/device-manager';
 
-const URL = 'ws://dds:8080/client';
+const URL = 'ws://localhost:8080/client';
 
 function onSensorSet(m){
-
+    DeviceManager.getSensor(m.sensor).put(m.value);
 }
 
 let onmessage = function(m,e){

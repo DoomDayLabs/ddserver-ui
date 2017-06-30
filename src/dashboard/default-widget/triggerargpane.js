@@ -10,8 +10,7 @@ export var style=css;
 class ParamSetter extends React.Component{
     
 
-    handleChange(value){
-        
+    handleChange(value){        
         this.setState({value:value});
         this.props.onValue?this.props.onValue(value):null;
     }
@@ -19,13 +18,18 @@ class ParamSetter extends React.Component{
         super();
         this.state = {value:null}        
         this.def = props.param;
+        
         this.component = <div></div>   
-        //this.component = <ReactSlider onChange={(v)=>this.props.onValue?this.props.onValue(v):null}/>
-        //this.component = <Slider min={0} max={100} onChange={(v)=>this.handleChange(v)} pinned value={this.state.value}/>     
+        
         switch (this.def.type){
             case 'int':{this.state.value=this.def.min};break;
             case 'str':{this.state.value=''};break;
         }   
+        //console.log(this.state);
+    }
+
+    componentWillMount(){
+        this.handleChange(this.state.value);
     }
     render(){
         //console.log('Param props=',this.props);
