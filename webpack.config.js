@@ -5,6 +5,7 @@ var HtmlPlugin = require('html-webpack-plugin');
 module.exports = {
     entry:{
         app:'./src/app.js',
+        admin:'./src_admin/app.js',
         vendor:['react','react-dom','jquery']
     },
     module:{
@@ -39,16 +40,22 @@ module.exports = {
     plugins:[
       //new webpack.optimize.CommonsChunkPlugin({names: ["apps","vendor"]}),
       new webpack.NamedModulesPlugin(),
-      new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
+      new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'}),
       new HtmlPlugin({
         title: 'Test APP',
         chunks: ['application', 'vendors'],
         filename: 'index.html',
         template: path.join(__dirname, 'src', 'index.html')
-      })  
+      }),
+      new HtmlPlugin({
+        title: 'Admin APP',
+        chunks: ['application', 'vendors'],
+        filename: 'admin.html',
+        template: path.join(__dirname, 'src_admin', 'admin.html')
+      })   
     ],
     output:{
-        filename:'app.js',
+        filename:'[name].js',
         path: path.resolve(__dirname,'dist'),
         pathinfo: true
     },
