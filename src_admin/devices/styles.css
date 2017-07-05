@@ -1,0 +1,19 @@
+.viewCard{
+    position: relative;
+}
+.menuIcon{
+    position: absolute;
+    top: 1em;
+    right: 0.5em;
+}
+
+.expanded{
+    /*max-height: 1000px;*/
+    transition: all 1000ms 100ms ease;
+    overflow: hidden;
+}
+.closed{
+    max-height: 0px;    
+    transition: all 1000ms 100ms ease;
+    overflow: hidden;
+}

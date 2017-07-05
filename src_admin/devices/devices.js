@@ -1,57 +1,42 @@
 import React from 'react';
-import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-toolbox/lib/list';
+import AppBar from 'react-toolbox/lib/app_bar';
+import EventBus from '../eventbus';
+import Api from '../api';
+import {Card,CardTitle} from 'react-toolbox/lib/card';
+import {KnownDeviceView,UnknownDeviceView} from './cardview';
 
-class DeviceList extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            devices:[
-                {
-                    name:"Device 1"
-                }
-            ]
-        };
-    }
-    componentWillMount(){         
-    }
-    handleDeviceClick(d){
-        this.props.onDevicePick?this.props.onDevicePick(d):null;
-    }
-    render(){
-        return (
-        <List selectable ripple>
-        {this.state.devices.map((d,k)=>{
-            let icon = d.meta==null?'star':''
-            let legend = d.meta==null?'Discovered':''
-            return <ListItem key={k} caption={d.name} leftIcon={icon} legend={legend} onClick={()=>this.handleDeviceClick(d)}/>
-        })}
-        </List>
-        )
-    }
-}
 
-class DeviceInfo extends React.Component{
-    render(){
-        return <div>INFO</div>
-    }
-}
 
 export class Devices extends React.Component{
     constructor(){
         super();
         this.state = {
-            device:null
-        }
+            devices:Api.getDevices()
+        }                        
     }
-    handleDevicePick(d){
-        this.setState({device:d});
+
+    componentWillMount(){
+        EventBus.subscribe('/device/list/updated',()=>{
+            this.setState({devices:Api.getDevices()});
+        });
     }
     
-
+    
     render(){
-        if (this.state.device==null)
-        return <DeviceList onDevicePick={(d)=>this.handleDevicePick(d)}/>
-        else
-        return <DeviceInfo device={this.state.device} />
+        return (
+        <div>
+             <AppBar title="Devices" leftIcon="menu"/>   
+             {this.state.devices.map((d,k)=>{                 
+                 let View = d.profile?KnownDeviceView:UnknownDeviceView;
+                 return (                     
+                    <Card key={k} style={{width:'400px'}}>                                                
+                        <View device={d} />
+                    </Card>
+                 )
+             })}
+        </div>
+        )
+    
+   
     }
 }
