@@ -1,6 +1,6 @@
 import React from 'react';
 import {FontIcon,Dropdown} from 'react-toolbox';
-export class IconSelector extends React.Component{
+export default class IconSelector extends React.Component{
     constructor(props){
         super();
         this.values = [

@@ -25,11 +25,13 @@ export class Devices extends React.Component{
         this.sub();
     }
     
-    
+    handleAppMenuClick(){
+        this.props.onMenuClick?this.props.onMenuClick():null;
+    }
     render(){
         return (
         <div>
-             <AppBar title="Devices" leftIcon="menu"/>  
+             <AppBar title="Devices" leftIcon="menu" onLeftIconClick={()=>this.handleAppMenuClick()}/>  
              <div className={css.devicesPane}> 
              {this.state.devices.map((d,k)=>{                 
                  let View = d.profile?KnownDeviceView:UnknownDeviceView;

@@ -121,7 +121,7 @@ function getDashboards(){
     let p = new Promise((resolve,reject)=>{
         request({
             method:'GET',
-            url:'/dashboards.json'
+            url:addr('dashboard/list')
         }).then(e=>JSON.parse(e.body))
         .then(resolve)
         
@@ -157,16 +157,38 @@ function appendWidget(dashboard,config){
         setTimeout(resolve,2000);
     });
 }
+
+function saveDashboard(dashboard){
+    return request({
+        method:'POST',
+        url:addr('dashboard/save'),
+        body:dashboard
+    }).then($r=>JSON.parse($r.body));
+}
+
+function removeDashboard(d){
+    return request({
+        method:'POST',
+        url:addr('dashboard/remove'),
+        body:{
+            _id:d._id
+        }
+    });
+}
 let api = {
     getDevices:getDevices,
     authorizeDevice:authorizeDevice,
     forgetDevice:forgetDevice,  
     updateDevice:authorizeDevice,
     showError:makeError,
-    getDashboards:getDashboards,
+    
     getWidgetClasses:getWidgetClasses,
     loadWidgetSource:loadWidgetSource,
-    appendWidget:appendWidget
+    appendWidget:appendWidget,
+    getDashboards:getDashboards,
+    saveDashboard:saveDashboard,
+    removeDashboard:removeDashboard,
+    
 }
 
 export default api;

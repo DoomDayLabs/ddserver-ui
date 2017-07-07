@@ -5,7 +5,7 @@ import {List,ListSubHeader,ListItem} from 'react-toolbox/lib/list';
 // import FontIcon from 'react-toolbox/lib/font_icon';
 import style from './wizzard-style';
 import {Input,FontIcon,Dropdown} from 'react-toolbox';
-import {IconSelector} from '../components/iconselector';
+import {IconSelector} from '../components';
 
 
 class Step2Custom extends React.Component{
