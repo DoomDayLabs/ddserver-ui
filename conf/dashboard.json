@@ -1,10 +1,15 @@
 {
         "rooms":[
+            
             {
                 "title":"Room1",
                 "icon":"lightbulb_outline",
                  "widgets":[  
-                   
+                   {
+                        "label":"Террариум",
+                        "description":"Ом Мелафефом Бва Кха Ша",
+                        "class":"custom1"
+                    },
                    {
                         "label":"Чайник",
                         "description":"Чайник на кухне",

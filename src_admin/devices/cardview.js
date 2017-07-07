@@ -7,6 +7,7 @@ import ProgressBar from 'react-toolbox/lib/progress_bar';
 import {IconMenu, MenuItem, MenuDivider } from 'react-toolbox/lib/menu';
 import Api from '../api';
 import style from './styles';
+import EventBus from '../eventbus';
 import {WidgetWizzard} from './widgetwizzard';
 
 
@@ -28,7 +29,7 @@ class ExpandableListItem extends React.Component{
         let rightIcon = this.state.expanded?'keyboard_arrow_up':'keyboard_arrow_down';
         return (
         <div>
-            <ListItem ripple={false} caption={this.props.caption} leftIcon={this.props.leftIcon} rightActions={[<Button mini={true} key={1} icon={rightIcon} onClick={()=>this.handleToggle()} floating={true}/>]} />
+            <ListItem onClick={()=>this.handleToggle()} ripple={true} selectable={true} caption={this.props.caption} leftIcon={this.props.leftIcon} rightIcon={rightIcon}/>
             <div className={className}>
                 {this.props.children}
             </div>
@@ -65,12 +66,33 @@ class KnownDeviceEditDialog extends React.Component{
     }
 }
 export class KnownDeviceView extends React.Component{
-    constructor(){
+    constructor(props){
         super();
         this.state = {
-            editDevice:null
+            editDevice:null,
+            sensors:props.device.values||{}
         }
+
+        //this.state.sensors = props.device.profile.sensors.map(s=>props.device.values[s.name]);
+        //pros.device.profile.sensors.forEach(s=>this.state.sensors[s.name] = props.device.values[s.name])
+        
     }
+
+    componentWillMount(){
+        console.log(this.state.sensors);
+        this.sensorSubsciption = EventBus.subscribe('/device/sensor/value',(e)=>{
+            if (e.devId==this.props.device.id){
+                var sensors = this.state.sensors;
+                sensors[e.sensor] = e.value;
+                this.setState({sensors});                
+            }
+        })
+    }
+
+    componentWillUnmount(){
+        this.sensorSubsciption();
+    }
+
     handleForgetClick(){
         Api.forgetDevice(this.props.device);
     }
@@ -86,19 +108,20 @@ export class KnownDeviceView extends React.Component{
     handleWidgetWizzard(){
         this.widgetWizzard.start(this.props.device);
     }
+    
     render(){
         return (
         <div className={style.viewCard}>            
             <IconMenu icon="more_vert" className={style.menuIcon} menuRipple position="topRight">
                 <MenuItem icon="delete_forever" caption="Forget" onClick={()=>this.handleForgetClick()}/>
                 <MenuItem icon="mode_edit" caption="Edit" onClick={()=>this.handleEditClick()}/>
-                <MenuItem icon="add_to_queue" caption="Widget wizzard" onClick={()=>this.handleWidgetWizzard()} />
+                <MenuItem icon="add_to_queue" caption="Make widget" onClick={()=>this.handleWidgetWizzard()} />
             </IconMenu>
             <CardTitle title={this.props.device.name} subtitle={this.props.device.id}/>
             <List>
                 <ExpandableListItem caption="Sensors" >
                 {this.props.device.profile.sensors.map((s,k)=>{                    
-                    return <ListItem key={k} caption={s.name} legend={s.def} rightIcon={<span>1</span>}/>
+                    return <ListItem key={k} caption={s.name} legend={s.def} rightIcon={<span>{this.state.sensors[s.name]}</span>}/>
                 })}
                 </ExpandableListItem>
                 <ExpandableListItem caption="Triggers">
@@ -134,16 +157,20 @@ export class UnknownDeviceView extends React.Component{
     }
 
     handleResetPincode(){
+        Api.authorizeDevice({id:this.props.device.id,pincode:''});
         console.log('Pin reset');
         this.props.device.pincode = null;
         this.setState({pincode:''});        
+
     }
 
     handleAuthCancel(){
+        
         this.setState({pinDialog:false});
+        
     }
     handlePincodeChange(v){
-        this.setState({pincode:v});
+        this.setState({pincode:v});        
     }
     render(){
         let authDialogActions = [

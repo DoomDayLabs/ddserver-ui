@@ -9,7 +9,7 @@ class ErrorDialog extends React.Component{
     constructor(){
         super();
         this.state = {
-            timeout:10
+            timeout:20
         }
         setInterval(()=>{
             let timeout = this.state.timeout-1;
@@ -37,21 +37,23 @@ class ErrorDialog extends React.Component{
 function makeError(error){
     ReactDOM.render(<ErrorDialog error={error}/>,document.getElementById('error'));
 }
-function addr(e){
-    return 'http://localhost:8080/dds/admin/'+e;
+// var host = 'localhost';
+var host = '192.168.0.125';
+function addr(e){    
+    return `http://${host}:8080/dds/admin/${e}`;
 }
 
 
-let w = new WebSocket('ws://localhost:8080/dds/admin/event.ws');
+let w = new WebSocket(`ws://${host}:8080/dds/admin/event.ws`);
 
 w.onmessage = (msg)=>{
-    console.log(msg.data);
+    //console.log(msg.data);
     var msgObject = JSON.parse(msg.data);
-    console.log(msgObject);
+    //console.log(msgObject);
     EventBus.emit(msgObject.key,msgObject.payload);
 }
 w.onclose = ()=>{
-    //makeError({title:'Connection lost',text:'Lost connection with server. Try reload page'});
+    makeError({title:'Опаньки! Что-то пошло не так :(',text:'Lost connection with server. Try reload page'});
 }
 
 
@@ -63,13 +65,14 @@ get(addr('device/list'))
 
 var devices = []
 
-EventBus.subscribe('/device/profile/updated',(d)=>{    
+EventBus.subscribe('/device/profile/updated',(d)=>{        
     let existDevi = devices.find((dev)=>dev.id===d.id);
-    console.log(existDevi,d);
+    console.log(existDevi,d);    
     Object.assign(existDevi,{...d});
 
     EventBus.emit('/device/list/updated');
 })
+
 EventBus.subscribe('/device/discovered',(d)=>{
     if (devices.find(dev=>dev.id===d.id)){
 
@@ -78,6 +81,8 @@ EventBus.subscribe('/device/discovered',(d)=>{
         EventBus.emit('/device/list/updated');
     } 
 });
+
+
 
 
 
@@ -112,12 +117,56 @@ function forgetDevice(d){
     }
 }
 
+function getDashboards(){
+    let p = new Promise((resolve,reject)=>{
+        request({
+            method:'GET',
+            url:'/dashboards.json'
+        }).then(e=>JSON.parse(e.body))
+        .then(resolve)
+        
+    });
+        
+    return p;
+}
+
+function getWidgetClasses(profile){
+    return new Promise((resolve,reject)=>{
+        request({
+            method:'GET',
+            url:`/widgetclasses.json?profile=${profile}`
+        }).then(e=>JSON.parse(e.body))
+        .then(resolve);
+    });
+    
+}
+
+function loadWidgetSource(widgetClass){
+    return Promise.all(
+            request({
+                method:'GET',
+                url:`/ext/${widgetClass}/widget.js`
+            }).then(e=>e.body)
+
+        )
+    
+}
+
+function appendWidget(dashboard,config){
+    return new Promise((resolve)=>{
+        setTimeout(resolve,2000);
+    });
+}
 let api = {
     getDevices:getDevices,
     authorizeDevice:authorizeDevice,
     forgetDevice:forgetDevice,  
     updateDevice:authorizeDevice,
-    showError:makeError
+    showError:makeError,
+    getDashboards:getDashboards,
+    getWidgetClasses:getWidgetClasses,
+    loadWidgetSource:loadWidgetSource,
+    appendWidget:appendWidget
 }
 
 export default api;

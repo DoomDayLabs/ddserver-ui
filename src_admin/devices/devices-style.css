@@ -1,0 +1,8 @@
+.devicesPane{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.devicesPane>div{
+    margin: 0.5em;
+}

@@ -7,6 +7,7 @@ import {Snackbar} from 'react-toolbox';
 import Button from 'react-toolbox/lib/button';
 import {Devices} from './devices/devices.js';
 import EventBus from './eventbus';
+import {WidgetWizzard} from './devices/widgetwizzard';
 
 class App extends React.Component{
     constructor(){
@@ -36,6 +37,7 @@ class App extends React.Component{
                     ref='snackbar'                                                          
                 />
             </Layout>
+            
         )
     }
 }
