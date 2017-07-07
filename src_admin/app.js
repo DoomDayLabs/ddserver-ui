@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppBar from 'react-toolbox/lib/app_bar';
-import { Layout,Panel } from 'react-toolbox';
-import Navigation from 'react-toolbox/lib/navigation';
-import {Snackbar} from 'react-toolbox';
-import Button from 'react-toolbox/lib/button';
+import { Layout,Panel,Snackbar } from 'react-toolbox';
 import {Devices} from './devices/devices.js';
 import EventBus from './eventbus';
-import {WidgetWizzard} from './devices/widgetwizzard';
+
 
 class App extends React.Component{
     constructor(){

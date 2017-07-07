@@ -66,7 +66,7 @@ class Step5 extends React.Component{
         return(            
         <List selectable>
             {this.state.dashboards.map((d,i)=>{
-                var rightIcon = this.state.selected.indexOf(i)>-1?'check':'';
+                var rightIcon = this.state.selected.indexOf(i)>-1?'check_box':'check_box_outline_blank';
                 return <ListItem key={i} leftIcon={d.icon} caption={d.title} rightIcon={rightIcon} onClick={()=>this.handleDashboardSelect(i)}/>
             })}
         </List>
@@ -136,7 +136,7 @@ class Step3 extends React.Component{
             <h3>Select triggers</h3>
             <List selectable >
                 {this.props.device.profile.triggers.map((t,k)=>{
-                    var icon = this.state.selected.indexOf(t)>-1?'check':'';
+                    var icon = this.state.selected.indexOf(t)>-1?'check_box':'check_box_outline_blank';
                     return <ListItem key={k} caption={t.name} rightIcon={icon} onClick={e=>this.toggleSensorSelect(t)} />
                 })}
             </List>
@@ -178,7 +178,7 @@ class Step2 extends React.Component{
             <h3>Select sensors</h3>
             <List selectable >
                 {this.props.device.profile.sensors.map((s,k)=>{
-                    var icon = this.state.selected.indexOf(s)>-1?'check':'';
+                    var icon = this.state.selected.indexOf(s)>-1?'check_box':'check_box_outline_blank';
                     return <ListItem key={k} caption={s.name} rightIcon={icon} onClick={e=>this.toggleSensorSelect(s)} />
                 })}
             </List>
@@ -212,8 +212,12 @@ class Step1 extends React.Component{
         Api.getWidgetClasses(this.props.device.devClass)
         .then(classes=>{
             var widgets = this.state.widgets;
+            var selected = this.state.selected;
+
             classes.forEach(c=>widgets.push(c));
-            this.setState({widgets});
+            if (!selected)
+                selected = widgets[0];
+            this.setState({widgets,selected});
         });
     }
     handleWidgetSelect(selected){
@@ -225,7 +229,7 @@ class Step1 extends React.Component{
             <h3>Select widget:</h3>
             <List selectable>
                 {this.state.widgets.map((w,k)=>{
-                    var icon = w==this.state.selected?'check':'';                    
+                    var icon = w==this.state.selected?'radio_button_checked':'radio_button_unchecked';                    
                     return <ListItem key={k} caption={w.title} onClick={()=>this.handleWidgetSelect(w)} rightIcon={icon}/>
                 })}
             </List>
