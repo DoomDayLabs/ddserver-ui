@@ -20,9 +20,16 @@ export class Devices extends React.Component{
         this.sub = EventBus.subscribe('/device/list/updated',()=>{
             this.setState({devices:Api.getDevices()});
         });
+        this.discoverSub = EventBus.subscribe('/device/discovered',(device)=>{
+            
+            EventBus.emit('/курлык',{
+                title:`Курлык! Обнаружено новое устройство ${device.devSerial}`
+            });
+        });
     }
     componentWillUnmount(){
         this.sub();
+        
     }
     
     handleAppMenuClick(){

@@ -5,7 +5,7 @@ var HtmlPlugin = require('html-webpack-plugin');
 module.exports = {
     entry:{
         app:'./src/app.js',
-        admin:'./src_admin/app.js',
+        admin:'./src_admin/app.js',        
         vendor:['react','react-dom','jquery']
     },
     module:{
@@ -52,7 +52,7 @@ module.exports = {
         chunks: ['application', 'vendors'],
         filename: 'admin.html',
         template: path.join(__dirname, 'src_admin', 'admin.html')
-      })   
+      })
     ],
     output:{
         filename:'[name].js',

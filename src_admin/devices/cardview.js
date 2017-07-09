@@ -186,7 +186,7 @@ export class UnknownDeviceView extends React.Component{
             <Button label="Authorize" onClick={()=>this.setState({pinDialog:true})}/>;
         return (
         <div>
-            <CardTitle title={this.props.device.name} subtitle={this.props.device.id}/>
+            <CardTitle title={this.props.device.devSerial} subtitle={this.props.device.id}/>
             <List>
                 <ListSubHeader caption="Serial"/>
                 <ListItem caption={this.props.device.devSerial} />

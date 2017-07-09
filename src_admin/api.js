@@ -37,8 +37,8 @@ class ErrorDialog extends React.Component{
 function makeError(error){
     ReactDOM.render(<ErrorDialog error={error}/>,document.getElementById('error'));
 }
-// var host = 'localhost';
-var host = '192.168.0.125';
+var host = 'localhost';
+// var host = '192.168.0.125';
 function addr(e){    
     return `http://${host}:8080/dds/admin/${e}`;
 }
@@ -76,9 +76,10 @@ EventBus.subscribe('/device/profile/updated',(d)=>{
 EventBus.subscribe('/device/discovered',(d)=>{
     if (devices.find(dev=>dev.id===d.id)){
 
-    } else {
+    } else {        
+        EventBus.emit('/device/discover',d);
         devices.push(d);
-        EventBus.emit('/device/list/updated');
+        EventBus.emit('/device/list/updated');        
     } 
 });
 
