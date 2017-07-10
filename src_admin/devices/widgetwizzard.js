@@ -111,7 +111,7 @@ class Step3 extends React.Component{
         }
     }
     handleNext(){
-        this.props.config.triggers = this.state.selected.map(t=>{
+        this.props.config.config.triggers = this.state.selected.map(t=>{
             return {
                  title:t.name,
                  trigger:this.props.device.id+'.'+t.name
@@ -153,7 +153,7 @@ class Step2 extends React.Component{
         }        
     }
     handleNext(){
-        this.props.config.sensors = this.state.selected.map(s=>{
+        this.props.config.config.sensors = this.state.selected.map(s=>{
             return {
                 title:s.name,
                 sensor:this.props.device.id+'.'+s.name
@@ -202,10 +202,12 @@ class Step1 extends React.Component{
     handleNext(){
         if (this.state.selected){
             this.props.config.class = this.state.selected.class;
-            if (this.state.selected.class=='default')
+            if (this.state.selected.class=='default'){
+                this.props.config.config = {};
                 return Step2;
-            else
+            }else{
                 return Step2Custom;        
+            }
         }                    
     }
     componentWillMount(){

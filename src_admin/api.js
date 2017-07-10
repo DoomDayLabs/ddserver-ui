@@ -1,5 +1,5 @@
 import EventBus from './eventbus';
-import {get,request} from 'popsicle';
+import {get,request,post,form} from 'popsicle';
 import pop from 'popsicle';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -153,10 +153,20 @@ function loadWidgetSource(widgetClass){
     
 }
 
-function appendWidget(dashboard,config){
-    return new Promise((resolve)=>{
-        setTimeout(resolve,2000);
+function appendWidget(dashboards,config){
+    console.log(config,dashboards);
+    let formData = form({
+        'dashboards':dashboards,
+        'widget':JSON.stringify(config)
     });
+    return post({
+        url:addr('/widgets/add'),
+        body:formData
+    })
+
+    // return new Promise((resolve)=>{
+    //     setTimeout(resolve,2000);
+    // });
 }
 
 function saveDashboard(dashboard){

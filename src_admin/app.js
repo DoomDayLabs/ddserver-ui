@@ -80,9 +80,13 @@ class App extends React.Component{
         let formData = form({
             "dashboards":['DASH1','DASH2','DASH3'],
             "widget":JSON.stringify({
-                _id:'ID',
                 label:'WidgetLabel',
-                description:'DESCR'
+                description:'DESCR',
+                config:{
+                    className:"Test",
+                    sensors:[],
+                    widgets:[]
+                }
             })
         });
 
