@@ -1,4 +1,4 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
 /***/ "./node_modules/create-react-class/index.js":
 /* no static exports found */
@@ -56,7 +56,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, "html, body, root{\n    margin: 0px;\n    padding: 0px;\n}\n/*\n.appbar{\n    padding: 0px 1em;\n    background-color: cornflowerblue;\n}\n.appbar h1{\n    padding: 0px;\n    margin: 0px;\n}\n\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}\n\n.widget .header .btnConfig{\n    float:right;\n}\n\n\n\n\n\n.widget .actions{\n    display: flex;\n    justify-content: space-around;\n    align-items: stretch;\n}\n*/", "", {"version":3,"sources":["/Volumes/WORK/doom-day-device/ddserver-ui/src/css/layout.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,aAAa;CAChB;AACD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAgCE","file":"layout.css","sourcesContent":["html, body, root{\n    margin: 0px;\n    padding: 0px;\n}\n/*\n.appbar{\n    padding: 0px 1em;\n    background-color: cornflowerblue;\n}\n.appbar h1{\n    padding: 0px;\n    margin: 0px;\n}\n\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}\n\n.widget .header .btnConfig{\n    float:right;\n}\n\n\n\n\n\n.widget .actions{\n    display: flex;\n    justify-content: space-around;\n    align-items: stretch;\n}\n*/"],"sourceRoot":""}]);
+exports.push([module.i, "html, body, root{\n    margin: 0px;\n    padding: 0px;\n}\n/*\n.appbar{\n    padding: 0px 1em;\n    background-color: cornflowerblue;\n}\n.appbar h1{\n    padding: 0px;\n    margin: 0px;\n}\n\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}\n\n.widget .header .btnConfig{\n    float:right;\n}\n\n\n\n\n\n.widget .actions{\n    display: flex;\n    justify-content: space-around;\n    align-items: stretch;\n}\n*/", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src/css/layout.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,aAAa;CAChB;AACD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAgCE","file":"layout.css","sourcesContent":["html, body, root{\n    margin: 0px;\n    padding: 0px;\n}\n/*\n.appbar{\n    padding: 0px 1em;\n    background-color: cornflowerblue;\n}\n.appbar h1{\n    padding: 0px;\n    margin: 0px;\n}\n\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}\n\n.widget .header .btnConfig{\n    float:right;\n}\n\n\n\n\n\n.widget .actions{\n    display: flex;\n    justify-content: space-around;\n    align-items: stretch;\n}\n*/"],"sourceRoot":""}]);
 
 // exports
 
@@ -76,7 +76,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, ".dashboard-styles__dashboard--2ODfQtsi{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;    \n    -ms-flex-pack: distribute;    \n        justify-content: space-around;\n}\n\n.dashboard-styles__dashboard--2ODfQtsi .dashboard-styles__widget--1kQWfgtr{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}", "", {"version":3,"sources":["/Volumes/WORK/doom-day-device/ddserver-ui/src/dashboard/dashboard-styles.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;QAChB,gBAAgB;IACpB,0BAA0B;QACtB,8BAA8B;CACrC;;AAED;IACI,sBAAsB;IACtB,aAAa;IACb,iBAAiB;IACjB,yBAAyB;IACzB,WAAW;CACd","file":"dashboard-styles.css","sourcesContent":[".dashboard{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;    \n    -ms-flex-pack: distribute;    \n        justify-content: space-around;\n}\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".dashboard-styles__dashboard--2ODfQtsi{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;    \n    -ms-flex-pack: distribute;    \n        justify-content: space-around;\n}\n\n.dashboard-styles__dashboard--2ODfQtsi .dashboard-styles__widget--1kQWfgtr{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src/dashboard/dashboard-styles.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,oBAAoB;QAChB,gBAAgB;IACpB,0BAA0B;QACtB,8BAA8B;CACrC;;AAED;IACI,sBAAsB;IACtB,aAAa;IACb,iBAAiB;IACjB,yBAAyB;IACzB,WAAW;CACd","file":"dashboard-styles.css","sourcesContent":[".dashboard{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;    \n    -ms-flex-pack: distribute;    \n        justify-content: space-around;\n}\n\n.dashboard .widget{\n    display: inline-block;\n    width: 300px;\n    min-height: 10px;\n    border: 1px dashed black;\n    margin:5px;\n}"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, "\n.sensor-styles__sensor_number--T0_b9QG2{\n\n}\n\n\n.sensor-styles__progress--12qqz78f{\n    display: block;\n    height: 10px;\n    position: relative;\n    border:1px solid gray;\n    margin: 0px 0px;    \n}\n\n\n.sensor-styles__progress--12qqz78f>.sensor-styles__bar--sEugU17-{\n        display: block;\n        position: absolute;\n        top:0px;\n        left: 0px;\n        height: 100%;\n        background-color: orangered;\n        transition:width 90ms 0ms ease;\n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G{\n\n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G .sensor-styles__options--8arlYE-H{\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G .sensor-styles__options--8arlYE-H .sensor-styles__option--Vf0uveF2, .sensor-styles__option_active--uT0SW8Fe{\n    border-radius: 100px;   \n    padding: 0.1em 0.5em;\n    border:1px dotted black;    \n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G .sensor-styles__options--8arlYE-H .sensor-styles__option--Vf0uveF2:before{\n    content: '\\25FB\\FE0E'\n}\n\n\n.sensor-styles__option_active--uT0SW8Fe{\n    border-color:green;\n    background-color: aquamarine;\n}\n\n\n.sensor-styles__option_active--uT0SW8Fe:before{\n    content: '\\2611\\FE0E'\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt{\n\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt .sensor-styles__flags--1bZZquly{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt .sensor-styles__flags--1bZZquly .sensor-styles__flag--2oSUUWpe{\n    border-radius: 100px;    \n    padding: 0.1em 0.5em;\n    border:1px dotted black;\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt .sensor-styles__flags--1bZZquly .sensor-styles__flag--2oSUUWpe:before{\n    content:'\\25FB\\FE0E';\n}\n\n\n.slider {\n    position:absolute;    \n    height:10px;\n    width:300px;\n    background-color:green;\n}\n\n\n.slider .handle {\n    position:absolute;\n    height:10px;\n    width:20px;\n    background-color:red;\n}", "", {"version":3,"sources":["/Volumes/WORK/doom-day-device/ddserver-ui/src/dashboard/default-widget/sensor-styles.css"],"names":[],"mappings":";AACA;;CAEC;;;AAGD;IACI,eAAe;IACf,aAAa;IACb,mBAAmB;IACnB,sBAAsB;IACtB,gBAAgB;CACnB;;;AAGD;QACQ,eAAe;QACf,mBAAmB;QACnB,QAAQ;QACR,UAAU;QACV,aAAa;QACb,4BAA4B;QAC5B,+BAA+B;CACtC;;;AAGD;;CAEC;;;AAGD;IACI,oBAAoB;IACpB,oBAAoB;IACpB,aAAa;IACb,+BAA+B;IAC/B,8BAA8B;QAC1B,wBAAwB;YACpB,oBAAoB;IAC5B,0BAA0B;QACtB,8BAA8B;IAClC,4BAA4B;QACxB,uBAAuB;CAC9B;;;AAGD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,wBAAwB;CAC3B;;;AAGD;IACI,qBAAa;CAChB;;;AAGD;IACI,mBAAmB;IACnB,6BAA6B;CAChC;;;AAGD;IACI,qBAAa;CAChB;;;AAGD;;CAEC;;;AAGD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,+BAA+B;IAC/B,8BAA8B;QAC1B,wBAAwB;YACpB,oBAAoB;IAC5B,0BAA0B;QACtB,8BAA8B;IAClC,4BAA4B;QACxB,uBAAuB;CAC9B;;;AAGD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,wBAAwB;CAC3B;;;AAGD;IACI,qBAAa;CAChB;;;AAGD;IACI,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,uBAAuB;CAC1B;;;AAGD;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,qBAAqB;CACxB","file":"sensor-styles.css","sourcesContent":["\n.sensor_number{\n\n}\n\n\n.progress{\n    display: block;\n    height: 10px;\n    position: relative;\n    border:1px solid gray;\n    margin: 0px 0px;    \n}\n\n\n.progress>.bar{\n        display: block;\n        position: absolute;\n        top:0px;\n        left: 0px;\n        height: 100%;\n        background-color: orangered;\n        transition:width 90ms 0ms ease;\n}\n\n\n.sensor_val{\n\n}\n\n\n.sensor_val .options{\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor_val .options .option, .option_active{\n    border-radius: 100px;   \n    padding: 0.1em 0.5em;\n    border:1px dotted black;    \n}\n\n\n.sensor_val .options .option:before{\n    content: '◻︎'\n}\n\n\n.option_active{\n    border-color:green;\n    background-color: aquamarine;\n}\n\n\n.option_active:before{\n    content: '☑︎'\n}\n\n\n.sensor_flag{\n\n}\n\n\n.sensor_flag .flags{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor_flag .flags .flag{\n    border-radius: 100px;    \n    padding: 0.1em 0.5em;\n    border:1px dotted black;\n}\n\n\n.sensor_flag .flags .flag:before{\n    content:'◻︎';\n}\n\n\n:global .slider {\n    position:absolute;    \n    height:10px;\n    width:300px;\n    background-color:green;\n}\n\n\n:global .slider .handle {\n    position:absolute;\n    height:10px;\n    width:20px;\n    background-color:red;\n}"],"sourceRoot":""}]);
+exports.push([module.i, "\n.sensor-styles__sensor_number--T0_b9QG2{\n\n}\n\n\n.sensor-styles__progress--12qqz78f{\n    display: block;\n    height: 10px;\n    position: relative;\n    border:1px solid gray;\n    margin: 0px 0px;    \n}\n\n\n.sensor-styles__progress--12qqz78f>.sensor-styles__bar--sEugU17-{\n        display: block;\n        position: absolute;\n        top:0px;\n        left: 0px;\n        height: 100%;\n        background-color: orangered;\n        transition:width 90ms 0ms ease;\n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G{\n\n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G .sensor-styles__options--8arlYE-H{\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G .sensor-styles__options--8arlYE-H .sensor-styles__option--Vf0uveF2, .sensor-styles__option_active--uT0SW8Fe{\n    border-radius: 100px;   \n    padding: 0.1em 0.5em;\n    border:1px dotted black;    \n}\n\n\n.sensor-styles__sensor_val--2Bf3fY3G .sensor-styles__options--8arlYE-H .sensor-styles__option--Vf0uveF2:before{\n    content: '\\25FB\\FE0E'\n}\n\n\n.sensor-styles__option_active--uT0SW8Fe{\n    border-color:green;\n    background-color: aquamarine;\n}\n\n\n.sensor-styles__option_active--uT0SW8Fe:before{\n    content: '\\2611\\FE0E'\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt{\n\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt .sensor-styles__flags--1bZZquly{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt .sensor-styles__flags--1bZZquly .sensor-styles__flag--2oSUUWpe{\n    border-radius: 100px;    \n    padding: 0.1em 0.5em;\n    border:1px dotted black;\n}\n\n\n.sensor-styles__sensor_flag--RU_SifSt .sensor-styles__flags--1bZZquly .sensor-styles__flag--2oSUUWpe:before{\n    content:'\\25FB\\FE0E';\n}\n\n\n.slider {\n    position:absolute;    \n    height:10px;\n    width:300px;\n    background-color:green;\n}\n\n\n.slider .handle {\n    position:absolute;\n    height:10px;\n    width:20px;\n    background-color:red;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src/dashboard/default-widget/sensor-styles.css"],"names":[],"mappings":";AACA;;CAEC;;;AAGD;IACI,eAAe;IACf,aAAa;IACb,mBAAmB;IACnB,sBAAsB;IACtB,gBAAgB;CACnB;;;AAGD;QACQ,eAAe;QACf,mBAAmB;QACnB,QAAQ;QACR,UAAU;QACV,aAAa;QACb,4BAA4B;QAC5B,+BAA+B;CACtC;;;AAGD;;CAEC;;;AAGD;IACI,oBAAoB;IACpB,oBAAoB;IACpB,aAAa;IACb,+BAA+B;IAC/B,8BAA8B;QAC1B,wBAAwB;YACpB,oBAAoB;IAC5B,0BAA0B;QACtB,8BAA8B;IAClC,4BAA4B;QACxB,uBAAuB;CAC9B;;;AAGD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,wBAAwB;CAC3B;;;AAGD;IACI,qBAAa;CAChB;;;AAGD;IACI,mBAAmB;IACnB,6BAA6B;CAChC;;;AAGD;IACI,qBAAa;CAChB;;;AAGD;;CAEC;;;AAGD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,+BAA+B;IAC/B,8BAA8B;QAC1B,wBAAwB;YACpB,oBAAoB;IAC5B,0BAA0B;QACtB,8BAA8B;IAClC,4BAA4B;QACxB,uBAAuB;CAC9B;;;AAGD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,wBAAwB;CAC3B;;;AAGD;IACI,qBAAa;CAChB;;;AAGD;IACI,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,uBAAuB;CAC1B;;;AAGD;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,qBAAqB;CACxB","file":"sensor-styles.css","sourcesContent":["\n.sensor_number{\n\n}\n\n\n.progress{\n    display: block;\n    height: 10px;\n    position: relative;\n    border:1px solid gray;\n    margin: 0px 0px;    \n}\n\n\n.progress>.bar{\n        display: block;\n        position: absolute;\n        top:0px;\n        left: 0px;\n        height: 100%;\n        background-color: orangered;\n        transition:width 90ms 0ms ease;\n}\n\n\n.sensor_val{\n\n}\n\n\n.sensor_val .options{\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor_val .options .option, .option_active{\n    border-radius: 100px;   \n    padding: 0.1em 0.5em;\n    border:1px dotted black;    \n}\n\n\n.sensor_val .options .option:before{\n    content: '◻︎'\n}\n\n\n.option_active{\n    border-color:green;\n    background-color: aquamarine;\n}\n\n\n.option_active:before{\n    content: '☑︎'\n}\n\n\n.sensor_flag{\n\n}\n\n\n.sensor_flag .flags{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    -ms-flex-line-pack: stretch;\n        align-content: stretch;\n}\n\n\n.sensor_flag .flags .flag{\n    border-radius: 100px;    \n    padding: 0.1em 0.5em;\n    border:1px dotted black;\n}\n\n\n.sensor_flag .flags .flag:before{\n    content:'◻︎';\n}\n\n\n:global .slider {\n    position:absolute;    \n    height:10px;\n    width:300px;\n    background-color:green;\n}\n\n\n:global .slider .handle {\n    position:absolute;\n    height:10px;\n    width:20px;\n    background-color:red;\n}"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -130,7 +130,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, "\n.trigger-styles__view--1PoZ_Odg{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    padding:0px 10px;;\n    \n}\n\n.trigger-styles__view--1PoZ_Odg>.trigger-styles__content--WjhxBhZj{\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n\n.trigger-styles__view--1PoZ_Odg>.trigger-styles__actions--_9jONehc{\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}", "", {"version":3,"sources":["/Volumes/WORK/doom-day-device/ddserver-ui/src/dashboard/default-widget/trigger-styles.css"],"names":[],"mappings":";AACA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,aAAa;IACb,6BAA6B;IAC7B,8BAA8B;QAC1B,2BAA2B;YACvB,uBAAuB;IAC/B,iBAAiB;;CAEpB;;AAED;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;CACxB;;AAED;IACI,4BAA4B;IAC5B,4BAA4B;IAC5B,qBAAqB;IACrB,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC","file":"trigger-styles.css","sourcesContent":["\n.view{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    padding:0px 10px;;\n    \n}\n\n.view>.content{\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n\n.view>.actions{\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}"],"sourceRoot":""}]);
+exports.push([module.i, "\n.trigger-styles__view--1PoZ_Odg{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    padding:0px 10px;;\n    \n}\n\n.trigger-styles__view--1PoZ_Odg>.trigger-styles__content--WjhxBhZj{\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n\n.trigger-styles__view--1PoZ_Odg>.trigger-styles__actions--_9jONehc{\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src/dashboard/default-widget/trigger-styles.css"],"names":[],"mappings":";AACA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,aAAa;IACb,6BAA6B;IAC7B,8BAA8B;QAC1B,2BAA2B;YACvB,uBAAuB;IAC/B,iBAAiB;;CAEpB;;AAED;IACI,oBAAoB;QAChB,qBAAqB;YACjB,aAAa;CACxB;;AAED;IACI,4BAA4B;IAC5B,4BAA4B;IAC5B,qBAAqB;IACrB,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC","file":"trigger-styles.css","sourcesContent":["\n.view{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    padding:0px 10px;;\n    \n}\n\n.view>.content{\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n}\n\n.view>.actions{\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -154,7 +154,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".widget-styles__content--2ZGZa9ia{\n    position: relative;\n    padding: 5px 10px;\n    padding-bottom: 0px;\n}\n.widget-styles__triggerParamPane--j7NMPfdE, .widget-styles__triggerParamPane_active--1zeQv6OR{\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100%;\n    background-color: white;\n    height: 0%;\n    transition:height 200ms 0ms ease-out;\n    overflow: hidden;\n}\n.widget-styles__triggerParamPane_active--1zeQv6OR{\n    height: 100%;\n}\n.widget-styles__actions--gLWT1Ujl{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}", "", {"version":3,"sources":["/Volumes/WORK/doom-day-device/ddserver-ui/src/dashboard/default-widget/widget-styles.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;IACnB,kBAAkB;IAClB,oBAAoB;CACvB;AACD;IACI,mBAAmB;IACnB,YAAY;IACZ,UAAU;IACV,YAAY;IACZ,wBAAwB;IACxB,WAAW;IACX,qCAAqC;IACrC,iBAAiB;CACpB;AACD;IACI,aAAa;CAChB;AACD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC","file":"widget-styles.css","sourcesContent":[".content{\n    position: relative;\n    padding: 5px 10px;\n    padding-bottom: 0px;\n}\n.triggerParamPane, .triggerParamPane_active{\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100%;\n    background-color: white;\n    height: 0%;\n    transition:height 200ms 0ms ease-out;\n    overflow: hidden;\n}\n.triggerParamPane_active{\n    height: 100%;\n}\n.actions{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".widget-styles__content--2ZGZa9ia{\n    position: relative;\n    padding: 5px 10px;\n    padding-bottom: 0px;\n}\n.widget-styles__triggerParamPane--j7NMPfdE, .widget-styles__triggerParamPane_active--1zeQv6OR{\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100%;\n    background-color: white;\n    height: 0%;\n    transition:height 200ms 0ms ease-out;\n    overflow: hidden;\n}\n.widget-styles__triggerParamPane_active--1zeQv6OR{\n    height: 100%;\n}\n.widget-styles__actions--gLWT1Ujl{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src/dashboard/default-widget/widget-styles.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;IACnB,kBAAkB;IAClB,oBAAoB;CACvB;AACD;IACI,mBAAmB;IACnB,YAAY;IACZ,UAAU;IACV,YAAY;IACZ,wBAAwB;IACxB,WAAW;IACX,qCAAqC;IACrC,iBAAiB;CACpB;AACD;IACI,aAAa;CAChB;AACD;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,sBAAsB;QAClB,mBAAmB;YACf,0BAA0B;CACrC","file":"widget-styles.css","sourcesContent":[".content{\n    position: relative;\n    padding: 5px 10px;\n    padding-bottom: 0px;\n}\n.triggerParamPane, .triggerParamPane_active{\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100%;\n    background-color: white;\n    height: 0%;\n    transition:height 200ms 0ms ease-out;\n    overflow: hidden;\n}\n.triggerParamPane_active{\n    height: 100%;\n}\n.actions{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -179,7 +179,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, ".widget-styles__widget--1tZMiU2B{\n    display: inline-block;\n    width: 20%;\n    min-height: 10px;    \n    margin:16px 0px;    \n    margin:1rem 0rem;\n    position: relative;\n}\n\n\n\n@media screen and (max-device-width:1280px){\n    .widget-styles__widget--1tZMiU2B{\n        width: 32%;\n    }\n}\n\n\n\n@media screen and (max-device-width:1023px){\n    .widget-styles__widget--1tZMiU2B{\n        width: 50%;\n    }\n}\n\n\n\n@media screen and (max-device-width:767px){\n    .widget-styles__widget--1tZMiU2B{\n        width: 100%;\n    }\n}\n\n\n\n\n\n", "", {"version":3,"sources":["/Volumes/WORK/doom-day-device/ddserver-ui/src/dashboard/widget-styles.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;IACtB,WAAW;IACX,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,mBAAmB;CACtB;;;;AAID;IACI;QACI,WAAW;KACd;CACJ;;;;AAID;IACI;QACI,WAAW;KACd;CACJ;;;;AAID;IACI;QACI,YAAY;KACf;CACJ","file":"widget-styles.css","sourcesContent":[".widget{\n    display: inline-block;\n    width: 20%;\n    min-height: 10px;    \n    margin:16px 0px;    \n    margin:1rem 0rem;\n    position: relative;\n}\n\n\n\n@media screen and (max-device-width:1280px){\n    .widget{\n        width: 32%;\n    }\n}\n\n\n\n@media screen and (max-device-width:1023px){\n    .widget{\n        width: 50%;\n    }\n}\n\n\n\n@media screen and (max-device-width:767px){\n    .widget{\n        width: 100%;\n    }\n}\n\n\n\n\n\n"],"sourceRoot":""}]);
+exports.push([module.i, ".widget-styles__widget--1tZMiU2B{\n    display: inline-block;\n    width: 20%;\n    min-height: 10px;    \n    margin:16px 0px;    \n    margin:1rem 0rem;\n    position: relative;\n}\n\n\n\n@media screen and (max-device-width:1280px){\n    .widget-styles__widget--1tZMiU2B{\n        width: 32%;\n    }\n}\n\n\n\n@media screen and (max-device-width:1023px){\n    .widget-styles__widget--1tZMiU2B{\n        width: 50%;\n    }\n}\n\n\n\n@media screen and (max-device-width:767px){\n    .widget-styles__widget--1tZMiU2B{\n        width: 100%;\n    }\n}\n\n\n\n\n\n", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src/dashboard/widget-styles.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;IACtB,WAAW;IACX,iBAAiB;IACjB,gBAAgB;IAChB,iBAAiB;IACjB,mBAAmB;CACtB;;;;AAID;IACI;QACI,WAAW;KACd;CACJ;;;;AAID;IACI;QACI,WAAW;KACd;CACJ;;;;AAID;IACI;QACI,YAAY;KACf;CACJ","file":"widget-styles.css","sourcesContent":[".widget{\n    display: inline-block;\n    width: 20%;\n    min-height: 10px;    \n    margin:16px 0px;    \n    margin:1rem 0rem;\n    position: relative;\n}\n\n\n\n@media screen and (max-device-width:1280px){\n    .widget{\n        width: 32%;\n    }\n}\n\n\n\n@media screen and (max-device-width:1023px){\n    .widget{\n        width: 50%;\n    }\n}\n\n\n\n@media screen and (max-device-width:767px){\n    .widget{\n        width: 100%;\n    }\n}\n\n\n\n\n\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -996,6 +996,35 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
+/***/ "./src/api.js":
+/* no static exports found */
+/* all exports used */
+/*!********************!*\
+  !*** ./src/api.js ***!
+  \********************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _popsicle = __webpack_require__(/*! popsicle */ "./node_modules/popsicle/dist/common.js");
+
+var addrBase = 'http://localhost:8080/dds/webclient';
+function makeUrl(url) {
+    return addrBase + url;
+}
+
+exports.default = {
+    makeUrl: makeUrl
+
+};
+
+/***/ }),
+
 /***/ "./src/app.js":
 /* no static exports found */
 /* all exports used */
@@ -1055,6 +1084,14 @@ var _font_icon2 = _interopRequireDefault(_font_icon);
 
 var _popsicle = __webpack_require__(/*! popsicle */ "./node_modules/popsicle/dist/common.js");
 
+var _api = __webpack_require__(/*! ./api */ "./src/api.js");
+
+var _api2 = _interopRequireDefault(_api);
+
+var _eventbus = __webpack_require__(/*! eventbus */ "./lib/eventbus/index.js");
+
+var _eventbus2 = _interopRequireDefault(_eventbus);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1079,16 +1116,16 @@ var App = function (_React$Component) {
         _this.dashboard = null;
         _this.promises = [];
 
-        (0, _popsicle.get)('/devices.json').then(function ($r) {
+        (0, _popsicle.get)(_api2.default.makeUrl('/device/list')).then(function ($r) {
             var devicesConf = JSON.parse($r.body);
-            devicesConf.devices.forEach(function (d) {
+            devicesConf.forEach(function (d) {
                 return _deviceManager2.default.addDevice(d);
             });
         }).then(function () {
-            (0, _popsicle.get)('/dashboard.json').then(function ($r) {
+            (0, _popsicle.get)(_api2.default.makeUrl('/dashboard/list')).then(function ($r) {
                 var dashboardConfig = JSON.parse($r.body);
                 var sources = [];
-                dashboardConfig.rooms.forEach(function (r) {
+                dashboardConfig.forEach(function (r) {
                     (r.widgets || []).forEach(function (w) {
                         if ((w.class || 'default') != 'default') {
                             if (sources.indexOf(w.class) == -1) {
@@ -1103,7 +1140,7 @@ var App = function (_React$Component) {
                         return _widgetFactory2.default.addWidget(s, sources[0].body, sources[1].body);
                     });
                 })).then(function (widgetSources) {
-                    _this.setState({ dashboard: dashboardConfig.rooms[0], rooms: dashboardConfig.rooms });
+                    _this.setState({ dashboard: dashboardConfig[0], rooms: dashboardConfig });
                 });
             });
         });
@@ -1113,7 +1150,6 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: 'handleDrawerToggle',
         value: function handleDrawerToggle() {
-
             this.setState({ drawer: !this.state.drawer });
         }
     }, {
@@ -1595,6 +1631,11 @@ var IntSensor = exports.IntSensor = function (_Sensor) {
     }
 
     _createClass(IntSensor, [{
+        key: 'value',
+        value: function value() {
+            return parseInt(this.props.value);
+        }
+    }, {
         key: 'render',
         value: function render() {
             var v = (this.props.value - this.min) / this.max * 100;
@@ -1614,7 +1655,7 @@ var IntSensor = exports.IntSensor = function (_Sensor) {
                     this.props.config.title,
                     displayValue
                 ),
-                _react2.default.createElement(_progress_bar2.default, { min: this.props.def.min, max: this.props.def.max, type: 'linear', value: this.props.value, mode: 'determinate' }),
+                _react2.default.createElement(_progress_bar2.default, { min: this.props.def.min, max: this.props.def.max, type: 'linear', value: this.value(), mode: 'determinate' }),
                 _react2.default.createElement(_sensorHistory.SensorHistory, { active: this.state.dialogActive,
                     title: this.props.config.title,
                     onClose: this.handleDialogToggle
@@ -2190,7 +2231,7 @@ var DefaultWidget = exports.DefaultWidget = function (_React$Component) {
                     return _this.refreshSensor(val, UID);
                 });
                 _this.sensors.set(s, sensor);
-                if (s.view === 'main') {
+                if (s.viewInMain) {
                     _this.sensorsMain.push(s);
                 } else {
                     _this.sensorsExtend.push(s);
@@ -2757,29 +2798,11 @@ var Sensor = function Sensor(sensorDef, value, UID) {
 var sensors = new Map();
 var triggers = new Map();
 
-/*
-DeviceConf.devices.forEach((d)=>addDevice(d));
-
-*/
-var val = 0;
-var inc = 1;
-setInterval(function () {
-    var s = sensors.get('device1.sensor1');
-    if (s) {
-        s.put(val += inc);
-        if (val == 100) {
-            inc = -1;
-        }
-        if (val == 0) {
-            inc = 1;
-        }
-    }
-}, 1000);
-
 function addDevice(device) {
     (device.sensors || []).forEach(function (s) {
         var UID = device.name + '.' + s.name;
-        var sensor = new Sensor(s, s.value, UID);
+        var value = device.values[s.name];
+        var sensor = new Sensor(s, value, UID);
         sensors.set(sensor.def().UID, sensor);
     });
 

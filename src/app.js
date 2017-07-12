@@ -13,7 +13,9 @@ import { List, ListItem, ListSubHeader, ListDivider, ListCheckbox } from 'react-
 import FontIcon from 'react-toolbox/lib/font_icon';
 //import './client/client';
 import {get} from 'popsicle';
+import Api from './api';
 
+import EventBus from 'eventbus';
 
 
 //popsicle('/devices.conf');
@@ -26,17 +28,17 @@ class App extends React.Component{
         this.dashboard = null; 
         this.promises = []
  
-        get('/devices.json')
+        get(Api.makeUrl('/device/list'))
         .then(($r)=>{
             let devicesConf = JSON.parse($r.body);
-            devicesConf.devices.forEach((d)=>DeviceManager.addDevice(d));                            
+            devicesConf.forEach((d)=>DeviceManager.addDevice(d));                            
         })
         .then(()=>{
-            get('/dashboard.json')
+            get(Api.makeUrl('/dashboard/list'))
             .then(($r)=>{
                 let dashboardConfig = JSON.parse($r.body);                                
                 let sources = [];
-                dashboardConfig.rooms.forEach((r)=>{
+                dashboardConfig.forEach((r)=>{
                     (r.widgets||[]).forEach((w)=>{
                         if ((w.class||'default')!='default'){
                             if (sources.indexOf(w.class)==-1){
@@ -55,13 +57,12 @@ class App extends React.Component{
                     });                                      
                 }))
                 .then((widgetSources)=>{                                        
-                    this.setState({dashboard:dashboardConfig.rooms[0],rooms:dashboardConfig.rooms});
+                    this.setState({dashboard:dashboardConfig[0],rooms:dashboardConfig});
                 });              
             });
         });           
     }
-    handleDrawerToggle(){
-        
+    handleDrawerToggle(){        
         this.setState({drawer:!this.state.drawer});
     }
 

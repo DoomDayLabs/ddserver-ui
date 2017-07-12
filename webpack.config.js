@@ -34,8 +34,10 @@ module.exports = {
             }
         ]
     },
+    
     resolve:{
-        extensions:['.js','.htmls','.css','.scss']
+        extensions:['.js','.htmls','.css','.scss'],
+        modules: [path.resolve(__dirname, "lib"), "node_modules"]
     },
     plugins:[
       //new webpack.optimize.CommonsChunkPlugin({names: ["apps","vendor"]}),

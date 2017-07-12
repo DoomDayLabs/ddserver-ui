@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar from 'react-toolbox/lib/app_bar';
-import EventBus from '../eventbus';
+import EventBus from 'eventbus';
 import Api from '../api';
 import {Card,CardTitle} from 'react-toolbox/lib/card';
 import {KnownDeviceView,UnknownDeviceView} from './cardview';
@@ -20,10 +20,16 @@ export class Devices extends React.Component{
         this.sub = EventBus.subscribe('/device/list/updated',()=>{
             this.setState({devices:Api.getDevices()});
         });
-        this.discoverSub = EventBus.subscribe('/device/discovered',(device)=>{
+        this.discoverSub = EventBus.subscribe('/device/discover',(device)=>{
             
             EventBus.emit('/курлык',{
                 title:`Курлык! Обнаружено новое устройство ${device.devSerial}`
+                
+            });
+        });
+        this.profileUpdateSub = EventBus.subscribe('/device/profileupdated',d=>{
+            EventBus.emit('/курлык',{
+                title:`Курлык! Устройство ${d.devSerial} успешно авторизовано!`
             });
         });
     }

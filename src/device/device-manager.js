@@ -34,8 +34,7 @@ class Trigger {
     
 }
 
-class Sensor {
-    
+class Sensor {    
     constructor(sensorDef,value,UID){
         let $def = {UID,...sensorDef};
         let $value = value;
@@ -48,40 +47,19 @@ class Sensor {
             $value = v;
             $subs.forEach((s)=>s(v,$def.UID));
         }        
-    }
-    
-    
-    
-    
-    
+    }                    
 }
 var sensors = new Map();
 var triggers = new Map();
 
-/*
-DeviceConf.devices.forEach((d)=>addDevice(d));
 
-*/
-let val = 0;
-let inc = 1;
-setInterval(()=>{
-    let s = sensors.get('device1.sensor1');
-    if (s){
-        s.put(val+=inc); 
-    if (val==100){
-        inc = -1
-    }
-    if (val==0){
-        inc = 1;
-    }
-    }    
-},1000);
 
 
 function addDevice(device){
     (device.sensors||[]).forEach((s)=>{        
         let UID = device.name+'.'+s.name;
-        let sensor = new Sensor(s,s.value,UID)
+        let value = device.values[s.name]
+        let sensor = new Sensor(s,value,UID)
         sensors.set(sensor.def().UID, sensor);
     });
     

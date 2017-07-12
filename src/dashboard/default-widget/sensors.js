@@ -29,14 +29,16 @@ export class IntSensor extends Sensor{
         
     }
     
-  
+    value(){
+        return parseInt(this.props.value)
+    }
     render(){         
         let v = (this.props.value-this.min)/this.max*100;                        
         let displayValue = this.props.config.displayValue?<span style={{float:'right'}}>{this.props.value} {this.props.def.char}</span>:null;
         return (
             <div className={style.sensor_number} onClick={this.handleDialogToggle}>                
                 <h4>{this.props.config.title}{displayValue}</h4>
-                <ProgressBar min={this.props.def.min} max={this.props.def.max} type='linear' value={this.props.value} mode='determinate'/>                
+                <ProgressBar min={this.props.def.min} max={this.props.def.max} type='linear' value={this.value()} mode='determinate'/>                
                 <SensorHistory active={this.state.dialogActive} 
                                 title={this.props.config.title}
                                 onClose={this.handleDialogToggle}

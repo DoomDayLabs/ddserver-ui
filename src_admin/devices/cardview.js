@@ -7,8 +7,8 @@ import ProgressBar from 'react-toolbox/lib/progress_bar';
 import {IconMenu, MenuItem, MenuDivider } from 'react-toolbox/lib/menu';
 import Api from '../api';
 import style from './styles';
-import EventBus from '../eventbus';
-import {WidgetWizzard} from './widgetwizzard';
+import EventBus from 'eventbus';
+import {WidgetWizzard} from './wizzard/widgetwizzard';
 
 
 class ExpandableListItem extends React.Component{
@@ -45,8 +45,8 @@ class KnownDeviceEditDialog extends React.Component{
             name:''
         }
         this.actions = [
-            {label:'Apply',onClick:()=>this.handleApply()},
-            {label:'Cancel',onClick:()=>this.setState({active:false})}
+            {label:'Apply',icon:'done',onClick:()=>this.handleApply()},
+            {label:'Cancel',icon:'close',onClick:()=>this.setState({active:false})}
         ]
     }
     handleApply(){
@@ -71,10 +71,7 @@ export class KnownDeviceView extends React.Component{
         this.state = {
             editDevice:null,
             sensors:props.device.values||{}
-        }
-
-        //this.state.sensors = props.device.profile.sensors.map(s=>props.device.values[s.name]);
-        //pros.device.profile.sensors.forEach(s=>this.state.sensors[s.name] = props.device.values[s.name])
+        }      
         
     }
 
@@ -120,8 +117,9 @@ export class KnownDeviceView extends React.Component{
             <CardTitle title={this.props.device.name} subtitle={this.props.device.id}/>
             <List>
                 <ExpandableListItem caption="Sensors" >
-                {this.props.device.profile.sensors.map((s,k)=>{                    
-                    return <ListItem key={k} caption={s.name} legend={s.def} rightIcon={<span>{this.state.sensors[s.name]}</span>}/>
+                {this.props.device.profile.sensors.map((s,k)=>{     
+                    let rightAction = <span>{this.state.sensors[s.name]}</span>               
+                    return <ListItem key={k} caption={s.name} legend={s.def}  rightIcon={rightAction}/>
                 })}
                 </ExpandableListItem>
                 <ExpandableListItem caption="Triggers">
@@ -187,11 +185,9 @@ export class UnknownDeviceView extends React.Component{
         return (
         <div>
             <CardTitle title={this.props.device.devSerial} subtitle={this.props.device.id}/>
-            <List>
-                <ListSubHeader caption="Serial"/>
-                <ListItem caption={this.props.device.devSerial} />
-                <ListSubHeader caption="Profile" />
-                <ListItem caption={this.props.device.devClass} />
+            <List>                
+                <ListItem caption="Serial" legend={this.props.device.devSerial}/>                
+                <ListItem caption="Profile" legend={this.props.device.devClass} />
             </List>            
             <CardActions>
                 {ActionsPane}

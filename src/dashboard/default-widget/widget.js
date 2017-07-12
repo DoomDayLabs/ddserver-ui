@@ -43,7 +43,7 @@ export class DefaultWidget extends React.Component{
                 state[sensor.def().UID] = sensor.val();
                 sensor.sub((val,UID)=>this.refreshSensor(val,UID));
                 this.sensors.set(s,sensor);            
-                if (s.view==='main'){
+                if (s.viewInMain){
                     this.sensorsMain.push(s);
                 } else {
                     this.sensorsExtend.push(s);

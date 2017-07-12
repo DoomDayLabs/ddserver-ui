@@ -4,8 +4,8 @@ import {List,ListItem} from 'react-toolbox/lib/list';
 import {IconMenu, MenuItem} from 'react-toolbox/lib/menu';
 import {Dialog,Input,Button} from 'react-toolbox';
 import {IconSelector} from '../components';
-import Api from '../api';
-import EventBus from '../eventbus';
+import Api from '../api/';
+import EventBus from 'eventbus';
 import styles from './dashboardlist-style';
 
 class DashboardEditor extends React.Component{
@@ -37,7 +37,7 @@ class DashboardEditor extends React.Component{
         let d = this.state;
         delete d.active;
         this.setState({active:false});
-        Api.saveDashboard(d)
+        Api.dashboards.save(d)
         .then(dashboard=>{
             this.$resolve(dashboard);
         })
@@ -84,7 +84,7 @@ class DashboardRemover extends React.Component{
     }
 
     handleRemoveClick(){
-        Api.removeDashboard(this.state.dashboard)
+        Api.dashboards.remove(this.state.dashboard)
         .then(()=>{
             this.$resolve(this.state.dashboard);
             this.setState({active:false});            
@@ -149,7 +149,7 @@ export class DashboardsList extends React.Component{
             this.state = {
                 dashboards:[]
             }
-            Api.getDashboards()
+            Api.dashboards.list()
             .then(dashboards=>this.setState({dashboards}));
     }
 
@@ -216,7 +216,7 @@ export class DashboardsList extends React.Component{
         return (
         <div style={{position:'relative'}}>
             <AppBar title="Dashboards" leftIcon="menu" onLeftIconClick={()=>this.handleAppbarClick()}>
-                <Button mini={true} icon='add' onClick={()=>this.handleDashboardCreate()} inverse label="Create"/>
+                <Button mini={true} icon='add' onClick={()=>this.handleDashboardCreate()} label="Create" raised primary/>
             </AppBar>
             
             <List ripple={false}>

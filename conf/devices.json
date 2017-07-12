@@ -1,54 +1,53 @@
+[
 {
-    "devices":[
-        {
-            "name":"device1",
-            "caption":"Device 1",
-            "sensors":[
-                {
-                    "name":"sensor1",
-                    "char":"℃",
-                    "type":"int",
-                    "char":"℃",
-                    "min":0,
-                    "max":100,
-                    "value":30
-                },
-                {
-                    "name":"sensor2",
-                    "type":"float",
-                    "min":0,
-                    "max":3,
-                    "value":2                
-                },
-                {
-                    "name":"state",
-                    "type":"val",
-                    "options":["ВЫКЛ","Подогрев","Кипячение"],
-                    "value":0                            
-                },
-                {
-                    "name":"flagsensor",
-                    "type":"flag",
-                    "flags":["FLAG_1","FLAG_2","FLAG_3"]
-                }
-            ],
-            "triggers":[
-                {
-                    "name":"boil"                                    
-                },
-                {
-                    "name":"heat",
-                    "params":[
-                        {
-                            "name":"Подогреть до",
-                            "type":"int",
-                            "min":20,
-                            "max":95
-                        }
-                    ]
-
-                }
-            ]
-        }
-    ]
+"name": "DIY:TEST:0.1:12345",
+"caption": "",
+"sensors": [
+{
+"name": "TEMPERATURE",
+"min": 0,
+"max": 100,
+"type": "int",
+"def": "INT (0,100)"
+},
+{
+"name": "STATE",
+"type": "val",
+"options": [
+"HEAT",
+"STANDBY",
+"BOIL"
+],
+"def": "VAL (HEAT,STANDBY,BOIL)"
+},
+{
+"name": "WATERLEVEL",
+"min": 0,
+"max": 3,
+"type": "int",
+"def": "INT (0,3)"
 }
+],
+"triggers": [
+{
+"params": [
+{
+"name": "TAGET",
+"min": 30,
+"max": 95,
+"type": "int"
+}
+],
+"name": "HEAT"
+},
+{
+"params": [],
+"name": "STANDBY"
+},
+{
+"params": [],
+"name": "BOIL"
+}
+]
+}
+]

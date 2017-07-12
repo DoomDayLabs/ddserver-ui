@@ -1,4 +1,5 @@
 import DeviceManager from '../device/device-manager';
+import EventBus from 'eventbus';
 
 const URL = 'ws://localhost:8080/client';
 
