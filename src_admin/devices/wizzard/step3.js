@@ -39,10 +39,13 @@ export class Step3 extends React.Component{
         <div>
             <h3>Select triggers</h3>
             <List selectable >
-                {this.props.device.profile.triggers.map((t,k)=>{
+                {Object.entries(this.props.device.profile.triggers).map(trigger=>{
+                    let k = trigger[0];
+                    let t = trigger[1];
                     var icon = this.state.selected.indexOf(t)>-1?'check_box':'check_box_outline_blank';
                     return <ListItem key={k} caption={t.name} rightIcon={icon} onClick={e=>this.toggleSensorSelect(t)} />
                 })}
+                
             </List>
         </div>
         )

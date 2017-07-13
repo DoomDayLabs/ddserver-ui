@@ -79,7 +79,7 @@ class App extends React.Component{
     componentWillMount(){
         let view = window.location.hash.replace('#','');
         if (!view)
-            view = 'widgets';
+            view = 'devices';
         this.setState({view});
                 
     }

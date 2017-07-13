@@ -478,6 +478,39 @@ exports.default = {
 
 /***/ }),
 
+/***/ "./src_admin/api/api-devices.js":
+/* no static exports found */
+/* all exports used */
+/*!**************************************!*\
+  !*** ./src_admin/api/api-devices.js ***!
+  \**************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _apiCommon = __webpack_require__(/*! ./api-common */ "./src_admin/api/api-common.js");
+
+function listDevices() {
+    return (0, _apiCommon.jsonRequest)({
+        method: 'GET',
+        url: (0, _apiCommon.addr)('/devices')
+    });
+}
+
+function updateDevice() {}
+
+exports.default = {
+    list: listDevices,
+    update: updateDevice
+};
+
+/***/ }),
+
 /***/ "./src_admin/api/api-groups.js":
 /* no static exports found */
 /* all exports used */
@@ -669,6 +702,10 @@ var _apiWidgets2 = _interopRequireDefault(_apiWidgets);
 var _apiDashboards = __webpack_require__(/*! ./api-dashboards */ "./src_admin/api/api-dashboards.js");
 
 var _apiDashboards2 = _interopRequireDefault(_apiDashboards);
+
+var _apiDevices = __webpack_require__(/*! ./api-devices */ "./src_admin/api/api-devices.js");
+
+var _apiDevices2 = _interopRequireDefault(_apiDevices);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

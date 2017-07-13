@@ -7,7 +7,7 @@ import ApiCommon from './api/api-common';
 import ApiUsers from './api/api-users';
 import Api from './api/';
 
-console.log(ApiCommon);
+
 var host = ApiCommon.host;
 var addr = ApiCommon.addr;
 
@@ -26,7 +26,7 @@ w.onclose = ()=>{
     Api.common.makeError({title:'Опаньки! Что-то пошло не так :(',text:'Lost connection with server. Try reload page'});
 }
 
-
+/*
 get(addr('device/list'))
 .then(e=>{
     devices = JSON.parse(e.body);        
@@ -59,7 +59,7 @@ EventBus.subscribe('/device/discovered',(d)=>{
 
 
 
-
+/*
 function getDevices(){
     return devices;
 }
@@ -90,7 +90,7 @@ function forgetDevice(d){
         });
     }
 }
-
+*/
 
 
 function getWidgetClasses(profile){
@@ -139,10 +139,12 @@ function appendWidget(dashboards,config){
 
 
 let api = {
+    /*
     getDevices:getDevices,
     authorizeDevice:authorizeDevice,
     forgetDevice:forgetDevice,  
     updateDevice:authorizeDevice,
+    */
     showError:Api.common.makeError,
     
     getWidgetClasses:getWidgetClasses,

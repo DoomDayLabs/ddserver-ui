@@ -1,6 +1,6 @@
 import React from 'react';
 import {List,ListSubHeader,ListItem} from 'react-toolbox/lib/list';
-import Api from '../../api';
+import Api from '../../api/';
 import {StepComplete} from './step-complete';
 
 export class Step5 extends React.Component{
@@ -10,14 +10,14 @@ export class Step5 extends React.Component{
             dashboards:[],
             selected:[]
         }
-
-        Api.getDashboards()
+        Api.dashboards.list()        
         .then(dashboards=>this.setState({dashboards}));
     }
     handleNext(){
         let dashboards = this.state.selected.map(k=>this.state.dashboards[k]._id);
-        
-        Api.appendWidget(dashboards,this.props.config);
+        this.props.config.dashboards = dashboards;
+        //Api.appendWidget(dashboards,this.props.config);
+        Api.widgets.save(this.props.config);
         return StepComplete;
     }
     title(){

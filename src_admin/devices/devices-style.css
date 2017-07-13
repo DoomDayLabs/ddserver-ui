@@ -6,3 +6,7 @@
 .devicesPane>div{
     margin: 0.5em;
 }
+
+.device_auth_progress{
+    transform: scale(0.8);
+}

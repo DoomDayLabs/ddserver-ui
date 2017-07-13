@@ -7,11 +7,21 @@ function listDevices(){
     });
 }
 
-function updateDevice(){
-
+function updateDevice(device){
+    return jsonRequest({
+        method:'POST',
+        url:addr('/devices'),
+        body:device
+    })
 }
-
+function removeDevice(device){
+    return jsonRequest({
+        method:'DELETE',
+        url:addr(`/devices/${device.id}`)        
+    });
+}
 export default {
     list:listDevices,
-    update:updateDevice    
+    save:updateDevice,
+    remove:removeDevice  
 }

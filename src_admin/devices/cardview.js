@@ -9,34 +9,10 @@ import Api from '../api';
 import style from './styles';
 import EventBus from 'eventbus';
 import {WidgetWizzard} from './wizzard/widgetwizzard';
+import {ExpandableListItem} from '../components';
 
 
-class ExpandableListItem extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            expanded:false
-        }
-        this.actions = [
-           <Button mini={true} icon='keyboard_arrow_down' floating={true}/>
-        ]
-    }
-    handleToggle(){
-        this.setState({expanded:!this.state.expanded})
-    }
-    render(){
-        let className = this.state.expanded?style.expanded:style.closed;
-        let rightIcon = this.state.expanded?'keyboard_arrow_up':'keyboard_arrow_down';
-        return (
-        <div>
-            <ListItem onClick={()=>this.handleToggle()} ripple={true} selectable={true} caption={this.props.caption} leftIcon={this.props.leftIcon} rightIcon={rightIcon}/>
-            <div className={className}>
-                {this.props.children}
-            </div>
-        </div>
-        )
-    }
-}
+
 class KnownDeviceEditDialog extends React.Component{
     constructor(props){
         super();
@@ -166,7 +142,7 @@ export class UnknownDeviceView extends React.Component{
         
         this.setState({pinDialog:false});
         
-    }
+    }    
     handlePincodeChange(v){
         this.setState({pincode:v});        
     }

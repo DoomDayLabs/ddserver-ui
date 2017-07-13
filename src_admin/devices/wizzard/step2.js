@@ -38,10 +38,14 @@ export class Step2 extends React.Component{
         <div>
             <h3>Select sensors</h3>
             <List selectable >
-                {this.props.device.profile.sensors.map((s,k)=>{
+                {Object.entries(this.props.device.profile.sensors).map(sensor=>{
+                    let id=sensor[0];
+                    let s=sensor[1];
                     var icon = this.state.selected.indexOf(s)>-1?'check_box':'check_box_outline_blank';
-                    return <ListItem key={k} caption={s.name} rightIcon={icon} onClick={e=>this.toggleSensorSelect(s)} />
+                    return <ListItem key={id} caption={s.name} rightIcon={icon} onClick={e=>this.toggleSensorSelect(s)} />
+
                 })}
+                
             </List>
         </div>
         )
