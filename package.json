@@ -37,6 +37,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "postcss-mixins": "^6.0.0",
+    "qs": "^6.5.0",
     "qwest": "^4.4.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -47,6 +48,7 @@
     "sass-loader": "^6.0.6",
     "scss-loader": "0.0.1",
     "style-loader": "^0.18.2",
+    "url-parse": "^1.1.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
     "webpack-runtime-require": "^0.1.0"

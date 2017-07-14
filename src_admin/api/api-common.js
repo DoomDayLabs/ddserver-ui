@@ -2,6 +2,18 @@ import {get,request,post,form} from 'popsicle';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Dialog} from 'react-toolbox';
+import config from 'build-config';
+import qs from 'qs';
+import URL from 'url-parse';
+window.$url = URL;
+
+
+
+var configuration = qs.parse(document.currentScript.src.split('?')[1]);
+
+console.log(configuration.api);
+console.log(configuration.secure);
+
 class ErrorDialog extends React.Component{
     constructor(){
         super();
@@ -38,10 +50,24 @@ function makeError(error){
 
 
 
-export var host = 'localhost';
-// var host = '192.168.0.125';
+//export var host = 'localhost';
+var host = config.serverHost;
+// var host = config.serverHost;
+function isHttp(){
+    return configuration.secure?'http':'https';
+}
+function isWs(){
+    return configuration.secure?'ws':'wss';
+}
+
 export function addr(e){    
-    return `http://${host}:8080/dds/admin/${e}`;
+    return `${isHttp()}://${configuration.api}/${e}`
+    // return `${config.baseHttp}/admin/${e}`;
+    //return `http://${host}:8080/dds/admin/${e}`;
+}
+
+export function wsAddr(e){
+    return `${isWs()}://${configuration.api}${e}`
 }
 
 function $request(options){
@@ -61,8 +87,9 @@ export function jsonRequest(options){
 }
 export {request};
 export default {
-   
+    host:host,
     addr:addr,
+    wsAddr:wsAddr,
     request:$request,
     jsonRequest:jsonRequest,
     makeError:makeError

@@ -221,7 +221,7 @@ export class DashboardsList extends React.Component{
             
             <List ripple={false}>
                 {this.state.dashboards.map((d,k)=>{
-                    return <ListItem key={k} caption={d.title} leftIcon={d.icon} rightActions={this.actions(d,k)} ripple={false} selectable={false}/>
+                    return <ListItem key={k} caption={d.title} leftIcon={d.icon} rightActions={this.actions(d,k)} onClick={()=>this.handleDashboardEdit(d)} ripple selectable/>
                 })}
             </List>
             <DashboardEditor ref={e=>this.editor=e} />

@@ -6,15 +6,10 @@ import Dialog from 'react-toolbox/lib/dialog';
 import ApiCommon from './api/api-common';
 import ApiUsers from './api/api-users';
 import Api from './api/';
+import config from 'build-config';
 
 
-var host = ApiCommon.host;
-var addr = ApiCommon.addr;
-
-
-
-
-let w = new WebSocket(`ws://${host}:8080/dds/admin/event.ws`);
+let w = new WebSocket(ApiCommon.wsAddr('/event.ws'));
 
 w.onmessage = (msg)=>{
     //console.log(msg.data);

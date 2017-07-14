@@ -34,7 +34,9 @@ export class Devices extends React.Component{
         this.sensorSub = EventBus.subscribe('/device/sensor/value',v=>{
             let devices = this.state.devices;
             let device = devices.find(d=>d.id==v.deviceId);
-            if (device){                
+            if (device){    
+                if (device.values===null)
+                    device.values = {};            
                device.values[v.sensorId] = v.value;
                this.setState({});                                
             }

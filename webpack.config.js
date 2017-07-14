@@ -3,6 +3,7 @@ const webpack = require('webpack');
 var HtmlPlugin = require('html-webpack-plugin');
 
 var env = process.env.NODE_ENV||'DEVELOPMENT';
+
 console.log(`Enviroment=${process.env.NODE_ENV}`);
 
 var  plugins = [
@@ -28,11 +29,27 @@ var  plugins = [
       })
     ];
 
+
+var serverHost = process.env.SERVER_HOST?process.env.SERVER_HOST:'localhost:8080';
+var serverPath = process.env.SERVER_PATH?process.env.SERVER_PATH:'/dds';
+
+var buildConfig = {
+    serverHost:serverHost,
+    baseHttp:`http://${serverHost}/${serverPath}`,
+    baseWebsocket:`ws://${serverHost}/${serverPath}`
+}
+
+
+var externals = {
+        'conf/config':'require("cfg")',
+        'build-config':JSON.stringify(buildConfig)
+};
+
 module.exports = {
     entry:{
         app:'./src/app.js',
         admin:'./src_admin/app.js',
-        admin:'./src_webclient/app.js',        
+        webclient:'./src_webclient/app.js',        
         vendor:['react','react-dom','jquery']
     },
     module:{
@@ -78,7 +95,5 @@ module.exports = {
         contentBase:[path.join(__dirname,'./dist/'),path.join(__dirname,'./conf/'),path.join(__dirname,'./ext/')],
         disableHostCheck: true
     },
-    externals: {
-        'conf/config':'require("cfg")'
-    }
+    externals: externals
 }
