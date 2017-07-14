@@ -18,8 +18,8 @@ class SensorsView extends React.Component{
                 this.setState(state);
             }
         });
-
-        this.setState(this.props.values);
+        if (this.props.values)
+            this.setState(this.props.values);
     }
 
     componentWillUnmount(){
