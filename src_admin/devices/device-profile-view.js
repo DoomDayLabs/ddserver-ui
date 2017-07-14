@@ -4,6 +4,7 @@ import {List,ListItem} from 'react-toolbox/lib/list';
 import ProfileView from './profile-view';
 import css from './profile-view.css';
 
+
 export default class DevicePorfileView extends React.Component{
     constructor(){
         super();
@@ -39,15 +40,16 @@ export default class DevicePorfileView extends React.Component{
     render(){
         return <Dialog active={this.active}
                 actions={this.actions}
+                type='large'
         >
         <Tabs index={this.tabIndex} onChange={index=>{this.tabIndex=index;this.setState({})}} fixed> 
             <Tab label='Device data' icon='mode_edit'>
                 <Input type='text' label='Device name' value={this.state.device.name} onChange={v=>this.setState({device:{...this.state.device,name:v}})} required/>                
             </Tab>
             <Tab label='Profile' icon='settings_input_composite' >
-                <ProfileView profile={this.state.device.profile} className={css.scroll}/>
+                <ProfileView profile={this.state.device.profile} values={this.state.device.values} deviceId={this.state.device.id} className={css.scroll} />
             </Tab>
-            <Tab label='Scripts' icon='bug_report'/>           
+            <Tab label='Scripts' icon='code'/>           
         </Tabs>
         </Dialog>
     }

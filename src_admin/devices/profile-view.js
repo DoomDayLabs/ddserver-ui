@@ -5,13 +5,34 @@ import css from './profile-view.css';
 import EventBus from 'eventbus';
 
 
-class SensorsView extends React.Component{
+class SensorsView extends React.Component{    
+    constructor(){
+        super();
+        this.state = {};
+    }
+    componentWillMount(){
+        this.sensorSub = EventBus.subscribe('/device/sensor/value',v=>{
+            if (v.deviceId==this.props.deviceId){
+                let state = {};
+                state[v.sensorId] = v.value;
+                this.setState(state);
+            }
+        });
+
+        this.setState(this.props.values);
+    }
+
+    componentWillUnmount(){
+        this.sensorSub();
+    }
     render(){
+        
         return <ExpandableListItem caption='Sensors'>
         {Object.entries(this.props.sensors).map(s=>{
             let id=s[0];
             let def=s[1];
-            return <ListItem key={id} caption={id} legend={def.def} />
+            let rightIcon = <span>{this.state[id]}</span>
+            return <ListItem key={id} caption={id} legend={def.def} rightIcon={rightIcon}/>
         })}
         </ExpandableListItem>
     }
@@ -38,7 +59,7 @@ export default class ProfileView extends React.Component{
     }
     render(){
         return <List className={css.scroll}>
-            <SensorsView sensors={this.props.profile.sensors}/>
+            <SensorsView sensors={this.props.profile.sensors} values={this.props.values} deviceId={this.props.deviceId}/>
             <TriggersView triggers={this.props.profile.triggers}/>
         </List>
     }

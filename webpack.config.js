@@ -2,10 +2,37 @@ const path = require('path');
 const webpack = require('webpack');
 var HtmlPlugin = require('html-webpack-plugin');
 
+var env = process.env.NODE_ENV||'DEVELOPMENT';
+console.log(`Enviroment=${process.env.NODE_ENV}`);
+
+var  plugins = [
+      new webpack.NamedModulesPlugin(),
+      new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'}),
+      new HtmlPlugin({
+        title: 'Test APP',
+        chunks: ['application', 'vendors'],
+        filename: 'index.html',
+        template: path.join(__dirname, 'src', 'index.html')
+      }),
+      new HtmlPlugin({
+        title: 'Admin APP',
+        chunks: ['application', 'vendors'],
+        filename: 'admin.html',
+        template: path.join(__dirname, 'src_admin', 'admin.html')
+      }),
+      new HtmlPlugin({
+        title: 'WebClient APP',
+        chunks: ['application', 'vendors'],
+        filename: 'webclient.html',
+        template: path.join(__dirname, 'src_webclient', 'webclient.html')
+      })
+    ];
+
 module.exports = {
     entry:{
         app:'./src/app.js',
-        admin:'./src_admin/app.js',        
+        admin:'./src_admin/app.js',
+        admin:'./src_webclient/app.js',        
         vendor:['react','react-dom','jquery']
     },
     module:{
@@ -39,23 +66,7 @@ module.exports = {
         extensions:['.js','.htmls','.css','.scss'],
         modules: [path.resolve(__dirname, "lib"), "node_modules"]
     },
-    plugins:[
-      //new webpack.optimize.CommonsChunkPlugin({names: ["apps","vendor"]}),
-      new webpack.NamedModulesPlugin(),
-      new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.js'}),
-      new HtmlPlugin({
-        title: 'Test APP',
-        chunks: ['application', 'vendors'],
-        filename: 'index.html',
-        template: path.join(__dirname, 'src', 'index.html')
-      }),
-      new HtmlPlugin({
-        title: 'Admin APP',
-        chunks: ['application', 'vendors'],
-        filename: 'admin.html',
-        template: path.join(__dirname, 'src_admin', 'admin.html')
-      })
-    ],
+    plugins:plugins,
     output:{
         filename:'[name].js',
         path: path.resolve(__dirname,'dist'),

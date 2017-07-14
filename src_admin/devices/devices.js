@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppBar,ProgressBar} from 'react-toolbox';
+import {AppBar,ProgressBar,Avatar} from 'react-toolbox';
 import EventBus from 'eventbus';
 import Api from '../api/';
 import {List,ListItem} from 'react-toolbox/lib/list';
@@ -10,7 +10,7 @@ import css from './devices-style';
 import DeviceAuthorizer from './device-authorizer';
 import DeviceViewer from './device-profile-view';
 import {WidgetWizzard} from './wizzard/widgetwizzard';
-
+import theme from './theme.scss';
 
 export class Devices extends React.Component{
     constructor(){
@@ -30,9 +30,22 @@ export class Devices extends React.Component{
         }); 
         this.updateSub = EventBus.subscribe('/device/updated',device=>{
             this.updateDevice(device);
-        })      
+        });
+        this.sensorSub = EventBus.subscribe('/device/sensor/value',v=>{
+            let devices = this.state.devices;
+            let device = devices.find(d=>d.id==v.deviceId);
+            if (device){                
+               device.values[v.sensorId] = v.value;
+               this.setState({});                                
+            }
+        });
     }
     
+    componentWillUnmount(){
+        this.removeSub();
+        this.updateSub();
+        this.sensorSub();
+    }
     removeDevice(device){
         let devices = this.state.devices.copyWithin();
         let index = devices.findIndex(d=>d._id==device._id);
@@ -41,12 +54,16 @@ export class Devices extends React.Component{
             this.setState({devices});
         } 
     }
-    updateDevice(device){
+    updateDevice(dev){
+        let device = {};
+        Object.keys(dev).forEach(key=>{
+            if(dev[key]!==null)
+                device[key] = dev[key];
+        });
         let devices = this.state.devices.copyWithin();
         let index = devices.findIndex(d=>d._id==device._id);
-        if (index>-1){
-            Object.assign(devices[index],device);
-            
+        if (index>-1){            
+            Object.assign(devices[index],device);            
         } else {
             devices.push(device);
         }
@@ -84,7 +101,7 @@ export class Devices extends React.Component{
     render(){
         return (
         <div>
-             <AppBar title="Devices" leftIcon="menu" onLeftIconClick={()=>this.handleAppMenuClick()}/>  
+             <AppBar theme={theme} title="Devices" leftIcon="menu" onLeftIconClick={()=>this.handleAppMenuClick()}/>  
              
              <List selectable>   
              {this.state.devices.map((d,k)=>{                 
@@ -102,9 +119,12 @@ export class Devices extends React.Component{
 
                  if (d.connectionStatus=='ONLINE'||d.connectionStatus=='OFFLINE'){
                     menuItems.push(<MenuItem key='edit_device' caption='Edit' icon='mode_edit'/>);
-                    menuItems.push(<MenuItem key='make_widget' caption='Make widget' icon='library_add' onClick={()=>this.handleMakeWidget(d)}/>);
+                    menuItems.push(<MenuItem key='make_widget' caption='Make widget' icon='library_add' onClick={()=>this.handleMakeWidget(d)}/>);                    
                     
+                    let avatarClass = d.connectionStatus=='ONLINE'?theme.avatarOnline:theme.avatarOffline;
+                    leftIcon = <Avatar className={avatarClass} title={d.name} />
                  }
+                 
                 
                  menuItems.push(<MenuItem key='forget_device' caption='Forget' icon='delete_forever' onClick={()=>this.handleDeviceForget(d)}/>);
                  let menu = <IconMenu icon='more_vert' onClick={e=>e.stopPropagation()}>{menuItems}</IconMenu>

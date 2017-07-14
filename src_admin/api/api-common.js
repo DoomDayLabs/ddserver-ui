@@ -43,6 +43,7 @@ export var host = 'localhost';
 export function addr(e){    
     return `http://${host}:8080/dds/admin/${e}`;
 }
+
 function $request(options){
     return request(options)
     .then(null,function(e){
@@ -60,7 +61,7 @@ export function jsonRequest(options){
 }
 export {request};
 export default {
-    host:host,
+   
     addr:addr,
     request:$request,
     jsonRequest:jsonRequest,

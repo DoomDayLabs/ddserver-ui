@@ -22,6 +22,29 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/components/expandableListItem.css":
+/* no static exports found */
+/* all exports used */
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"modules":true,"sourceMap":true,"localIdentName":"[name]__[local]--[hash:base64:8]"}!./~/postcss-loader/lib!./src_admin/components/expandableListItem.css ***!
+  \*********************************************************************************************************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(true);
+// imports
+
+
+// module
+exports.push([module.i, ".expandableListItem__expanded--3Luw9D5l{\n    /*max-height: 1000px;*/\n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}\n.expandableListItem__closed--17_BP_0F{\n    max-height: 0px;    \n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/components/expandableListItem.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;IACvB,kCAAkC;IAClC,iBAAiB;CACpB;AACD;IACI,gBAAgB;IAChB,kCAAkC;IAClC,iBAAiB;CACpB","file":"expandableListItem.css","sourcesContent":[".expanded{\n    /*max-height: 1000px;*/\n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}\n.closed{\n    max-height: 0px;    \n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}"],"sourceRoot":""}]);
+
+// exports
+exports.locals = {
+	"expanded": "expandableListItem__expanded--3Luw9D5l",
+	"closed": "expandableListItem__closed--17_BP_0F"
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/dashboard/dashboardlist-style.css":
 /* no static exports found */
 /* all exports used */
@@ -57,11 +80,34 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, ".devices-style__devicesPane--2c2dWXwR{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n\n.devices-style__devicesPane--2c2dWXwR>div{\n    margin: 0.5em;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/devices/devices-style.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;CACvC;;AAED;IACI,cAAc;CACjB","file":"devices-style.css","sourcesContent":[".devicesPane{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n\n.devicesPane>div{\n    margin: 0.5em;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".devices-style__devicesPane--2c2dWXwR{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n\n.devices-style__devicesPane--2c2dWXwR>div{\n    margin: 0.5em;\n}\n\n.devices-style__device_auth_progress---Ueo30yK{\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/devices/devices-style.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,qBAAqB;IACrB,cAAc;IACd,wBAAwB;QACpB,qBAAqB;YACjB,4BAA4B;CACvC;;AAED;IACI,cAAc;CACjB;;AAED;IACI,8BAA8B;YACtB,sBAAsB;CACjC","file":"devices-style.css","sourcesContent":[".devicesPane{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n}\n\n.devicesPane>div{\n    margin: 0.5em;\n}\n\n.device_auth_progress{\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n}"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"devicesPane": "devices-style__devicesPane--2c2dWXwR"
+	"devicesPane": "devices-style__devicesPane--2c2dWXwR",
+	"device_auth_progress": "devices-style__device_auth_progress---Ueo30yK"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/devices/profile-view.css":
+/* no static exports found */
+/* all exports used */
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"modules":true,"sourceMap":true,"localIdentName":"[name]__[local]--[hash:base64:8]"}!./~/postcss-loader/lib!./src_admin/devices/profile-view.css ***!
+  \************************************************************************************************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(true);
+// imports
+
+
+// module
+exports.push([module.i, ".profile-view__scroll--1mXWVWWz{\n    max-height: 300px;\n    overflow-y: scroll;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/devices/profile-view.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,mBAAmB;CACtB","file":"profile-view.css","sourcesContent":[".scroll{\n    max-height: 300px;\n    overflow-y: scroll;\n}"],"sourceRoot":""}]);
+
+// exports
+exports.locals = {
+	"scroll": "profile-view__scroll--1mXWVWWz"
 };
 
 /***/ }),
@@ -79,14 +125,35 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, ".styles__viewCard--2vI3zeJ4{\n    position: relative;\n}\n.styles__menuIcon--3yjG8tXG{\n    position: absolute;\n    top: 1em;\n    right: 0.5em;\n}\n.styles__expanded--2cIv7oSW{\n    /*max-height: 1000px;*/\n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}\n.styles__closed--VuG7Bfy9{\n    max-height: 0px;    \n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/devices/styles.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;IACnB,SAAS;IACT,aAAa;CAChB;AACD;IACI,uBAAuB;IACvB,kCAAkC;IAClC,iBAAiB;CACpB;AACD;IACI,gBAAgB;IAChB,kCAAkC;IAClC,iBAAiB;CACpB","file":"styles.css","sourcesContent":[".viewCard{\n    position: relative;\n}\n.menuIcon{\n    position: absolute;\n    top: 1em;\n    right: 0.5em;\n}\n.expanded{\n    /*max-height: 1000px;*/\n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}\n.closed{\n    max-height: 0px;    \n    transition: all 1000ms 100ms ease;\n    overflow: hidden;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".styles__viewCard--2vI3zeJ4{\n    position: relative;\n}\n.styles__menuIcon--3yjG8tXG{\n    position: absolute;\n    top: 1em;\n    right: 0.5em;\n}\n\n", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/devices/styles.css"],"names":[],"mappings":"AAAA;IACI,mBAAmB;CACtB;AACD;IACI,mBAAmB;IACnB,SAAS;IACT,aAAa;CAChB","file":"styles.css","sourcesContent":[".viewCard{\n    position: relative;\n}\n.menuIcon{\n    position: absolute;\n    top: 1em;\n    right: 0.5em;\n}\n\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
 	"viewCard": "styles__viewCard--2vI3zeJ4",
-	"menuIcon": "styles__menuIcon--3yjG8tXG",
-	"expanded": "styles__expanded--2cIv7oSW",
-	"closed": "styles__closed--VuG7Bfy9"
+	"menuIcon": "styles__menuIcon--3yjG8tXG"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/devices/theme.scss":
+/* no static exports found */
+/* all exports used */
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"modules":true,"sourceMap":true,"localIdentName":"[name]__[local]--[hash:base64:8]"}!./~/postcss-loader/lib!./src_admin/devices/theme.scss ***!
+  \******************************************************************************************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(true);
+// imports
+
+
+// module
+exports.push([module.i, "\n.theme__avatarOnline--QNCfJcJU{\n    background-color:#00b248;\n}\n\n.theme__avatarOffline--1chQBF1B{\n    background-color: #b61827;\n}\n", "", {"version":3,"sources":["/Volumes/WORK/doomday/ddserver-ui/src_admin/devices/theme.scss"],"names":[],"mappings":";AACA;IACI,yBAAyB;CAC5B;;AAED;IACI,0BAA0B;CAC7B","file":"theme.scss","sourcesContent":["\n.avatarOnline{\n    background-color:#00b248;\n}\n\n.avatarOffline{\n    background-color: #b61827;\n}\n"],"sourceRoot":""}]);
+
+// exports
+exports.locals = {
+	"avatarOnline": "theme__avatarOnline--QNCfJcJU",
+	"avatarOffline": "theme__avatarOffline--1chQBF1B"
 };
 
 /***/ }),
@@ -128,8 +195,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _eventbus = __webpack_require__(/*! eventbus */ "./lib/eventbus/index.js");
 
 var _eventbus2 = _interopRequireDefault(_eventbus);
@@ -156,7 +221,6 @@ var _api2 = _interopRequireDefault(_api);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(_apiCommon2.default);
 var host = _apiCommon2.default.host;
 var addr = _apiCommon2.default.addr;
 
@@ -172,65 +236,71 @@ w.onclose = function () {
     _api2.default.common.makeError({ title: 'Опаньки! Что-то пошло не так :(', text: 'Lost connection with server. Try reload page' });
 };
 
-(0, _popsicle.get)(addr('device/list')).then(function (e) {
-    devices = JSON.parse(e.body);
-    _eventbus2.default.emit('/device/list/updated');
-});
+/*
+get(addr('device/list'))
+.then(e=>{
+    devices = JSON.parse(e.body);        
+    EventBus.emit('/device/list/updated');
+})
 
-var devices = [];
+var devices = []
 
-_eventbus2.default.subscribe('/device/profile/updated', function (d) {
-    var existDevi = devices.find(function (dev) {
-        return dev.id === d.id;
-    });
-    if (!existDevi.profile && d.profile) {
-        _eventbus2.default.emit('/device/profileupdated', d);
+EventBus.subscribe('/device/profile/updated',(d)=>{        
+    let existDevi = devices.find((dev)=>dev.id===d.id);
+    if (!existDevi.profile&&d.profile){
+        EventBus.emit('/device/profileupdated',d);
     }
-    console.log(existDevi, d);
-    Object.assign(existDevi, _extends({}, d));
+    console.log(existDevi,d);    
+    Object.assign(existDevi,{...d});
 
-    _eventbus2.default.emit('/device/list/updated');
-});
+    EventBus.emit('/device/list/updated');
+})
 
-_eventbus2.default.subscribe('/device/discovered', function (d) {
-    if (devices.find(function (dev) {
-        return dev.id === d.id;
-    })) {} else {
-        _eventbus2.default.emit('/device/discover', d);
+EventBus.subscribe('/device/discovered',(d)=>{
+    if (devices.find(dev=>dev.id===d.id)){
+
+    } else {        
+        EventBus.emit('/device/discover',d);
         devices.push(d);
-        _eventbus2.default.emit('/device/list/updated');
-    }
+        EventBus.emit('/device/list/updated');        
+    } 
 });
 
-function getDevices() {
+
+
+
+/*
+function getDevices(){
     return devices;
 }
 
-function authorizeDevice(device) {
-    (0, _popsicle.request)({
-        method: 'POST',
-        url: addr('device/update'),
-        body: device
-    }).then(function (e) {});
+function authorizeDevice(device){
+    request({
+        method:'POST',
+        url:addr('device/update'),
+        body:device
+    })
+    .then((e)=>{
+
+    });
 }
 
-function forgetDevice(d) {
-    var i = devices.findIndex(function (e) {
-        return e.id === d.id;
-    });
+function forgetDevice(d){    
+    let i = devices.findIndex(e=>e.id===d.id);
     console.log(i);
-    if (i > -1) {
-        devices.splice(i, 1);
-        _eventbus2.default.emit('/device/list/updated');
-        (0, _popsicle.request)({
-            method: 'POST',
-            url: addr('device/forget'),
-            body: {
-                id: d.id
+    if (i>-1){
+        devices.splice(i,1);
+        EventBus.emit('/device/list/updated');
+        request({
+            method:'POST',
+            url:addr('device/forget'),
+            body:{
+                id:d.id
             }
         });
     }
 }
+*/
 
 function getWidgetClasses(profile) {
     return new Promise(function (resolve, reject) {
@@ -269,10 +339,12 @@ function appendWidget(dashboards, config) {
 }
 
 var api = {
-    getDevices: getDevices,
-    authorizeDevice: authorizeDevice,
-    forgetDevice: forgetDevice,
-    updateDevice: authorizeDevice,
+    /*
+    getDevices:getDevices,
+    authorizeDevice:authorizeDevice,
+    forgetDevice:forgetDevice,  
+    updateDevice:authorizeDevice,
+    */
     showError: _api2.default.common.makeError,
 
     getWidgetClasses: getWidgetClasses,
@@ -401,6 +473,7 @@ var host = exports.host = 'localhost';
 function addr(e) {
     return 'http://' + host + ':8080/dds/admin/' + e;
 }
+
 function $request(options) {
     return (0, _popsicle.request)(options).then(null, function (e) {
         console.log(e);
@@ -418,7 +491,7 @@ function jsonRequest(options) {
 }
 exports.request = _popsicle.request;
 exports.default = {
-    host: host,
+
     addr: addr,
     request: $request,
     jsonRequest: jsonRequest,
@@ -502,11 +575,23 @@ function listDevices() {
     });
 }
 
-function updateDevice() {}
-
+function updateDevice(device) {
+    return (0, _apiCommon.jsonRequest)({
+        method: 'POST',
+        url: (0, _apiCommon.addr)('/devices'),
+        body: device
+    });
+}
+function removeDevice(device) {
+    return (0, _apiCommon.jsonRequest)({
+        method: 'DELETE',
+        url: (0, _apiCommon.addr)('/devices/' + device.id)
+    });
+}
 exports.default = {
     list: listDevices,
-    update: updateDevice
+    save: updateDevice,
+    remove: removeDevice
 };
 
 /***/ }),
@@ -714,7 +799,8 @@ exports.default = {
     users: _apiUsers2.default,
     groups: _apiGroups2.default,
     widgets: _apiWidgets2.default,
-    dashboards: _apiDashboards2.default
+    dashboards: _apiDashboards2.default,
+    devices: _apiDevices2.default
 };
 
 /***/ }),
@@ -929,7 +1015,7 @@ var App = function (_React$Component2) {
         key: 'componentWillMount',
         value: function componentWillMount() {
             var view = window.location.hash.replace('#', '');
-            if (!view) view = 'widgets';
+            if (!view) view = 'devices';
             this.setState({ view: view });
         }
     }, {
@@ -1081,6 +1167,129 @@ exports.default = ConfirmationDialog;
 
 /***/ }),
 
+/***/ "./src_admin/components/expandableListItem.css":
+/* no static exports found */
+/* all exports used */
+/*!*****************************************************!*\
+  !*** ./src_admin/components/expandableListItem.css ***!
+  \*****************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../~/css-loader??ref--2-1!../../~/postcss-loader/lib!./expandableListItem.css */ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/components/expandableListItem.css");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(/*! ../../~/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./expandableListItem.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./expandableListItem.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src_admin/components/expandableListItem.js":
+/* no static exports found */
+/* all exports used */
+/*!****************************************************!*\
+  !*** ./src_admin/components/expandableListItem.js ***!
+  \****************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _list = __webpack_require__(/*! react-toolbox/lib/list */ "./node_modules/react-toolbox/lib/list/index.js");
+
+var _reactToolbox = __webpack_require__(/*! react-toolbox */ "./node_modules/react-toolbox/lib/index.js");
+
+var _expandableListItem = __webpack_require__(/*! ./expandableListItem.css */ "./src_admin/components/expandableListItem.css");
+
+var _expandableListItem2 = _interopRequireDefault(_expandableListItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ExpandableListItem = function (_React$Component) {
+    _inherits(ExpandableListItem, _React$Component);
+
+    function ExpandableListItem() {
+        _classCallCheck(this, ExpandableListItem);
+
+        var _this = _possibleConstructorReturn(this, (ExpandableListItem.__proto__ || Object.getPrototypeOf(ExpandableListItem)).call(this));
+
+        _this.state = {
+            expanded: false
+        };
+        _this.actions = [_react2.default.createElement(_reactToolbox.Button, { mini: true, icon: 'keyboard_arrow_down', floating: true })];
+        return _this;
+    }
+
+    _createClass(ExpandableListItem, [{
+        key: 'handleToggle',
+        value: function handleToggle() {
+            this.setState({ expanded: !this.state.expanded });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var className = this.state.expanded ? _expandableListItem2.default.expanded : _expandableListItem2.default.closed;
+            var rightIcon = this.state.expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down';
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(_list.ListItem, { onClick: function onClick() {
+                        return _this2.handleToggle();
+                    }, ripple: true, selectable: true, caption: this.props.caption, leftIcon: this.props.leftIcon, rightIcon: rightIcon }),
+                _react2.default.createElement(
+                    'div',
+                    { className: className },
+                    this.props.children
+                )
+            );
+        }
+    }]);
+
+    return ExpandableListItem;
+}(_react2.default.Component);
+
+exports.default = ExpandableListItem;
+
+/***/ }),
+
 /***/ "./src_admin/components/iconselector.js":
 /* no static exports found */
 /* all exports used */
@@ -1176,7 +1385,7 @@ exports.default = IconSelector;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ConfirmationDialog = exports.IconSelector = undefined;
+exports.ExpandableListItem = exports.ConfirmationDialog = exports.IconSelector = undefined;
 
 var _iconselector = __webpack_require__(/*! ./iconselector */ "./src_admin/components/iconselector.js");
 
@@ -1186,10 +1395,15 @@ var _confirmation = __webpack_require__(/*! ./confirmation */ "./src_admin/compo
 
 var _confirmation2 = _interopRequireDefault(_confirmation);
 
+var _expandableListItem = __webpack_require__(/*! ./expandableListItem */ "./src_admin/components/expandableListItem.js");
+
+var _expandableListItem2 = _interopRequireDefault(_expandableListItem);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var IconSelector = exports.IconSelector = _iconselector2.default;
 var ConfirmationDialog = exports.ConfirmationDialog = _confirmation2.default;
+var ExpandableListItem = exports.ExpandableListItem = _expandableListItem2.default;
 
 /***/ }),
 
@@ -1778,6 +1992,8 @@ var _eventbus2 = _interopRequireDefault(_eventbus);
 
 var _widgetwizzard = __webpack_require__(/*! ./wizzard/widgetwizzard */ "./src_admin/devices/wizzard/widgetwizzard.js");
 
+var _components = __webpack_require__(/*! ../components */ "./src_admin/components/index.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1786,69 +2002,24 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ExpandableListItem = function (_React$Component) {
-    _inherits(ExpandableListItem, _React$Component);
-
-    function ExpandableListItem() {
-        _classCallCheck(this, ExpandableListItem);
-
-        var _this = _possibleConstructorReturn(this, (ExpandableListItem.__proto__ || Object.getPrototypeOf(ExpandableListItem)).call(this));
-
-        _this.state = {
-            expanded: false
-        };
-        _this.actions = [_react2.default.createElement(_reactToolbox.Button, { mini: true, icon: 'keyboard_arrow_down', floating: true })];
-        return _this;
-    }
-
-    _createClass(ExpandableListItem, [{
-        key: 'handleToggle',
-        value: function handleToggle() {
-            this.setState({ expanded: !this.state.expanded });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var className = this.state.expanded ? _styles2.default.expanded : _styles2.default.closed;
-            var rightIcon = this.state.expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down';
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_list.ListItem, { onClick: function onClick() {
-                        return _this2.handleToggle();
-                    }, ripple: true, selectable: true, caption: this.props.caption, leftIcon: this.props.leftIcon, rightIcon: rightIcon }),
-                _react2.default.createElement(
-                    'div',
-                    { className: className },
-                    this.props.children
-                )
-            );
-        }
-    }]);
-
-    return ExpandableListItem;
-}(_react2.default.Component);
-
-var KnownDeviceEditDialog = function (_React$Component2) {
-    _inherits(KnownDeviceEditDialog, _React$Component2);
+var KnownDeviceEditDialog = function (_React$Component) {
+    _inherits(KnownDeviceEditDialog, _React$Component);
 
     function KnownDeviceEditDialog(props) {
         _classCallCheck(this, KnownDeviceEditDialog);
 
-        var _this3 = _possibleConstructorReturn(this, (KnownDeviceEditDialog.__proto__ || Object.getPrototypeOf(KnownDeviceEditDialog)).call(this));
+        var _this = _possibleConstructorReturn(this, (KnownDeviceEditDialog.__proto__ || Object.getPrototypeOf(KnownDeviceEditDialog)).call(this));
 
-        _this3.state = {
+        _this.state = {
             active: false,
             name: ''
         };
-        _this3.actions = [{ label: 'Apply', icon: 'done', onClick: function onClick() {
-                return _this3.handleApply();
+        _this.actions = [{ label: 'Apply', icon: 'done', onClick: function onClick() {
+                return _this.handleApply();
             } }, { label: 'Cancel', icon: 'close', onClick: function onClick() {
-                return _this3.setState({ active: false });
+                return _this.setState({ active: false });
             } }];
-        return _this3;
+        return _this;
     }
 
     _createClass(KnownDeviceEditDialog, [{
@@ -1865,13 +2036,13 @@ var KnownDeviceEditDialog = function (_React$Component2) {
     }, {
         key: 'render',
         value: function render() {
-            var _this4 = this;
+            var _this2 = this;
 
             return _react2.default.createElement(
                 _dialog2.default,
                 { active: this.state.active, actions: this.actions },
                 _react2.default.createElement(_reactToolbox.Input, { label: 'Device name', value: this.state.name, onChange: function onChange(name) {
-                        return _this4.setState({ name: name });
+                        return _this2.setState({ name: name });
                     } })
             );
         }
@@ -1880,33 +2051,33 @@ var KnownDeviceEditDialog = function (_React$Component2) {
     return KnownDeviceEditDialog;
 }(_react2.default.Component);
 
-var KnownDeviceView = exports.KnownDeviceView = function (_React$Component3) {
-    _inherits(KnownDeviceView, _React$Component3);
+var KnownDeviceView = exports.KnownDeviceView = function (_React$Component2) {
+    _inherits(KnownDeviceView, _React$Component2);
 
     function KnownDeviceView(props) {
         _classCallCheck(this, KnownDeviceView);
 
-        var _this5 = _possibleConstructorReturn(this, (KnownDeviceView.__proto__ || Object.getPrototypeOf(KnownDeviceView)).call(this));
+        var _this3 = _possibleConstructorReturn(this, (KnownDeviceView.__proto__ || Object.getPrototypeOf(KnownDeviceView)).call(this));
 
-        _this5.state = {
+        _this3.state = {
             editDevice: null,
             sensors: props.device.values || {}
         };
 
-        return _this5;
+        return _this3;
     }
 
     _createClass(KnownDeviceView, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
-            var _this6 = this;
+            var _this4 = this;
 
             console.log(this.state.sensors);
             this.sensorSubsciption = _eventbus2.default.subscribe('/device/sensor/value', function (e) {
-                if (e.devId == _this6.props.device.id) {
-                    var sensors = _this6.state.sensors;
+                if (e.devId == _this4.props.device.id) {
+                    var sensors = _this4.state.sensors;
                     sensors[e.sensor] = e.value;
-                    _this6.setState({ sensors: sensors });
+                    _this4.setState({ sensors: sensors });
                 }
             });
         }
@@ -1941,7 +2112,7 @@ var KnownDeviceView = exports.KnownDeviceView = function (_React$Component3) {
     }, {
         key: 'render',
         value: function render() {
-            var _this7 = this;
+            var _this5 = this;
 
             return _react2.default.createElement(
                 'div',
@@ -1950,13 +2121,13 @@ var KnownDeviceView = exports.KnownDeviceView = function (_React$Component3) {
                     _menu.IconMenu,
                     { icon: 'more_vert', className: _styles2.default.menuIcon, menuRipple: true, position: 'topRight' },
                     _react2.default.createElement(_menu.MenuItem, { icon: 'delete_forever', caption: 'Forget', onClick: function onClick() {
-                            return _this7.handleForgetClick();
+                            return _this5.handleForgetClick();
                         } }),
                     _react2.default.createElement(_menu.MenuItem, { icon: 'mode_edit', caption: 'Edit', onClick: function onClick() {
-                            return _this7.handleEditClick();
+                            return _this5.handleEditClick();
                         } }),
                     _react2.default.createElement(_menu.MenuItem, { icon: 'add_to_queue', caption: 'Make widget', onClick: function onClick() {
-                            return _this7.handleWidgetWizzard();
+                            return _this5.handleWidgetWizzard();
                         } })
                 ),
                 _react2.default.createElement(_card.CardTitle, { title: this.props.device.name, subtitle: this.props.device.id }),
@@ -1964,19 +2135,19 @@ var KnownDeviceView = exports.KnownDeviceView = function (_React$Component3) {
                     _list.List,
                     null,
                     _react2.default.createElement(
-                        ExpandableListItem,
+                        _components.ExpandableListItem,
                         { caption: 'Sensors' },
                         this.props.device.profile.sensors.map(function (s, k) {
                             var rightAction = _react2.default.createElement(
                                 'span',
                                 null,
-                                _this7.state.sensors[s.name]
+                                _this5.state.sensors[s.name]
                             );
                             return _react2.default.createElement(_list.ListItem, { key: k, caption: s.name, legend: s.def, rightIcon: rightAction });
                         })
                     ),
                     _react2.default.createElement(
-                        ExpandableListItem,
+                        _components.ExpandableListItem,
                         { caption: 'Triggers' },
                         (this.props.device.profile.triggers || []).map(function (t, k) {
                             return _react2.default.createElement(_list.ListItem, { key: k, caption: t.name });
@@ -1984,12 +2155,12 @@ var KnownDeviceView = exports.KnownDeviceView = function (_React$Component3) {
                     )
                 ),
                 _react2.default.createElement(KnownDeviceEditDialog, { ref: function ref(c) {
-                        return _this7.editor = c;
+                        return _this5.editor = c;
                     }, onApply: function onApply(d) {
-                        return _this7.handleEditorApply(d);
+                        return _this5.handleEditorApply(d);
                     } }),
                 _react2.default.createElement(_widgetwizzard.WidgetWizzard, { ref: function ref(c) {
-                        return _this7.widgetWizzard = c;
+                        return _this5.widgetWizzard = c;
                     } })
             );
         }
@@ -1998,20 +2169,20 @@ var KnownDeviceView = exports.KnownDeviceView = function (_React$Component3) {
     return KnownDeviceView;
 }(_react2.default.Component);
 
-var UnknownDeviceView = exports.UnknownDeviceView = function (_React$Component4) {
-    _inherits(UnknownDeviceView, _React$Component4);
+var UnknownDeviceView = exports.UnknownDeviceView = function (_React$Component3) {
+    _inherits(UnknownDeviceView, _React$Component3);
 
     function UnknownDeviceView(props) {
         _classCallCheck(this, UnknownDeviceView);
 
-        var _this8 = _possibleConstructorReturn(this, (UnknownDeviceView.__proto__ || Object.getPrototypeOf(UnknownDeviceView)).call(this));
+        var _this6 = _possibleConstructorReturn(this, (UnknownDeviceView.__proto__ || Object.getPrototypeOf(UnknownDeviceView)).call(this));
 
-        _this8.state = {
+        _this6.state = {
             pinDialog: false,
             pincode: '',
             name: props.device.name
         };
-        return _this8;
+        return _this6;
     }
 
     _createClass(UnknownDeviceView, [{
@@ -2045,12 +2216,12 @@ var UnknownDeviceView = exports.UnknownDeviceView = function (_React$Component4)
     }, {
         key: 'render',
         value: function render() {
-            var _this9 = this;
+            var _this7 = this;
 
             var authDialogActions = [{ icon: 'check', label: 'Authorize', onClick: function onClick() {
-                    return _this9.handleAuthAction();
+                    return _this7.handleAuthAction();
                 } }, { icon: 'close', label: 'Cancel', onClick: function onClick() {
-                    return _this9.handleAuthCancel();
+                    return _this7.handleAuthCancel();
                 } }];
             var ActionsPane = this.props.device.pincode ? _react2.default.createElement(
                 'div',
@@ -2062,10 +2233,10 @@ var UnknownDeviceView = exports.UnknownDeviceView = function (_React$Component4)
                 ),
                 _react2.default.createElement(_progress_bar2.default, { type: 'linear', mode: 'indeterminate', multicolor: true }),
                 _react2.default.createElement(_reactToolbox.Button, { label: 'Cancel', onClick: function onClick() {
-                        return _this9.handleResetPincode();
+                        return _this7.handleResetPincode();
                     } })
             ) : _react2.default.createElement(_reactToolbox.Button, { label: 'Authorize', onClick: function onClick() {
-                    return _this9.setState({ pinDialog: true });
+                    return _this7.setState({ pinDialog: true });
                 } });
             return _react2.default.createElement(
                 'div',
@@ -2088,16 +2259,16 @@ var UnknownDeviceView = exports.UnknownDeviceView = function (_React$Component4)
                         actions: authDialogActions,
                         title: 'Auth device',
                         onOverlayClick: function onOverlayClick() {
-                            return _this9.handleAuthCancel();
+                            return _this7.handleAuthCancel();
                         },
                         onEscKeyDown: function onEscKeyDown() {
-                            return _this9.handleAuthCancel();
+                            return _this7.handleAuthCancel();
                         } },
                     _react2.default.createElement(_reactToolbox.Input, { label: 'Device name', value: this.state.name, onChange: function onChange(v) {
-                            return _this9.setState({ name: v });
+                            return _this7.setState({ name: v });
                         } }),
                     _react2.default.createElement(_reactToolbox.Input, { label: 'Pincode', value: this.state.pincode, onChange: function onChange(v) {
-                            return _this9.handlePincodeChange(v);
+                            return _this7.handlePincodeChange(v);
                         }, required: true })
                 )
             );
@@ -2106,6 +2277,258 @@ var UnknownDeviceView = exports.UnknownDeviceView = function (_React$Component4)
 
     return UnknownDeviceView;
 }(_react2.default.Component);
+
+/***/ }),
+
+/***/ "./src_admin/devices/device-authorizer.js":
+/* no static exports found */
+/* all exports used */
+/*!************************************************!*\
+  !*** ./src_admin/devices/device-authorizer.js ***!
+  \************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactToolbox = __webpack_require__(/*! react-toolbox */ "./node_modules/react-toolbox/lib/index.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DeviceAuthorized = function (_React$Component) {
+    _inherits(DeviceAuthorized, _React$Component);
+
+    function DeviceAuthorized() {
+        _classCallCheck(this, DeviceAuthorized);
+
+        var _this = _possibleConstructorReturn(this, (DeviceAuthorized.__proto__ || Object.getPrototypeOf(DeviceAuthorized)).call(this));
+
+        _this.active = false;
+        _this.actions = [{ label: 'Cancel', icon: 'close', onClick: function onClick() {
+                return _this.handleCancelClick();
+            } }, { label: 'Save', icon: 'done', onClick: function onClick() {
+                return _this.handleApplyClick();
+            }, raised: true, primary: true }];
+        _this.state = {
+            device: {
+                name: '',
+                pincode: ''
+            },
+            errors: {}
+        };
+        return _this;
+    }
+
+    _createClass(DeviceAuthorized, [{
+        key: 'authorizeDevice',
+        value: function authorizeDevice(device) {
+            var _this2 = this;
+
+            return new Promise(function (resolve, reject) {
+                _this2.setState({ device: _extends({}, device, { pincode: device.pincode || '' }) });
+                _this2.resolve = resolve;
+                _this2.reject = reject;
+                _this2.active = true;
+            });
+        }
+    }, {
+        key: 'handleApplyClick',
+        value: function handleApplyClick() {
+
+            if (!this.state.device.name) {
+                var errors = _extends({}, this.state.errors, { name: 'Must not empty' });
+                this.setState({ errors: errors });
+                return;
+            }
+            if (!this.state.device.pincode) {
+                var _errors = _extends({}, this.state.errors, { pincode: 'Must not empty' });
+                this.setState({ errors: _errors });
+                return;
+            }
+            this.resolve(_extends({}, this.state.device));
+            this.active = false;
+            this.setState({});
+        }
+    }, {
+        key: 'handleCancelClick',
+        value: function handleCancelClick() {
+            this.active = false;
+            this.setState({});
+            this.reject();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                _reactToolbox.Dialog,
+                { active: this.active,
+                    actions: this.actions,
+                    title: 'Authorize device ' + this.state.name },
+                _react2.default.createElement(_reactToolbox.Input, { type: 'text', label: 'Device name', value: this.state.device.name, onChange: function onChange(name) {
+                        return _this3.setState({ errors: {}, device: _extends({}, _this3.state.device, { name: name }) });
+                    }, error: this.state.errors.name, required: true }),
+                _react2.default.createElement(_reactToolbox.Input, { type: 'text', label: 'Pincode', value: this.state.device.pincode, onChange: function onChange(pincode) {
+                        return _this3.setState({ errors: {}, device: _extends({}, _this3.state.device, { pincode: pincode }) });
+                    }, error: this.state.errors.pincode, required: true })
+            );
+        }
+    }]);
+
+    return DeviceAuthorized;
+}(_react2.default.Component);
+
+exports.default = DeviceAuthorized;
+
+/***/ }),
+
+/***/ "./src_admin/devices/device-profile-view.js":
+/* no static exports found */
+/* all exports used */
+/*!**************************************************!*\
+  !*** ./src_admin/devices/device-profile-view.js ***!
+  \**************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactToolbox = __webpack_require__(/*! react-toolbox */ "./node_modules/react-toolbox/lib/index.js");
+
+var _list = __webpack_require__(/*! react-toolbox/lib/list */ "./node_modules/react-toolbox/lib/list/index.js");
+
+var _profileView = __webpack_require__(/*! ./profile-view */ "./src_admin/devices/profile-view.js");
+
+var _profileView2 = _interopRequireDefault(_profileView);
+
+var _profileView3 = __webpack_require__(/*! ./profile-view.css */ "./src_admin/devices/profile-view.css");
+
+var _profileView4 = _interopRequireDefault(_profileView3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DevicePorfileView = function (_React$Component) {
+    _inherits(DevicePorfileView, _React$Component);
+
+    function DevicePorfileView() {
+        _classCallCheck(this, DevicePorfileView);
+
+        var _this = _possibleConstructorReturn(this, (DevicePorfileView.__proto__ || Object.getPrototypeOf(DevicePorfileView)).call(this));
+
+        _this.active = false;
+        _this.actions = [{ label: 'Cancel', icon: 'close', onClick: function onClick() {
+                return _this.handleCancelClick();
+            } }, { label: 'Save', icon: 'done', onClick: function onClick() {
+                return _this.handleApplyClick();
+            }, raised: true, primary: true }];
+        _this.tabIndex = 0;
+        _this.state = {
+            device: {}
+        };
+        return _this;
+    }
+
+    _createClass(DevicePorfileView, [{
+        key: 'handleApplyClick',
+        value: function handleApplyClick() {
+            this.resolve(_extends({}, this.state.device));
+            this.active = false;
+            this.setState({});
+        }
+    }, {
+        key: 'handleCancelClick',
+        value: function handleCancelClick() {
+            this.active = false;
+            this.setState({});
+            this.reject();
+        }
+    }, {
+        key: 'view',
+        value: function view(device) {
+            var _this2 = this;
+
+            return new Promise(function (resolve, reject) {
+                _this2.resolve = resolve;
+                _this2.reject = reject;
+                _this2.active = true;
+                _this2.setState({ device: device });
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                _reactToolbox.Dialog,
+                { active: this.active,
+                    actions: this.actions,
+                    type: 'large'
+                },
+                _react2.default.createElement(
+                    _reactToolbox.Tabs,
+                    { index: this.tabIndex, onChange: function onChange(index) {
+                            _this3.tabIndex = index;_this3.setState({});
+                        }, fixed: true },
+                    _react2.default.createElement(
+                        _reactToolbox.Tab,
+                        { label: 'Device data', icon: 'mode_edit' },
+                        _react2.default.createElement(_reactToolbox.Input, { type: 'text', label: 'Device name', value: this.state.device.name, onChange: function onChange(v) {
+                                return _this3.setState({ device: _extends({}, _this3.state.device, { name: v }) });
+                            }, required: true })
+                    ),
+                    _react2.default.createElement(
+                        _reactToolbox.Tab,
+                        { label: 'Profile', icon: 'settings_input_composite' },
+                        _react2.default.createElement(_profileView2.default, { profile: this.state.device.profile, values: this.state.device.values, deviceId: this.state.device.id, className: _profileView4.default.scroll })
+                    ),
+                    _react2.default.createElement(_reactToolbox.Tab, { label: 'Scripts', icon: 'code' })
+                )
+            );
+        }
+    }]);
+
+    return DevicePorfileView;
+}(_react2.default.Component);
+
+exports.default = DevicePorfileView;
 
 /***/ }),
 
@@ -2168,17 +2591,19 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _app_bar = __webpack_require__(/*! react-toolbox/lib/app_bar */ "./node_modules/react-toolbox/lib/app_bar/index.js");
-
-var _app_bar2 = _interopRequireDefault(_app_bar);
+var _reactToolbox = __webpack_require__(/*! react-toolbox */ "./node_modules/react-toolbox/lib/index.js");
 
 var _eventbus = __webpack_require__(/*! eventbus */ "./lib/eventbus/index.js");
 
 var _eventbus2 = _interopRequireDefault(_eventbus);
 
-var _api = __webpack_require__(/*! ../api */ "./src_admin/api.js");
+var _api = __webpack_require__(/*! ../api/ */ "./src_admin/api/index.js");
 
 var _api2 = _interopRequireDefault(_api);
+
+var _list = __webpack_require__(/*! react-toolbox/lib/list */ "./node_modules/react-toolbox/lib/list/index.js");
+
+var _menu = __webpack_require__(/*! react-toolbox/lib/menu */ "./node_modules/react-toolbox/lib/menu/index.js");
 
 var _card = __webpack_require__(/*! react-toolbox/lib/card */ "./node_modules/react-toolbox/lib/card/index.js");
 
@@ -2187,6 +2612,20 @@ var _cardview = __webpack_require__(/*! ./cardview */ "./src_admin/devices/cardv
 var _devicesStyle = __webpack_require__(/*! ./devices-style */ "./src_admin/devices/devices-style.css");
 
 var _devicesStyle2 = _interopRequireDefault(_devicesStyle);
+
+var _deviceAuthorizer = __webpack_require__(/*! ./device-authorizer */ "./src_admin/devices/device-authorizer.js");
+
+var _deviceAuthorizer2 = _interopRequireDefault(_deviceAuthorizer);
+
+var _deviceProfileView = __webpack_require__(/*! ./device-profile-view */ "./src_admin/devices/device-profile-view.js");
+
+var _deviceProfileView2 = _interopRequireDefault(_deviceProfileView);
+
+var _widgetwizzard = __webpack_require__(/*! ./wizzard/widgetwizzard */ "./src_admin/devices/wizzard/widgetwizzard.js");
+
+var _theme = __webpack_require__(/*! ./theme.scss */ "./src_admin/devices/theme.scss");
+
+var _theme2 = _interopRequireDefault(_theme);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2205,7 +2644,7 @@ var Devices = exports.Devices = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Devices.__proto__ || Object.getPrototypeOf(Devices)).call(this));
 
         _this.state = {
-            devices: _api2.default.getDevices()
+            devices: []
         };
         return _this;
     }
@@ -2215,26 +2654,62 @@ var Devices = exports.Devices = function (_React$Component) {
         value: function componentWillMount() {
             var _this2 = this;
 
-            this.sub = _eventbus2.default.subscribe('/device/list/updated', function () {
-                _this2.setState({ devices: _api2.default.getDevices() });
+            _api2.default.devices.list().then(function (devices) {
+                _this2.setState({ devices: devices });
             });
-            this.discoverSub = _eventbus2.default.subscribe('/device/discover', function (device) {
-
-                _eventbus2.default.emit('/курлык', {
-                    title: '\u041A\u0443\u0440\u043B\u044B\u043A! \u041E\u0431\u043D\u0430\u0440\u0443\u0436\u0435\u043D\u043E \u043D\u043E\u0432\u043E\u0435 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E ' + device.devSerial
-
-                });
+            this.removeSub = _eventbus2.default.subscribe('/device/removed', function (device) {
+                _this2.removeDevice(device);
             });
-            this.profileUpdateSub = _eventbus2.default.subscribe('/device/profileupdated', function (d) {
-                _eventbus2.default.emit('/курлык', {
-                    title: '\u041A\u0443\u0440\u043B\u044B\u043A! \u0423\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E ' + d.devSerial + ' \u0443\u0441\u043F\u0435\u0448\u043D\u043E \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u043D\u043E!'
+            this.updateSub = _eventbus2.default.subscribe('/device/updated', function (device) {
+                _this2.updateDevice(device);
+            });
+            this.sensorSub = _eventbus2.default.subscribe('/device/sensor/value', function (v) {
+                var devices = _this2.state.devices;
+                var device = devices.find(function (d) {
+                    return d.id == v.deviceId;
                 });
+                if (device) {
+                    device.values[v.sensorId] = v.value;
+                    _this2.setState({});
+                }
             });
         }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            this.sub();
+            this.removeSub();
+            this.updateSub();
+            this.sensorSub();
+        }
+    }, {
+        key: 'removeDevice',
+        value: function removeDevice(device) {
+            var devices = this.state.devices.copyWithin();
+            var index = devices.findIndex(function (d) {
+                return d._id == device._id;
+            });
+            if (index > -1) {
+                devices.splice(index, 1);
+                this.setState({ devices: devices });
+            }
+        }
+    }, {
+        key: 'updateDevice',
+        value: function updateDevice(dev) {
+            var device = {};
+            Object.keys(dev).forEach(function (key) {
+                if (dev[key] !== null) device[key] = dev[key];
+            });
+            var devices = this.state.devices.copyWithin();
+            var index = devices.findIndex(function (d) {
+                return d._id == device._id;
+            });
+            if (index > -1) {
+                Object.assign(devices[index], device);
+            } else {
+                devices.push(device);
+            }
+            this.setState({ devices: devices });
         }
     }, {
         key: 'handleAppMenuClick',
@@ -2242,34 +2717,301 @@ var Devices = exports.Devices = function (_React$Component) {
             this.props.onMenuClick ? this.props.onMenuClick() : null;
         }
     }, {
+        key: 'handleDeviceEdit',
+        value: function handleDeviceEdit(device) {
+            var _this3 = this;
+
+            var promise = device.pincode == null ? this.authorizer.authorizeDevice(device) : this.viewer.view(device);
+
+            promise.then(_api2.default.devices.save).then(function (device) {
+                _this3.updateDevice(device);
+            });
+        }
+    }, {
+        key: 'handleDeviceForget',
+        value: function handleDeviceForget(device) {
+            var _this4 = this;
+
+            _api2.default.devices.remove(device).then(function () {
+                _this4.removeDevice(device);
+            });
+        }
+    }, {
+        key: 'handleMakeWidget',
+        value: function handleMakeWidget(device) {
+            this.widgetWizzard.start(device);
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
+            var _this5 = this;
 
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_app_bar2.default, { title: 'Devices', leftIcon: 'menu', onLeftIconClick: function onLeftIconClick() {
-                        return _this3.handleAppMenuClick();
+                _react2.default.createElement(_reactToolbox.AppBar, { theme: _theme2.default, title: 'Devices', leftIcon: 'menu', onLeftIconClick: function onLeftIconClick() {
+                        return _this5.handleAppMenuClick();
                     } }),
                 _react2.default.createElement(
-                    'div',
-                    { className: _devicesStyle2.default.devicesPane },
+                    _list.List,
+                    { selectable: true },
                     this.state.devices.map(function (d, k) {
-                        var View = d.profile ? _cardview.KnownDeviceView : _cardview.UnknownDeviceView;
-                        return _react2.default.createElement(
-                            _card.Card,
-                            { key: k, style: { width: '400px' } },
-                            _react2.default.createElement(View, { device: d })
+                        var menuItems = [];
+                        var leftIcon = null;
+                        if (d.connectionStatus == 'DISCOVERED') {
+                            if (d.pincode == null) {
+                                menuItems.push(_react2.default.createElement(_menu.MenuItem, { key: 'authorize_device', caption: 'Authorize', icon: 'vpn_key', onClick: function onClick() {
+                                        return _this5.handleDeviceEdit(d);
+                                    } }));
+                            } else {
+                                menuItems.push(_react2.default.createElement(_menu.MenuItem, { key: 'reset_authorization', caption: 'Edit', icon: 'mode_edit', onClick: function onClick() {
+                                        return _this5.handleDeviceEdit(d);
+                                    } }));
+                                leftIcon = _react2.default.createElement(_reactToolbox.ProgressBar, { className: _devicesStyle2.default.device_auth_progress, type: 'circular' });
+                            }
+                        }
+
+                        if (d.connectionStatus == 'ONLINE' || d.connectionStatus == 'OFFLINE') {
+                            menuItems.push(_react2.default.createElement(_menu.MenuItem, { key: 'edit_device', caption: 'Edit', icon: 'mode_edit' }));
+                            menuItems.push(_react2.default.createElement(_menu.MenuItem, { key: 'make_widget', caption: 'Make widget', icon: 'library_add', onClick: function onClick() {
+                                    return _this5.handleMakeWidget(d);
+                                } }));
+
+                            var avatarClass = d.connectionStatus == 'ONLINE' ? _theme2.default.avatarOnline : _theme2.default.avatarOffline;
+                            leftIcon = _react2.default.createElement(_reactToolbox.Avatar, { className: avatarClass, title: d.name });
+                        }
+
+                        menuItems.push(_react2.default.createElement(_menu.MenuItem, { key: 'forget_device', caption: 'Forget', icon: 'delete_forever', onClick: function onClick() {
+                                return _this5.handleDeviceForget(d);
+                            } }));
+                        var menu = _react2.default.createElement(
+                            _menu.IconMenu,
+                            { icon: 'more_vert', onClick: function onClick(e) {
+                                    return e.stopPropagation();
+                                } },
+                            menuItems
                         );
+
+                        return _react2.default.createElement(_list.ListItem, { key: k, caption: d.name, legend: 'Profile: ' + d.devClass + ' Serial:' + d.devSerial, leftIcon: leftIcon, rightIcon: menu, onClick: function onClick() {
+                                return _this5.handleDeviceEdit(d);
+                            } });
                     })
-                )
+                ),
+                _react2.default.createElement(_deviceAuthorizer2.default, { ref: function ref(c) {
+                        return _this5.authorizer = c;
+                    } }),
+                _react2.default.createElement(_deviceProfileView2.default, { ref: function ref(c) {
+                        return _this5.viewer = c;
+                    } }),
+                _react2.default.createElement(_widgetwizzard.WidgetWizzard, { ref: function ref(c) {
+                        return _this5.widgetWizzard = c;
+                    } })
             );
         }
     }]);
 
     return Devices;
 }(_react2.default.Component);
+
+/***/ }),
+
+/***/ "./src_admin/devices/profile-view.css":
+/* no static exports found */
+/* all exports used */
+/*!********************************************!*\
+  !*** ./src_admin/devices/profile-view.css ***!
+  \********************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../~/css-loader??ref--2-1!../../~/postcss-loader/lib!./profile-view.css */ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/devices/profile-view.css");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(/*! ../../~/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./profile-view.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./profile-view.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src_admin/devices/profile-view.js":
+/* no static exports found */
+/* all exports used */
+/*!*******************************************!*\
+  !*** ./src_admin/devices/profile-view.js ***!
+  \*******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _list = __webpack_require__(/*! react-toolbox/lib/list */ "./node_modules/react-toolbox/lib/list/index.js");
+
+var _components = __webpack_require__(/*! ../components */ "./src_admin/components/index.js");
+
+var _profileView = __webpack_require__(/*! ./profile-view.css */ "./src_admin/devices/profile-view.css");
+
+var _profileView2 = _interopRequireDefault(_profileView);
+
+var _eventbus = __webpack_require__(/*! eventbus */ "./lib/eventbus/index.js");
+
+var _eventbus2 = _interopRequireDefault(_eventbus);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SensorsView = function (_React$Component) {
+    _inherits(SensorsView, _React$Component);
+
+    function SensorsView() {
+        _classCallCheck(this, SensorsView);
+
+        var _this = _possibleConstructorReturn(this, (SensorsView.__proto__ || Object.getPrototypeOf(SensorsView)).call(this));
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(SensorsView, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
+
+            this.sensorSub = _eventbus2.default.subscribe('/device/sensor/value', function (v) {
+                if (v.deviceId == _this2.props.deviceId) {
+                    var state = {};
+                    state[v.sensorId] = v.value;
+                    _this2.setState(state);
+                }
+            });
+
+            this.setState(this.props.values);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.sensorSub();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                _components.ExpandableListItem,
+                { caption: 'Sensors' },
+                Object.entries(this.props.sensors).map(function (s) {
+                    var id = s[0];
+                    var def = s[1];
+                    var rightIcon = _react2.default.createElement(
+                        'span',
+                        null,
+                        _this3.state[id]
+                    );
+                    return _react2.default.createElement(_list.ListItem, { key: id, caption: id, legend: def.def, rightIcon: rightIcon });
+                })
+            );
+        }
+    }]);
+
+    return SensorsView;
+}(_react2.default.Component);
+
+var TriggersView = function (_React$Component2) {
+    _inherits(TriggersView, _React$Component2);
+
+    function TriggersView() {
+        _classCallCheck(this, TriggersView);
+
+        return _possibleConstructorReturn(this, (TriggersView.__proto__ || Object.getPrototypeOf(TriggersView)).apply(this, arguments));
+    }
+
+    _createClass(TriggersView, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _components.ExpandableListItem,
+                { caption: 'Triggers' },
+                Object.entries(this.props.triggers).map(function (t) {
+                    var id = t[0];
+                    var def = t[1];
+                    return _react2.default.createElement(_list.ListItem, { key: id, caption: id, legend: def.def });
+                })
+            );
+        }
+    }]);
+
+    return TriggersView;
+}(_react2.default.Component);
+
+var ProfileView = function (_React$Component3) {
+    _inherits(ProfileView, _React$Component3);
+
+    function ProfileView() {
+        _classCallCheck(this, ProfileView);
+
+        return _possibleConstructorReturn(this, (ProfileView.__proto__ || Object.getPrototypeOf(ProfileView)).apply(this, arguments));
+    }
+
+    _createClass(ProfileView, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            console.log('MOUNT');
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            console.log('UNMOUNT');
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _list.List,
+                { className: _profileView2.default.scroll },
+                _react2.default.createElement(SensorsView, { sensors: this.props.profile.sensors, values: this.props.values, deviceId: this.props.deviceId }),
+                _react2.default.createElement(TriggersView, { triggers: this.props.profile.triggers })
+            );
+        }
+    }]);
+
+    return ProfileView;
+}(_react2.default.Component);
+
+exports.default = ProfileView;
 
 /***/ }),
 
@@ -2300,6 +3042,43 @@ if(false) {
 	if(!content.locals) {
 		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./styles.css", function() {
 			var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src_admin/devices/theme.scss":
+/* no static exports found */
+/* all exports used */
+/*!**************************************!*\
+  !*** ./src_admin/devices/theme.scss ***!
+  \**************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../~/css-loader??ref--2-1!../../~/postcss-loader/lib!./theme.scss */ "./node_modules/css-loader/index.js?{\"modules\":true,\"sourceMap\":true,\"localIdentName\":\"[name]__[local]--[hash:base64:8]\"}!./node_modules/postcss-loader/lib/index.js!./src_admin/devices/theme.scss");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(/*! ../../~/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./theme.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js!./theme.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -2748,9 +3527,11 @@ var Step2 = exports.Step2 = function (_React$Component) {
                 _react2.default.createElement(
                     _list.List,
                     { selectable: true },
-                    this.props.device.profile.sensors.map(function (s, k) {
+                    Object.entries(this.props.device.profile.sensors).map(function (sensor) {
+                        var id = sensor[0];
+                        var s = sensor[1];
                         var icon = _this3.state.selected.indexOf(s) > -1 ? 'check_box' : 'check_box_outline_blank';
-                        return _react2.default.createElement(_list.ListItem, { key: k, caption: s.name, rightIcon: icon, onClick: function onClick(e) {
+                        return _react2.default.createElement(_list.ListItem, { key: id, caption: s.name, rightIcon: icon, onClick: function onClick(e) {
                                 return _this3.toggleSensorSelect(s);
                             } });
                     })
@@ -3040,7 +3821,9 @@ var Step3 = exports.Step3 = function (_React$Component) {
                 _react2.default.createElement(
                     _list.List,
                     { selectable: true },
-                    this.props.device.profile.triggers.map(function (t, k) {
+                    Object.entries(this.props.device.profile.triggers).map(function (trigger) {
+                        var k = trigger[0];
+                        var t = trigger[1];
                         var icon = _this3.state.selected.indexOf(t) > -1 ? 'check_box' : 'check_box_outline_blank';
                         return _react2.default.createElement(_list.ListItem, { key: k, caption: t.name, rightIcon: icon, onClick: function onClick(e) {
                                 return _this3.toggleSensorSelect(t);
@@ -3177,7 +3960,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _list = __webpack_require__(/*! react-toolbox/lib/list */ "./node_modules/react-toolbox/lib/list/index.js");
 
-var _api = __webpack_require__(/*! ../../api */ "./src_admin/api.js");
+var _api = __webpack_require__(/*! ../../api/ */ "./src_admin/api/index.js");
 
 var _api2 = _interopRequireDefault(_api);
 
@@ -3203,8 +3986,7 @@ var Step5 = exports.Step5 = function (_React$Component) {
             dashboards: [],
             selected: []
         };
-
-        _api2.default.getDashboards().then(function (dashboards) {
+        _api2.default.dashboards.list().then(function (dashboards) {
             return _this.setState({ dashboards: dashboards });
         });
         return _this;
@@ -3218,8 +4000,9 @@ var Step5 = exports.Step5 = function (_React$Component) {
             var dashboards = this.state.selected.map(function (k) {
                 return _this2.state.dashboards[k]._id;
             });
-
-            _api2.default.appendWidget(dashboards, this.props.config);
+            this.props.config.dashboards = dashboards;
+            //Api.appendWidget(dashboards,this.props.config);
+            _api2.default.widgets.save(this.props.config);
             return _stepComplete.StepComplete;
         }
     }, {
