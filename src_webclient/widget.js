@@ -7,7 +7,8 @@ import theme from './widget.css';
 
 export class Widget extends React.Component{
     constructor(){
-        super();        
+        super();     
+        console.log('Widget::Create');
     }
     componentWillMount(){
         let widgetClassName = this.props.widget.class;
@@ -18,6 +19,7 @@ export class Widget extends React.Component{
     }
 
     render(){
+        
         return <Card className={theme.widgetCard}>
             <CardTitle title={this.props.widget.label} subtitle={this.props.widget.description} avatar={<Avatar title={this.props.widget.label} />} />
             <this.widgetClass config={this.props.widget.config} />

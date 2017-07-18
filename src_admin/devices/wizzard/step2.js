@@ -9,17 +9,18 @@ export class Step2 extends React.Component{
         super();
         this.state = {
             selected:[]
-        }        
+        };        
     }
     handleNext(){
         this.props.config.config.sensors = this.state.selected.map(s=>{
             return {
                 title:s.name,
-                sensor:this.props.device.id+'.'+s.name
-            }
+                device:this.props.device.id,
+                sensor:s.name
+            };
         });
         if (this.props.config.config.sensors.length>0)
-            return Step2_1
+            return Step2_1;
         else
             return Step3;
     }

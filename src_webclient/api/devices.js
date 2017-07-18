@@ -1,9 +1,12 @@
-import {jsonRequest} from './commons';
+import {jsonRequest,httpAddr} from './commons';
 
-function getValues(){
+function getValues(sensors){
     return jsonRequest({
         method:'GET',
-        url:'/values.json'
+        url:httpAddr('/devices/values'),
+        query:{
+            sensors:JSON.stringify(sensors)
+        }
     });
 }
 
