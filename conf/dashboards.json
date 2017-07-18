@@ -1,4 +1,14 @@
 [
-    {"title":"Dashborad1","_id":"1","icon":"explore"},
-    {"title":"Dashborad2","_id":"2","icon":"exit_to_app"}
+    {
+        "_id": "760681f3",
+        "title": "Dashboard",
+        "icon": "explore",
+        "widgets": null
+    },
+    {
+        "_id": "71d0c761",
+        "title": "Dash",
+        "icon": "exit_to_app",
+        "widgets": null
+    }
 ]

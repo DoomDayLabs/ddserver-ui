@@ -1,0 +1,73 @@
+[
+    {
+        "_id": "60e0546f",
+        "label": "CE36B21640E0",
+        "description": "DOOMDAYDY:TEST:0.0.1",
+        "icon": "extension",
+        "enabled": null,
+        "config": {
+            "sensors": [
+                {
+                    "title": "TEMPERATURE",
+                    "device": "DOOMDAYDY:TEST:0.0.1:CE36B21640E0",
+                    "sensor": "TEMPERATURE",
+                    "viewInMain": true,
+                    "showLog": true,
+                    "char":"°C",
+                    "type":"!circular"                    
+                },
+                {
+                    "title": "TEMPERATURE",
+                    "device": "DOOMDAYDY:TEST:0.0.1:CE36B21640E0",
+                    "sensor": "TEMPERATURE",
+                    "viewInMain": true,
+                    "showLog": true,
+                    "char":"°C",
+                    "type":"circular"
+                },
+                {
+                    "title": "STATE",
+                    "device": "DOOMDAYDY:TEST:0.0.1:CE36B21640E0",
+                    "sensor": "STATE",
+                    "viewInMain": true
+                }
+            ],
+            "triggers": [
+                {
+                    "title": "BOIL",
+                    "trigger": "DOOMDAYDY:TEST:0.0.1:CE36B21640E0.BOIL",
+                    "params": []
+                },
+                {
+                    "title": "HEAT",
+                    "trigger": "DOOMDAYDY:TEST:0.0.1:CE36B21640E0.HEAT",
+                    "params": [
+                        {
+                            "name": "TARGET",
+                            "title": "TARGET"
+                        }
+                    ]
+                },
+                {
+                    "title": "STANDBY",
+                    "trigger": "DOOMDAYDY:TEST:0.0.1:CE36B21640E0.STANDBY",
+                    "params": []
+                }
+            ]
+        },
+        "dashboards": [
+            "760681f3"
+        ],
+        "class": "default"
+    },
+    {
+        "_id":"WIDGET2",
+        "label":"SCUSTOM",
+        "description":"CUSTOMSWIDGET",
+        "dashboards":[
+            "760681f3"   
+        ],
+        "class":"customwidget1"
+
+    }
+]

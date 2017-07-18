@@ -1,0 +1,19 @@
+.options{
+    display: flex;
+    justify-content: space-around;
+}
+.options>div{
+    flex-grow: 1;
+}
+.active{
+    background-color: #C5E1A5;
+}
+.active>div{
+    background-color: #1B5E20;
+}
+._inactive{
+    background-color: #FFAB91;
+}
+._inactive>div{
+    background-color: #BF360C;
+}

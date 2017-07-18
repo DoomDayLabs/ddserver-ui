@@ -1,0 +1,45 @@
+[
+    {
+        "_id":"DOOMDAYDY:TEST:0.0.1",        
+        "sensors": {
+            "STATE": {
+                "name": "STATE",
+                "type": "val",
+                "options": [
+                    "HEAT",
+                    "STANDBY",
+                    "BOIL"
+                ],
+                "def": "VAL (HEAT,STANDBY,BOIL)"
+            },
+            "TEMPERATURE": {
+                "name": "TEMPERATURE",
+                "min": 0,
+                "max": 100,
+                "type": "int",
+                "def": "INT (0,100)"
+            }
+        },
+        "triggers": {
+            "BOIL": {
+                "params": [],
+                "name": "BOIL"
+            },
+            "HEAT": {
+                "params": [
+                    {
+                        "name": "TARGET",
+                        "min": 20,
+                        "max": 90,
+                        "type": "int"
+                    }
+                ],
+                "name": "HEAT"
+            },
+            "STANDBY": {
+                "params": [],
+                "name": "STANDBY"
+            }
+        }
+    }
+]
