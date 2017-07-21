@@ -8,5 +8,6 @@ export default{
     dashboards:Dashboards,
     widgets:Widgets,
     profiles:Profiles,
-    devices:Devices
+    devices:Devices,
+    websocket:WebSocket
 };

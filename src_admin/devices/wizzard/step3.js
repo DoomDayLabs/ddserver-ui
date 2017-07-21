@@ -15,7 +15,8 @@ export class Step3 extends React.Component{
         this.props.config.config.triggers = this.state.selected.map(t=>{
             return {
                  title:t.name,
-                 trigger:this.props.device.id+'.'+t.name,
+                 device:this.props.device.id,
+                 trigger:t.name,
                  params:t.params.map(p=>({name:p.name,title:p.name}))
             }
         });

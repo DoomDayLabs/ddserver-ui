@@ -3,13 +3,17 @@ import {IntSensor} from './intsensorview';
 import {ValSensor} from './valsensorview';
 import Api from '../api';
 import EventBus from 'eventbus';
-
+import TriggerView from './triggerview';
+import {CardActions} from 'react-toolbox/lib/card';
 class DefaultView extends React.Component{
     
     render(){
         return <div>DEFAULT_VIEW</div>
     }
 }
+
+
+
 class SensorView extends React.Component{
     getViewComponentClass(profile){        
         switch(profile.type){
@@ -30,12 +34,15 @@ class SensorView extends React.Component{
 
 
 export class DefaultWidget extends React.Component{
+    
+   
     constructor(props){
         super();
-        console.log('DefaultWidget::create',props.config);
+        
         this.state = {
             config:{
-                sensors:[]
+                sensors:[],
+                triggers:[]
             },
             profiles:{},
             values:{}
@@ -49,6 +56,9 @@ export class DefaultWidget extends React.Component{
             values.add({device:s.device,sensor:s.sensor});            
             sensorsCanRead.add(s.device+":"+s.sensor);
         });
+        props.config.triggers.forEach(t=>{
+            devices.add(t.device);
+        })
         values = Array.from(values);
         this.subscribe = EventBus.subscribe('/device/sensor/value',e=>{            
             let sensor = e.deviceId+":"+e.sensorId;
@@ -80,15 +90,22 @@ export class DefaultWidget extends React.Component{
             
             this.setState({config:{...props.config},profiles});
         });                                                       
+        this.context = {
+            a:'TEST'
+        };
     }
     componentWillUnmount(){
         this.subscribe();
     }
+
     componentWillMount(){
-        console.log('DefaultWidget::Mount');
+        
     }
-    render(){        
-        return <div style={{margin:'1em'}}>
+    sendCommand(device,command){
+        Api.websocket.send('FOR '+device+' '+command);
+    }
+    render(){                
+        return <div style={{margin:'1em',position:'relative'}}>
             {this.state.config.sensors.map((s,k)=>{                
                 let profile = this.state.profiles[s.device]; 
                 if (profile)                                               
@@ -96,6 +113,22 @@ export class DefaultWidget extends React.Component{
                 else
                     return null;
             })}
+            <CardActions>
+            {this.state.config.triggers.map((t,k)=>{
+                let profile = this.state.profiles[t.device];
+                if (profile)
+                    return <TriggerView key={k} 
+                                        config={t} 
+                                        profile={profile.triggers[t.trigger]} 
+                                        parampane={this.parampane} 
+                                        onCommand={cmd=>this.sendCommand(t.device,cmd)}/>
+                else
+                    return null;
+            })}            
+            </CardActions>
+            
+            
+            
         </div>
     }
 }

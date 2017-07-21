@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/.bin/webpack --progress NODE_ENV=PRODUCTION",
+    "build": "node_modules/.bin/webpack --progress",
     "bld": "cross-env NODE_ENV=PRODUCTION webpack --progress",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --public"
   },

@@ -6,86 +6,19 @@ import Dialog from 'react-toolbox/lib/dialog';
 import ApiCommon from './api/api-common';
 import ApiUsers from './api/api-users';
 import Api from './api/';
-import config from 'build-config';
 
 
 let w = new WebSocket(ApiCommon.wsAddr('/event.ws'));
 
 w.onmessage = (msg)=>{
-    //console.log(msg.data);
+    
     var msgObject = JSON.parse(msg.data);
-    //console.log(msgObject);
+
     EventBus.emit(msgObject.key,msgObject.payload);
-}
+};
 w.onclose = ()=>{
     Api.common.makeError({title:'Опаньки! Что-то пошло не так :(',text:'Lost connection with server. Try reload page'});
-}
-
-/*
-get(addr('device/list'))
-.then(e=>{
-    devices = JSON.parse(e.body);        
-    EventBus.emit('/device/list/updated');
-})
-
-var devices = []
-
-EventBus.subscribe('/device/profile/updated',(d)=>{        
-    let existDevi = devices.find((dev)=>dev.id===d.id);
-    if (!existDevi.profile&&d.profile){
-        EventBus.emit('/device/profileupdated',d);
-    }
-    console.log(existDevi,d);    
-    Object.assign(existDevi,{...d});
-
-    EventBus.emit('/device/list/updated');
-})
-
-EventBus.subscribe('/device/discovered',(d)=>{
-    if (devices.find(dev=>dev.id===d.id)){
-
-    } else {        
-        EventBus.emit('/device/discover',d);
-        devices.push(d);
-        EventBus.emit('/device/list/updated');        
-    } 
-});
-
-
-
-
-/*
-function getDevices(){
-    return devices;
-}
-
-function authorizeDevice(device){
-    request({
-        method:'POST',
-        url:addr('device/update'),
-        body:device
-    })
-    .then((e)=>{
-
-    });
-}
-
-function forgetDevice(d){    
-    let i = devices.findIndex(e=>e.id===d.id);
-    console.log(i);
-    if (i>-1){
-        devices.splice(i,1);
-        EventBus.emit('/device/list/updated');
-        request({
-            method:'POST',
-            url:addr('device/forget'),
-            body:{
-                id:d.id
-            }
-        });
-    }
-}
-*/
+};
 
 
 function getWidgetClasses(profile){

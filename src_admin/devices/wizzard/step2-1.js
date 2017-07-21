@@ -30,7 +30,7 @@ class SensorConfigItem extends React.Component{
                 <Switch label='Can show log' checked={this.state.showLog} onChange={showLog=>this.setState({showLog})} />
             </div>
             <div style={{display:'flex',justifyContent:'space-between'}}>                
-                <Input label='ValueChar' value={this.state.valueChar} onChange={valueChar=>this.setState({valueChar})} />
+                <Input label='ValueChar' value={this.state.char} onChange={char=>this.setState({char})} />
             </div>
         </div>
     }
@@ -38,6 +38,7 @@ class SensorConfigItem extends React.Component{
 export class Step2_1 extends React.Component{
    
     handleNext(){
+        console.log(this.props.config);
         return Step3;
     }
    

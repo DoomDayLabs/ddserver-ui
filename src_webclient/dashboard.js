@@ -20,15 +20,14 @@ export class Dashboard extends React.Component{
     }
     render(){
         let dashboard = this.props.dashboard||{};    
-        console.log('render',dashboard);     
+        
         return <div>
             <AppBar title={dashboard.title} leftIcon='menu' onLeftIconClick={()=>this.props.onMenuClick?this.props.onMenuClick():null} />
             <div className={theme.dashboard} >
             {this.state.widgets
-            //.filter(w=>w.dashboards.indexOf(dashboard._id)>-1)
             .map((w,k)=>{
                 if (w.dashboards.indexOf(dashboard._id)>-1){
-                    console.log('Render widget',w);
+                    
                     return <Widget widget={w} key={k} />
                 }
             })}

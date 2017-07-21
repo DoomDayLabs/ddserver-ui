@@ -4,11 +4,12 @@ import {Avatar} from 'react-toolbox';
 import {DefaultWidget} from './defaultwidget';
 import Classloader from './classloader';
 import theme from './widget.css';
+import Injector from 'injector';
 
 export class Widget extends React.Component{
     constructor(){
         super();     
-        console.log('Widget::Create');
+        
     }
     componentWillMount(){
         let widgetClassName = this.props.widget.class;

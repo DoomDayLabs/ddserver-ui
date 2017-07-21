@@ -2,6 +2,13 @@ import {request} from 'popsicle';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Dialog} from 'react-toolbox';
+import qs from 'qs';
+import URL from 'url-parse';
+
+var configuration = qs.parse(document.currentScript.src.split('?')[1]);
+console.log(configuration.api);
+console.log(configuration.secure||false);
+
 
 class ErrorDialog extends React.Component{
     constructor(){
@@ -42,8 +49,9 @@ export function jsonRequest(options){
     .then(e=>JSON.parse(e.body));
 }
 
-let host = "localhost:8080/dds/webclient";
-export function httpAddr(path){
+let host = configuration.api;
+
+export function httpAddr(path){    
     return `http://${host}${path}`;
 }
 export function wsAddr(path){

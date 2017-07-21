@@ -1,3 +1,27 @@
 .widgetCard{
-    margin:0.5em;    
+
+   margin: 0.5em; 
+}
+
+
+@media screen and (max-device-width:1280px){
+    .widgetCard{
+        width: 32%;
+        margin: 0.5em;
+    }
+}
+
+@media screen and (max-device-width:1023px){
+    .widgetCard{
+        width: 50%;
+        margin: 0.5em;
+    }
+}
+
+@media screen and (max-device-width:767px){
+    .widgetCard{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
 }

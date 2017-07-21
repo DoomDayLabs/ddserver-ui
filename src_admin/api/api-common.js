@@ -2,11 +2,8 @@ import {get,request,post,form} from 'popsicle';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Dialog} from 'react-toolbox';
-import config from 'build-config';
 import qs from 'qs';
 import URL from 'url-parse';
-window.$url = URL;
-
 
 
 var configuration = qs.parse(document.currentScript.src.split('?')[1]);
@@ -51,13 +48,12 @@ function makeError(error){
 
 
 //export var host = 'localhost';
-var host = config.serverHost;
 // var host = config.serverHost;
 function isHttp(){
-    return configuration.secure?'http':'https';
+    return configuration.secure==true?'https':'http';
 }
 function isWs(){
-    return configuration.secure?'ws':'wss';
+    return configuration.secure==true?'wss':'ws';
 }
 
 export function addr(e){    
@@ -87,7 +83,7 @@ export function jsonRequest(options){
 }
 export {request};
 export default {
-    host:host,
+    // host:host,
     addr:addr,
     wsAddr:wsAddr,
     request:$request,

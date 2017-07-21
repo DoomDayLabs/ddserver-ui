@@ -16,7 +16,8 @@ export class Step2 extends React.Component{
             return {
                 title:s.name,
                 device:this.props.device.id,
-                sensor:s.name
+                sensor:s.name,
+                char:''
             };
         });
         if (this.props.config.config.sensors.length>0)

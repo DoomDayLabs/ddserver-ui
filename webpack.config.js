@@ -2,9 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 var HtmlPlugin = require('html-webpack-plugin');
 
-var env = process.env.NODE_ENV||'DEVELOPMENT';
 
-console.log(`Enviroment=${process.env.NODE_ENV}`);
 
 var  plugins = [
       new webpack.NamedModulesPlugin(),
@@ -26,30 +24,20 @@ var  plugins = [
         chunks: ['application', 'vendors'],
         filename: 'webclient.html',
         template: path.join(__dirname, 'src_webclient', 'webclient.html')
+      }),
+      new HtmlPlugin({
+        title: 'Authorize',
+        chunks: ['application', 'vendors'],
+        filename: 'auth.html',
+        template: path.join(__dirname, 'src_auth', 'auth.html')
       })
     ];
-
-
-var serverHost = process.env.SERVER_HOST?process.env.SERVER_HOST:'localhost:8080';
-var serverPath = process.env.SERVER_PATH?process.env.SERVER_PATH:'/dds';
-
-var buildConfig = {
-    serverHost:serverHost,
-    baseHttp:`http://${serverHost}/${serverPath}`,
-    baseWebsocket:`ws://${serverHost}/${serverPath}`
-}
-
-
-var externals = {
-        'conf/config':'require("cfg")',
-        'build-config':JSON.stringify(buildConfig)
-};
-
 module.exports = {
     entry:{
         app:'./src/app.js',
         admin:'./src_admin/app.js',
-        webclient:'./src_webclient/app.js',        
+        webclient:'./src_webclient/app.js',
+        auth:'./src_auth/app.js',         
         vendor:['react','react-dom','jquery']
     },
     module:{
@@ -95,5 +83,5 @@ module.exports = {
         contentBase:[path.join(__dirname,'./dist/'),path.join(__dirname,'./conf/'),path.join(__dirname,'./ext/')],
         disableHostCheck: true
     },
-    externals: externals
-}
+    // externals: externals
+};

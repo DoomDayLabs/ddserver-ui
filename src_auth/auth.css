@@ -1,0 +1,10 @@
+.authWrapper{
+    display: flex;    
+    justify-content: center;
+}
+.authWrapper>form{
+    width: 400px;
+    text-align: center;
+
+}
+

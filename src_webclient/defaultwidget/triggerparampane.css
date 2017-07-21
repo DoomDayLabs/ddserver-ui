@@ -1,0 +1,21 @@
+.paramPane{
+    /* background-color: green; */
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 3px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+    transition: all 100ms 0s ease;
+    transform-origin: 100% 100%;
+    transform: scaleY(0);
+}
+.paramPane.active{
+    transform: scaleY(1);
+    z-index: 100;
+}
